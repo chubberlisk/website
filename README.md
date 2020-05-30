@@ -24,7 +24,6 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-- [Releases](#releases)
 - [License](#license)
 
 ## About the project
@@ -104,11 +103,6 @@ To run linting using [ESLint](https://eslint.org/):
 ```sh
 yarn format
 ```
-
-## Releases
-
-- [Semantic Versioning](https://semver.org/) will be followed.
-- Each **major** release will have a codename which will begin with A until Z and be named after a Yu-Gi-Oh! card owned by _Seto Kaiba_.
 
 ## License
 
