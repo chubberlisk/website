@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier --write '{pages,pageTests,src}/**/*.{js,css,md,yml}'",
-    "format:check": "prettier --check '{pages,pageTests,src}/**/*.{js,css,md,yml}'"
+    "format:check": "prettier --check '{pages,pageTests,src}/**/*.{js,css,md,yml}'",
+    "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "next": "9.3.5",
@@ -15,6 +16,9 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-react": "^7.20.0",
     "prettier": "^2.0.5"
   }
 }
