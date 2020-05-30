@@ -6,7 +6,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Wen Ting Wang</title>
-        <link rel="icon" href="/wtw-icon-512x512.png" />
+        <link rel="icon" href="/icons/wtw-512x512.png" />
       </Head>
 
       <main>
