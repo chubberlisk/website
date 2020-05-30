@@ -33,7 +33,7 @@ This is the personal website for Wen Ting Wang. Originally, it served as an info
 
 For the current website repository: https://github.com/chubberlisk/chubberlisk.github.io.
 
-For the current website: wentingwang.co.uk.
+For the current website: <a href="wentingwang.co.uk" target="_blank">wentingwang.co.uk</a>.
 
 ### Built with
 
