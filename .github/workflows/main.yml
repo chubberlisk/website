@@ -1,0 +1,27 @@
+name: CI
+on: [push]
+jobs:
+  formatting-and-linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run formatter
+        run: yarn format
+
+      - name: Run linter
+        run: yarn lint
+  end-to-end-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run end to end tests
+        uses: cypress-io/github-action@v1
+        with:
+          command: yarn test:e2e
