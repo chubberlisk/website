@@ -1,20 +1,20 @@
-describe("User visits home page", function() {
-  it("welcomes the user", function() {
-    whenIVisitTheHomePage()
+describe("User visits home page", function () {
+  it("welcomes the user", function () {
+    whenIVisitTheHomePage();
 
-    thenISeeThePageTitle()
-    andISeeTheWelcomeText()
-  })
+    thenISeeThePageTitle();
+    andISeeTheWelcomeText();
+  });
 
   function whenIVisitTheHomePage() {
-    cy.visit("/")
+    cy.visit("/");
   }
 
   function thenISeeThePageTitle() {
-    cy.title().should('eq', 'Wen Ting Wang')
+    cy.title().should("eq", "Wen Ting Wang");
   }
 
   function andISeeTheWelcomeText() {
-    cy.contains("Welcome!")
+    cy.contains("Hi there!");
   }
-})
+});
