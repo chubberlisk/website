@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./src/components/**/*.js", "./pages/**/*.js"],
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
