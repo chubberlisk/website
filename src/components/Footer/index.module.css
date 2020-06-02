@@ -1,0 +1,7 @@
+.footer {
+  @apply bg-wtw-dark-grey text-center p-5 text-white;
+}
+
+.copyrightText {
+  @apply text-sm;
+}
