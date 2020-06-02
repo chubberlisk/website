@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write '{pages,pageTests,src}/**/*.{js,css,md,yml}'",
-    "format:check": "prettier --check '{pages,pageTests,src}/**/*.{js,css,md,yml}'",
+    "format": "prettier --write 'src/**/*.{js,css,md,yml}'",
+    "format:check": "prettier --check 'src/**/*.{js,css,md,yml}'",
     "lint": "eslint . --ext .js",
     "test:e2e": "start-server-and-test 'next dev --port 3001' 3001 'cypress run --headless'",
     "test:e2e:interactive": "cypress open"
