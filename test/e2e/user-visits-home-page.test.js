@@ -4,6 +4,10 @@ describe("User visits home page", function () {
 
     thenISeeThePageTitle();
     andISeeTheWelcomeText();
+    andISeeTheSlogan();
+    andISeeTheGitHubLink();
+    andISeeTheLinkedInLink();
+    andISeeAFooter();
   });
 
   function whenIVisitTheHomePage() {
@@ -16,5 +20,25 @@ describe("User visits home page", function () {
 
   function andISeeTheWelcomeText() {
     cy.contains("Hi there!");
+  }
+
+  function andISeeTheSlogan() {
+    cy.get("section#contact-me").contains(/Let's develop Tings together./);
+  }
+
+  function andISeeTheGitHubLink() {
+    cy.get("section#contact-me li:nth-child(1) a")
+      .should("have.attr", "href")
+      .and("include", "https://github.com/chubberlisk");
+  }
+
+  function andISeeTheLinkedInLink() {
+    cy.get("section#contact-me li:nth-child(2) a")
+      .should("have.attr", "href")
+      .and("include", "https://www.linkedin.com/in/wen-ting-wang");
+  }
+
+  function andISeeAFooter() {
+    cy.get("footer").should("include.text", "© 2020 Copyright: Wen Ting Wang");
   }
 });
