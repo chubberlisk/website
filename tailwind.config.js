@@ -5,6 +5,7 @@ module.exports = {
       ...theme("colors"),
       "wtw-yellow": "#eac435",
       "wtw-dark-grey": "#343a40",
+      "wtw-turquoise": "#17a2b8",
     }),
     container: {
       center: true,
