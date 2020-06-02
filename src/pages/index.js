@@ -4,7 +4,7 @@ import Section from "../components/Section";
 
 const Home = () => (
   <Layout>
-    <Section className="text-center">
+    <Section id="landing" className="text-center">
       <div className="container">
         <h1>
           Hi there!
