@@ -4,6 +4,7 @@ module.exports = {
     backgroundColor: (theme) => ({
       ...theme("colors"),
       "wtw-yellow": "#eac435",
+      "wtw-dark-grey": "#343a40",
     }),
     container: {
       center: true,
