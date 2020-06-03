@@ -30,9 +30,9 @@
 
 This is the personal website for Wen Ting Wang. Originally, it served as an informal CV and portfolio but currently a rebuild is underway for the second time.
 
-For the current website repository: https://github.com/chubberlisk/chubberlisk.github.io.
+For repository of the previous version of the website: https://github.com/chubberlisk/chubberlisk.github.io.
 
-For the current website: <a href="https://wentingwang.co.uk">wentingwang.co.uk</a>.
+For the previous version of the website: <a href="https://chubberlisk.github.io">https://chubberlisk.github.io</a>.
 
 ### Built with
 
