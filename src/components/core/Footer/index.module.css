@@ -5,3 +5,9 @@
 .copyrightText {
   @apply text-sm;
 }
+
+@media (max-width: 640px) {
+  .copyrightText {
+    @apply text-xs;
+  }
+}
