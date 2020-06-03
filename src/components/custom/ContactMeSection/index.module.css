@@ -31,6 +31,21 @@
 .contactMeSocialLinksListItem {
   @apply inline;
 }
+
 .contactMeSocialLinksListItem:nth-child(odd) {
   @apply mr-5;
+}
+
+@media (max-width: 640px) {
+  .contactMeSlogan {
+    @apply text-base;
+  }
+
+  .contactMeSocialLink {
+    @apply text-base;
+  }
+
+  .contactMeTitle {
+    @apply text-2xl;
+  }
 }
