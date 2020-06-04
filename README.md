@@ -43,7 +43,7 @@ For the previous version of the website: <a href="https://chubberlisk.github.io"
 
 - [Vercel](https://vercel.com/)
 
-## Getting Started
+## Getting started
 
 To get a local copy up and running follow these simple steps.
 
