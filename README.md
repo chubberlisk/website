@@ -1,3 +1,5 @@
+![CI](https://github.com/chubberlisk/chubberlisk/workflows/CI/badge.svg)
+
 <p align="center">
   <a href="https://github.com/chubberlisk/chubberlisk">
     <img src="./public/icons/wtw-512x512.png" alt="Logo" width="80" height="80">
