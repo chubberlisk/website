@@ -6,7 +6,10 @@ const Layout = ({ title = "Wen Ting Wang", children }) => (
   <>
     <Head>
       <title>{title}</title>
-      <link rel="icon" href="favicon.ico" />
+      <meta
+        name="description"
+        content="Wen Ting Wang, software engineer at Made Tech, based in London, UK."
+      ></meta>
     </Head>
     <main>{children}</main>
     <Footer />
