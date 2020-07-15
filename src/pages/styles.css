@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 @tailwind base;
 @tailwind components;
 
@@ -6,23 +6,24 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Amatic SC", cursive;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
 }
 
 h1 {
-  @apply text-6xl;
-}
-
-h2 {
   @apply text-5xl;
 }
 
-h3 {
+h2 {
   @apply text-4xl;
 }
 
-h4 {
+h3 {
   @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
 }
 
 p {
@@ -31,19 +32,19 @@ p {
 
 @media (max-width: 640px) {
   h1 {
-    @apply text-4xl;
-  }
-
-  h2 {
     @apply text-3xl;
   }
 
-  h3 {
+  h2 {
     @apply text-2xl;
   }
 
-  h4 {
+  h3 {
     @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
   }
 
   p {
@@ -52,7 +53,7 @@ p {
 }
 
 mark {
-  padding: 0 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 @tailwind utilities;
