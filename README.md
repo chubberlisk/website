@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/chubberlisk/chubberlisk">
-    <img src="./public/icon-512x512.png" alt="Logo" width="80" height="80">
+    <img src="./public/images/icons/icon-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Wen Ting Wang</h3>

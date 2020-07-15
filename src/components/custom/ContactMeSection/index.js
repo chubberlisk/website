@@ -12,7 +12,7 @@ const ContactMeSection = () => (
     <div className="container">
       <div className="mt-1 mb-5">
         <img
-          src="icon-512x512.png"
+          src="/images/icons/icon-512x512.png"
           alt="Wen Ting Wang Logo"
           className={styles.contactMeLogo}
         />
