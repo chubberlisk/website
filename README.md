@@ -1,7 +1,7 @@
-![CI](https://github.com/chubberlisk/chubberlisk/workflows/CI/badge.svg)
+![CI](https://github.com/chubberlisk/website/workflows/CI/badge.svg)
 
 <p align="center">
-  <a href="https://github.com/chubberlisk/chubberlisk">
+  <a href="https://github.com/chubberlisk/website">
     <img src="./public/images/icons/icon-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -11,9 +11,9 @@
     A personal website for Wen Ting Wang.
     <br />
     <br />
-    <a href="https://chubberlisk.now.sh">View Site</a>
+    <a href="https://wentingwang.co.uk">View Site</a>
     ·
-    <a href="https://github.com/chubberlisk/chubberlisk/issues">Report Bug</a>
+    <a href="https://github.com/chubberlisk/website/issues">Report Bug</a>
   </p>
 </p>
 
