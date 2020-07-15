@@ -30,6 +30,14 @@ p {
   @apply text-lg;
 }
 
+a {
+  @apply underline
+}
+
+a:hover {
+  @apply no-underline
+}
+
 @media (max-width: 640px) {
   h1 {
     @apply text-3xl;
