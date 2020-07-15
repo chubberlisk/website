@@ -10,35 +10,37 @@ const Layout = ({ title = "Wen Ting Wang", children }) => (
         name="description"
         content="Wen Ting Wang, software engineer at Made Tech, based in London, UK."
       ></meta>
+      <meta name="theme-color" content="#eac435" />
+      <link rel="manifest" href="/manifest.json" />
       <link rel="icon" href="favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="apple-touch-icon.png"
+        href="/images/icons/apple-touch-icon.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="512x512"
-        href="android-chrome-512x512.png"
+        href="/images/icons/icon-512x512.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="192x192"
-        href="android-chrome-192x192.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="favicon-16x16.png"
+        href="/images/icons/icon-192x192.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="favicon-32x32.png"
+        href="/images/icons/icon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/images/icons/icon-16x16.png"
       />
     </Head>
     <main>{children}</main>
