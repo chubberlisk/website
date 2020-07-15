@@ -78,7 +78,7 @@ To run the application for local development:
 yarn dev
 ```
 
-Then visit [localhost:3000](localhost:3000).
+Then visit [http://localhost:3000](http://localhost:3000).
 
 ### Running the tests
 
