@@ -7,12 +7,12 @@ const ContactMeSection = () => (
     id="contact-me"
     className={styles.contactMe}
     height="h-auto"
-    backgroundColor="bg-wtw-turquoise"
+    backgroundColor="bg-purple-700"
   >
     <div className="container">
-      <div>
+      <div className="mt-1 mb-5">
         <img
-          src="/icons/wtw-512x512.png"
+          src="icon-512x512.png"
           alt="Wen Ting Wang Logo"
           className={styles.contactMeLogo}
         />

@@ -1,5 +1,5 @@
 .footer {
-  @apply bg-wtw-dark-grey text-center p-5 text-white;
+  @apply bg-wtw-dark-grey p-5 text-white;
 }
 
 .copyrightText {
