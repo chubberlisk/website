@@ -7,7 +7,7 @@ const ContactMeSection = () => (
     id="contact-me"
     className={styles.contactMe}
     height="h-auto"
-    backgroundColor="bg-wtw-turquoise"
+    backgroundColor="bg-purple-700"
   >
     <div className="container">
       <div className="mt-1 mb-5">
