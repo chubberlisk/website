@@ -10,9 +10,9 @@ const ContactMeSection = () => (
     backgroundColor="bg-wtw-turquoise"
   >
     <div className="container">
-      <div>
+      <div className="mt-1 mb-5">
         <img
-          src="/icons/wtw-512x512.png"
+          src="icon-512x512.png"
           alt="Wen Ting Wang Logo"
           className={styles.contactMeLogo}
         />

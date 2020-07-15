@@ -6,7 +6,7 @@ const Layout = ({ title = "Wen Ting Wang", children }) => (
   <>
     <Head>
       <title>{title}</title>
-      <link rel="icon" href="/icons/wtw-512x512.png" />
+      <link rel="icon" href="favicon.ico" />
     </Head>
     <main>{children}</main>
     <Footer />
