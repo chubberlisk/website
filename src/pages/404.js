@@ -4,7 +4,7 @@ import Section from "../components/core/Section";
 
 export default function Custom404() {
   return (
-    <Layout>
+    <Layout title="Page not found | Wen Ting Wang">
       <Section id="about-me">
         <div className="container">
           <h1>Page not found</h1>
