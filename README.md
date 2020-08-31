@@ -62,7 +62,7 @@ To get a local copy up and running follow these simple steps.
 git clone git@github.com:chubberlisk/website.git
 ```
 
-2. Install packages in `chubberlisk` directory
+2. Install packages in `website` directory
 
 ```sh
 yarn
