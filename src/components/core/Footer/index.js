@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className="container">
       <div className={styles.copyrightText}>
-        © 2020 Copyright: Wen Ting Wang
+        © {new Date().getFullYear()} Copyright: Wen Ting Wang
       </div>
     </div>
   </footer>
