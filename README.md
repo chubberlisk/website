@@ -94,16 +94,20 @@ To interactively run the end-to-end tests:
 yarn test:e2e:interactive
 ```
 
+### Running the formatter
+
 To run formatting using [Prettier](https://prettier.io/):
 
 ```sh
 yarn format
 ```
 
+### Running the linter
+
 To run linting using [ESLint](https://eslint.org/):
 
 ```sh
-yarn format
+yarn lint
 ```
 
 ## License
