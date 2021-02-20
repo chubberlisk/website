@@ -31,11 +31,11 @@ p {
 }
 
 a {
-  @apply underline
+  @apply underline;
 }
 
 a:hover {
-  @apply no-underline
+  @apply no-underline;
 }
 
 @media (max-width: 640px) {
