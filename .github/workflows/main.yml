@@ -1,6 +1,5 @@
-name: CI
-on:
-  pull_request: {}
+name: CI/CD
+on: [push, pull_request]
 jobs:
   formatting-and-linting:
     runs-on: ubuntu-latest
@@ -26,3 +25,17 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           command: yarn test:e2e
+  deployment:
+    if: github.ref == 'refs/heads/main'
+    needs: [formatting-and-linting, end-to-end-testing]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-args: --confirm --prod
+          vercel-org-id: ${{ secrets.ORG_ID }}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
