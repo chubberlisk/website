@@ -39,6 +39,6 @@ describe("User visits home page", function () {
   }
 
   function andISeeAFooter() {
-    cy.get("footer").should("include.text", "© 2020 Copyright: Wen Ting Wang");
+    cy.get("footer").should("include.text", "Copyright: Wen Ting Wang");
   }
 });
