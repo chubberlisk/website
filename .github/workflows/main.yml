@@ -26,7 +26,7 @@ jobs:
         with:
           command: yarn test:e2e
   deployment:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: [formatting-and-linting, end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
