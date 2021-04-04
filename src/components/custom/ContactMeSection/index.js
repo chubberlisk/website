@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../../core/Section";
+import Image from 'next/image'
 import styles from "./index.module.css";
 
 const ContactMeSection = () => (
@@ -11,10 +12,11 @@ const ContactMeSection = () => (
   >
     <div className="container">
       <div className="mt-1 mb-5">
-        <img
+        <Image
           src="/images/icons/icon-512x512.png"
           alt="Wen Ting Wang Logo"
-          className={styles.contactMeLogo}
+          width={72}
+          height={72}
         />
       </div>
       <div className={styles.contactMeTitle}>

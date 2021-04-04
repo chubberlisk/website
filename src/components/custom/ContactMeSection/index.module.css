@@ -2,11 +2,6 @@
   @apply text-purple-100;
 }
 
-.contactMeLogo {
-  width: 72px;
-  display: initial;
-}
-
 .contactMeTitle {
   @apply text-2xl;
   font-family: "Noto Sans JP", sans-serif;
