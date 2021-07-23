@@ -12,7 +12,3 @@ updates:
   - dependency-name: webpack
     versions:
     - 5.24.2
-  automerged_updates:
-    - match:
-      dependency_type: "all"
-      update_type: "all"
