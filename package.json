@@ -30,6 +30,6 @@
     "eslint-plugin-react": "^7.24.0",
     "prettier": "^2.3.2",
     "start-server-and-test": "^1.13.1",
-    "webpack": "^5.49.0"
+    "webpack": "^5.50.0"
   }
 }
