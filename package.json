@@ -29,7 +29,7 @@
     "eslint-plugin-cypress": "^2.11.3",
     "eslint-plugin-react": "^7.25.0",
     "prettier": "^2.3.2",
-    "start-server-and-test": "^1.13.1",
+    "start-server-and-test": "^1.14.0",
     "webpack": "^5.51.1"
   }
 }
