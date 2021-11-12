@@ -30,6 +30,9 @@ jobs:
   deployment:
     name: 🚀 Deployment
     if: github.ref == 'refs/heads/master'
+    concurrency: deployment
+    environment:
+      name: Production
     needs: [end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
