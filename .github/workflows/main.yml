@@ -29,7 +29,7 @@ jobs:
 
   deployment:
     name: 🚀 Deployment
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     concurrency: deployment
     environment:
       name: Production
