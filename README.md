@@ -1,4 +1,4 @@
-![CI](https://github.com/chubberlisk/website/workflows/CI/badge.svg)
+[![CI/CD](https://github.com/chubberlisk/website/actions/workflows/main.yml/badge.svg)](https://github.com/chubberlisk/website/actions/workflows/main.yml)
 
 <p align="center">
   <a href="https://github.com/chubberlisk/website">
@@ -17,41 +17,40 @@
   </p>
 </p>
 
-## Contents
+## 🍱 Contents <!-- omit in toc -->
 
-- [About the project](#about-the-project)
+- [👩‍🏫 About the project](#-about-the-project)
   - [Built with](#built-with)
   - [Deployed using](#deployed-using)
-- [Getting started](#getting-started)
+- [🏃‍♀️ Getting started](#️-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
+- [🐱‍💻 Usage](#-usage)
+  - [Running the application](#running-the-application)
+  - [Running the tests](#running-the-tests)
+  - [Running the linter](#running-the-linter)
+- [📜 License](#-license)
 
-## About the project
+## 👩‍🏫 About the project
 
-This is the personal website for Wen Ting Wang. Originally, it served as an informal CV and portfolio but currently a rebuild is underway for the second time.
-
-For the repository of the previous version of the website: https://github.com/chubberlisk/chubberlisk.github.io.
-
-For the previous version of the website: <a href="https://chubberlisk.github.io">https://chubberlisk.github.io</a>.
+This is the personal website for Wen Ting Wang. Admittedly, it's gone through a number of versions, see [previous repository that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
 ### Built with
 
-- [NextJS](https://nextjs.org/)
+- [Next.js](https://nextjs.org/)
 - [Cypress](https://www.cypress.io/)
 
 ### Deployed using
 
 - [Vercel](https://vercel.com/)
 
-## Getting started
+## 🏃‍♀️ Getting started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-- [NodeJS](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/docs/getting-started)
 
 ### Installation
@@ -68,7 +67,7 @@ git clone git@github.com:chubberlisk/website.git
 yarn
 ```
 
-## Usage
+## 🐱‍💻 Usage
 
 ### Running the application
 
@@ -94,14 +93,6 @@ To interactively run the end-to-end tests:
 yarn test:e2e:interactive
 ```
 
-### Running the formatter
-
-To run formatting using [Prettier](https://prettier.io/):
-
-```sh
-yarn format
-```
-
 ### Running the linter
 
 To run linting using [ESLint](https://eslint.org/):
@@ -110,6 +101,6 @@ To run linting using [ESLint](https://eslint.org/):
 yarn lint
 ```
 
-## License
+## 📜 License
 
 Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
