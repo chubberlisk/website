@@ -17,30 +17,30 @@
   </p>
 </p>
 
-## 🍱 Contents <!-- omit in toc -->
+## 📚 Contents <!-- omit in toc -->
 
-- [👩‍🏫 About the project](#-about-the-project)
-  - [Built with](#built-with)
-  - [Deployed using](#deployed-using)
+- [📘 About the project](#-about-the-project)
+  - [🧱 Built with](#-built-with)
+  - [🚀 Deployed using](#-deployed-using)
 - [🏃‍♀️ Getting started](#️-getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [✅ Prerequisites](#-prerequisites)
+  - [🏗 Installation](#-installation)
 - [🐱‍💻 Usage](#-usage)
-  - [Running the application](#running-the-application)
-  - [Running the tests](#running-the-tests)
-  - [Running the linter](#running-the-linter)
+  - [🖥 Running the application](#-running-the-application)
+  - [🧪 Running the tests](#-running-the-tests)
+  - [🧹 Running the linter](#-running-the-linter)
 - [📜 License](#-license)
 
-## 👩‍🏫 About the project
+## 📘 About the project
 
 This is the personal website for Wen Ting Wang. Admittedly, it's gone through a number of versions, see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
-### Built with
+### 🧱 Built with
 
 - [Next.js](https://nextjs.org/)
 - [Cypress](https://www.cypress.io/)
 
-### Deployed using
+### 🚀 Deployed using
 
 - [Vercel](https://vercel.com/)
 
@@ -48,12 +48,12 @@ This is the personal website for Wen Ting Wang. Admittedly, it's gone through a 
 
 To get a local copy up and running follow these simple steps.
 
-### Prerequisites
+### ✅ Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/docs/getting-started)
 
-### Installation
+### 🏗 Installation
 
 1. Clone the repo
 
@@ -69,7 +69,7 @@ yarn
 
 ## 🐱‍💻 Usage
 
-### Running the application
+### 🖥 Running the application
 
 To run the application for local development:
 
@@ -79,7 +79,7 @@ yarn dev
 
 Then visit [http://localhost:3000](http://localhost:3000).
 
-### Running the tests
+### 🧪 Running the tests
 
 To run just the end-to-end tests using [Cypress](https://www.cypress.io/):
 
@@ -93,7 +93,7 @@ To interactively run the end-to-end tests:
 yarn test:e2e:interactive
 ```
 
-### Running the linter
+### 🧹 Running the linter
 
 To run linting using [ESLint](https://eslint.org/):
 
