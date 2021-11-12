@@ -33,7 +33,7 @@
 
 ## 👩‍🏫 About the project
 
-This is the personal website for Wen Ting Wang. Admittedly, it's gone through a number of versions, see [previous repository that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
+This is the personal website for Wen Ting Wang. Admittedly, it's gone through a number of versions, see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
 ### Built with
 
