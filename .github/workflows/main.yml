@@ -33,6 +33,7 @@ jobs:
     concurrency: deployment
     environment:
       name: Production
+      url: https://wentingwang.co.uk
     needs: [end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
