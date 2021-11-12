@@ -2,6 +2,7 @@ name: CI/CD
 on: push
 jobs:
   end-to-end-testing:
+    name: 🖥️ End to end tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -13,6 +14,7 @@ jobs:
           command: yarn test:e2e
 
   deployment:
+    name: 🚀 Deployment
     if: github.ref == 'refs/heads/master'
     needs: [end-to-end-testing]
     runs-on: ubuntu-latest
