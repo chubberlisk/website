@@ -12,13 +12,6 @@ const AboutMeSection = () => (
   >
     <div className="container">
       <h2>A bit about me</h2>
-      <Image
-        src="/images/paintings/tingker-bell.png"
-        alt="Tingker Bell"
-        className="float-right ml-4 my-2 h-24"
-        width="100"
-        height="100"
-      />
       <p>
         I’m a software engineer at{" "}
         <a
@@ -40,18 +33,7 @@ const AboutMeSection = () => (
         </a>{" "}
         programme in 2019. I build software that makes our customers happy,
         using Agile practices and techniques such as continuous delivery,
-        test-driven development and pair programming. More recently though, I’ve
-        been using Microsoft Paint and Photos to bring a little silliness into
-        the workplace. Check out my{" "}
-        <a
-          href="https://github.com/chubberlisk/paintings"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-yellow-300"
-        >
-          GitHub repository of paintings
-        </a>
-        .
+        test-driven development and pair programming.
       </p>
     </div>
   </Section>
