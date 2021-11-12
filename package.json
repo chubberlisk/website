@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write 'src/**/*.{js,css,md,yml}'",
-    "format:check": "prettier --check 'src/**/*.{js,css,md,yml}'",
-    "lint": "eslint . --ext .js",
+    "lint": "next lint",
     "test:e2e": "start-server-and-test 'next dev --port 3001' 3001 'cypress run --headless'",
     "test:e2e:interactive": "start-server-and-test 'next dev --port 3001' 3001 'cypress open'"
   },
@@ -24,11 +22,9 @@
   },
   "devDependencies": {
     "cypress": "^8.7.0",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "^12.0.3",
-    "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-react": "^7.26.1",
-    "prettier": "^2.4.1",
+    "eslint": "<8.0.0",
+    "eslint-config-next": "12.0.3",
+    "eslint-config-prettier": "^8.3.0",
     "start-server-and-test": "^1.14.0",
     "webpack": "^5.64.0"
   }

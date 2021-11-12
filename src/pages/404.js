@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/core/Layout";
 import Section from "../components/core/Section";
+import Link from "next/link";
 
 export default function Custom404() {
   return (
@@ -12,9 +13,9 @@ export default function Custom404() {
           <p>I can&apos;t seem to find what you&apos;re looking for.</p>
           <p>
             Try heading back to the{" "}
-            <a href="/" className="text-blue-900">
-              homepage
-            </a>
+            <Link href="/" className="text-blue-900">
+              <a>homepage</a>
+            </Link>
             , that should exist.
           </p>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../../core/Section";
 import styles from "./index.module.css";
+import Image from "next/image";
 
 const AboutMeSection = () => (
   <Section
@@ -11,10 +12,12 @@ const AboutMeSection = () => (
   >
     <div className="container">
       <h2>A bit about me</h2>
-      <img
+      <Image
         src="/images/paintings/tingker-bell.png"
         alt="Tingker Bell"
         className="float-right ml-4 my-2 h-24"
+        width="100"
+        height="100"
       />
       <p>
         I’m a software engineer at{" "}
