@@ -15,7 +15,8 @@ const LandingSection = () => (
         <span className={classNames("textGradient", "font-black")}>Ting</span>.
       </h2>
       <p className="md:w-2/4">
-        I'm a software engineer based in London, UK. Currently, I'm working at{" "}
+        I&apos;m a software engineer based in London, UK. Currently, I&apos;m
+        working at{" "}
         <a
           href="https://madetech.com"
           target="_blank"
