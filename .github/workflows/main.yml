@@ -9,7 +9,6 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Run linting
-        uses: cypress-io/github-action@v2
         run: yarn lint
 
   end-to-end-testing:
@@ -45,7 +44,7 @@ jobs:
     environment:
       name: Production
       url: https://wentingwang.co.uk
-    needs: [end-to-end-testing]
+    needs: [linting, end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
