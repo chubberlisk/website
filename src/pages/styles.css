@@ -7,23 +7,26 @@ h2,
 h3,
 h4 {
   font-family: "Noto Sans JP", sans-serif;
-  line-height: 1.75;
 }
 
 h1 {
   @apply text-5xl;
+  @apply leading-relaxed;
 }
 
 h2 {
   @apply text-4xl;
+  @apply leading-relaxed;
 }
 
 h3 {
   @apply text-3xl;
+  @apply leading-relaxed;
 }
 
 h4 {
   @apply text-2xl;
+  @apply leading-relaxed;
 }
 
 p {
@@ -41,18 +44,22 @@ a:hover {
 @media (max-width: 640px) {
   h1 {
     @apply text-3xl;
+    @apply leading-relaxed;
   }
 
   h2 {
     @apply text-2xl;
+    @apply leading-relaxed;
   }
 
   h3 {
     @apply text-xl;
+    @apply leading-relaxed;
   }
 
   h4 {
     @apply text-lg;
+    @apply leading-relaxed;
   }
 
   p {

@@ -11,14 +11,16 @@
     "test:e2e:interactive": "start-server-and-test 'next dev --port 3001' 3001 'cypress open'"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.0",
     "classnames": "^2.3.1",
     "next": "12.0.3",
     "next-pwa": "^5.4.0",
     "node-fetch": "^3.1.0",
+    "postcss": "^8.3.11",
     "postcss-preset-env": "^6.7.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tailwindcss": "^1.9.6"
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "cypress": "^9.0.0",
