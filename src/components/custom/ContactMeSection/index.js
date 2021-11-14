@@ -1,15 +1,10 @@
 import React from "react";
 import Section from "../../core/Section";
-import Image from 'next/image'
-import styles from "./index.module.css";
+import Image from "next/image";
+import classNames from "classnames";
 
 const ContactMeSection = () => (
-  <Section
-    id="contact-me"
-    className={styles.contactMe}
-    height="h-auto"
-    backgroundColor="bg-purple-700"
-  >
+  <Section id="contact-me" height="h-auto">
     <div className="container">
       <div className="mt-1 mb-5">
         <Image
@@ -19,37 +14,35 @@ const ContactMeSection = () => (
           height={72}
         />
       </div>
-      <div className={styles.contactMeTitle}>
-        <b>Wen Ting Wang</b>
-      </div>
-      <div className={styles.contactMeSlogan}>
+
+      <h2
+        className={classNames("text-2xl", "textGradient", "font-black", "mb-1")}
+      >
+        Wen Ting Wang
+      </h2>
+
+      <p className={classNames("text-xl", "text-gray-100")}>
         Let&apos;s develop Tings together.
-      </div>
-      <div className={styles.contactMeSocialLinks}>
-        <ul className={styles.contactMeSocialLinksList}>
-          <li className={styles.contactMeSocialLinksListItem}>
-            <a
-              href="https://github.com/chubberlisk"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Wen Ting Wang's GitHub Profile"
-              className={styles.contactMeSocialLink}
-            >
-              GitHub
-            </a>
-          </li>
-          <li className={styles.contactMeSocialLinksListItem}>
-            <a
-              href="https://www.linkedin.com/in/wen-ting-wang"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Wen Ting Wang's LinkedIn Profile"
-              className={styles.contactMeSocialLink}
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
+      </p>
+
+      <div className="grid grid-cols-4 md:grid-cols-12 gap-4 md:gap-1">
+        <a
+          href="https://github.com/chubberlisk"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Wen Ting Wang's GitHub Profile"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/wen-ting-wang"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Wen Ting Wang's LinkedIn Profile"
+        >
+          LinkedIn
+        </a>
       </div>
     </div>
   </Section>

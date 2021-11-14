@@ -6,9 +6,11 @@ import ContactMeSection from "../components/custom/ContactMeSection";
 
 const Home = () => (
   <Layout>
-    <LandingSection />
-    <AboutMeSection />
-    <ContactMeSection />
+    <div className="divide-y-2 divide-wtw-yellow">
+      <LandingSection />
+      <AboutMeSection />
+      <ContactMeSection />
+    </div>
   </Layout>
 );
 

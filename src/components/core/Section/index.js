@@ -1,17 +1,21 @@
 import React from "react";
 import classNames from "classnames";
-import styles from "./index.module.css";
 
 const Section = ({
   id,
-  backgroundColor = "bg-wtw-yellow",
+  backgroundColor = "bg-wtw-black",
   height = "h-screen",
   className,
   children,
 }) => (
   <section
     id={id}
-    className={classNames(styles.section, backgroundColor, height, className)}
+    className={classNames(
+      "flex flex-col justify-center p-5",
+      backgroundColor,
+      height,
+      className
+    )}
   >
     {children}
   </section>

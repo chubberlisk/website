@@ -1,10 +1,9 @@
 import React from "react";
-import styles from "./index.module.css";
 
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer className="bg-black p-5">
     <div className="container">
-      <div className={styles.copyrightText}>
+      <div className="text-xs md:text-sm text-center">
         © {new Date().getFullYear()} Copyright: Wen Ting Wang
       </div>
     </div>

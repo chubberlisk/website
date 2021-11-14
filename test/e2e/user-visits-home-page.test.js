@@ -27,13 +27,13 @@ describe("User visits home page", function () {
   }
 
   function andISeeTheGitHubLink() {
-    cy.get("section#contact-me li:nth-child(1) a")
+    cy.contains("GitHub")
       .should("have.attr", "href")
       .and("include", "https://github.com/chubberlisk");
   }
 
   function andISeeTheLinkedInLink() {
-    cy.get("section#contact-me li:nth-child(2) a")
+    cy.contains("LinkedIn")
       .should("have.attr", "href")
       .and("include", "https://www.linkedin.com/in/wen-ting-wang");
   }
