@@ -1,6 +1,17 @@
 name: CI/CD
 on: push
 jobs:
+  linting:
+    name: 🧹 Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run linting
+        uses: cypress-io/github-action@v2
+        run: yarn lint
+
   end-to-end-testing:
     name: 🧪 End to end tests
     runs-on: ubuntu-latest
