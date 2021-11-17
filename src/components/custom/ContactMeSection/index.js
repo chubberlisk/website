@@ -1,18 +1,13 @@
 import React from "react";
 import Section from "../../core/Section";
-import Image from "next/image";
 import classNames from "classnames";
+import Logo from "../../core/Logo";
 
 const ContactMeSection = () => (
   <Section id="contact-me" height="h-auto">
     <div className="container">
       <div className="mt-1 mb-5">
-        <Image
-          src="/images/icons/icon-512x512.png"
-          alt="Wen Ting Wang Logo"
-          width={72}
-          height={72}
-        />
+        <Logo height="72px" width="72px" />
       </div>
 
       <h2
