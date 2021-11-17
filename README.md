@@ -25,7 +25,7 @@
 - [🏃‍♀️ Getting started](#️-getting-started)
   - [✅ Prerequisites](#-prerequisites)
   - [🏗 Installation](#-installation)
-- [🐱‍💻 Usage](#-usage)
+- [👩‍💻 Usage](#-usage)
   - [🖥 Running the application](#-running-the-application)
   - [🧪 Running the tests](#-running-the-tests)
   - [🧹 Running the linter](#-running-the-linter)
@@ -33,7 +33,7 @@
 
 ## 📘 About the project
 
-This is the personal website for Wen Ting Wang. Admittedly, it's gone through a number of versions, see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
+This is the personal website for Wen Ting Wang, see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
 ### 🧱 Built with
 
@@ -67,7 +67,7 @@ git clone git@github.com:chubberlisk/website.git
 yarn
 ```
 
-## 🐱‍💻 Usage
+## 👩‍💻 Usage
 
 ### 🖥 Running the application
 
