@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 const Layout = ({ title = "Wen Ting Wang", children }) => (
   <>
@@ -43,6 +44,7 @@ const Layout = ({ title = "Wen Ting Wang", children }) => (
         href="/images/icons/icon-16x16.png"
       />
     </Head>
+    <Navbar />
     <main>{children}</main>
     <Footer />
   </>

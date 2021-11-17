@@ -3,7 +3,7 @@
 @tailwind components;
 
 html {
-  @apply text-wtw-white;
+  @apply text-wtw-white bg-wtw-black;
   font-family: "DM Sans", sans-serif;
 }
 
@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  @apply underline;
+  @apply text-base md:text-lg underline;
 }
 
 a:hover {

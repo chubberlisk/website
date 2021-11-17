@@ -3,7 +3,7 @@ import React from "react";
 import Section from "../../core/Section";
 
 const LandingSection = () => (
-  <Section id="landing">
+  <Section id="landing" height="h-screen-90">
     <div className={classNames("container")}>
       <h1 className="text-xl md:text-3xl leading-normal mb-3">Hi there! 👋</h1>
       <h2 className="text-4xl md:text-7xl leading-normal mb-9 md:w-3/4">
