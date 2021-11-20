@@ -23,7 +23,10 @@ const ComicCard = ({ image: { src, alt }, title, publishedDate, tags }) => (
 
         <div className="flex flex-wrap">
           {tags.map((tag) => (
-            <span className="flex-shrink rounded-full bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-black mr-2 mb-1">
+            <span
+              className="flex-shrink rounded-full bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-black mr-2 mb-1"
+              key={tag}
+            >
               {tag}
             </span>
           ))}
