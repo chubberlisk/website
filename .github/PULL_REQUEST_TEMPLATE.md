@@ -6,7 +6,7 @@
 
 <!-- If there are UI changes, please include Before and After screenshots. -->
 
-<!-- 
+<!--
 | Before | After |
 |--------|-------|
 |        |       |

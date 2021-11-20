@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write .",
     "test:e2e": "start-server-and-test 'next dev --port 3001' 3001 'cypress run --headless'",
     "test:e2e:interactive": "start-server-and-test 'next dev --port 3001' 3001 'cypress open'"
   },
@@ -27,6 +28,7 @@
     "eslint": "<8.0.0",
     "eslint-config-next": "12.0.3",
     "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1",
     "start-server-and-test": "^1.14.0",
     "webpack": "^5.64.0"
   }

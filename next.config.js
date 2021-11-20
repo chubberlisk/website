@@ -5,5 +5,5 @@ module.exports = withPWA({
     dest: "public",
     disable: process.env.NODE_ENV != "production",
   },
-  webpack5: true
+  webpack5: true,
 });
