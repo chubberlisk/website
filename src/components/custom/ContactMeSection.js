@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Logo from "../core/Logo";
 
 const ContactMeSection = () => (
-  <Section id="contact-me" height="h-auto">
+  <Section id="contact-me" minHeight="h-auto">
     <div className="container">
       <div className="mt-1 mb-5">
         <Logo height="72px" width="72px" />
