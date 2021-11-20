@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Custom404() {
   return (
     <Layout title="Page not found | Wen Ting Wang">
-      <Section>
+      <Section height="h-screen-90">
         <div className="container">
           <h1>😞 Page not found</h1>
           <p>
