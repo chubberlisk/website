@@ -8,12 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
+    "test": "jest",
     "test:e2e": "start-server-and-test 'next dev --port 3001' 3001 'cypress run --headless'",
     "test:e2e:interactive": "start-server-and-test 'next dev --port 3001' 3001 'cypress open'"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "classnames": "^2.3.1",
+    "moment": "^2.29.1",
     "next": "12.0.3",
     "next-pwa": "^5.4.0",
     "node-fetch": "^3.1.0",
@@ -24,11 +26,17 @@
     "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.3.1",
     "cypress": "^9.0.0",
     "eslint": "<8.0.0",
     "eslint-config-next": "12.0.3",
     "eslint-config-prettier": "^8.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
     "prettier": "^2.4.1",
+    "react-test-renderer": "^17.0.2",
     "start-server-and-test": "^1.14.0",
     "webpack": "^5.64.0"
   }
