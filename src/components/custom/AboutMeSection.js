@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../../core/Section";
+import Section from "../core/Section";
 
 const AboutMeSection = () => (
   <Section id="about-me">

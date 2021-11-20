@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "../../core/Section";
+import Section from "../core/Section";
 import classNames from "classnames";
-import Logo from "../../core/Logo";
+import Logo from "../core/Logo";
 
 const ContactMeSection = () => (
   <Section id="contact-me" height="h-auto">

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import Section from "../../core/Section";
+import Section from "../core/Section";
 
 const LandingSection = () => (
   <Section id="landing" height="h-screen-90">
