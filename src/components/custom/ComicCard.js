@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { formatDate } from "../../../lib/formatters/date";
 
 const ComicCard = ({
   title,
@@ -17,12 +18,15 @@ const ComicCard = ({
       layout="responsive"
       className="w-full object-fill"
     />
+
     <div className="pt-5">
       <h2 className="text-lg md:text-xl font-semibold mb-3">{title}</h2>
 
-      <p className="text-sm md:text-base w-full">Published on {publishDate}</p>
+      <p className="text-sm md:text-base w-full">
+        Published on {formatDate(publishDate)}
+      </p>
 
-      <p className="text-sm md:text-base w-full mb-0">
+      <div className="text-sm md:text-base w-full mb-0">
         <span className="float-left mr-5">#{number}</span>
 
         <div className="flex flex-wrap">
@@ -35,7 +39,7 @@ const ComicCard = ({
             </span>
           ))}
         </div>
-      </p>
+      </div>
     </div>
   </div>
 );

@@ -18,6 +18,7 @@ const Comics = () => (
               image={image}
               tags={tags}
               number={index + 1}
+              key={title}
             />
           ))}
         </div>
