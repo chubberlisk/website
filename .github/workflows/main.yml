@@ -20,8 +20,27 @@ jobs:
       - name: Run linting
         run: yarn lint
 
+  unit-testing:
+    name: 🧪 Unit testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run linting
+        run: yarn test
+
   end-to-end-testing:
-    name: 🧪 End to end tests
+    name: 🖥 End to end tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -53,7 +72,7 @@ jobs:
     environment:
       name: Production
       url: https://wentingwang.co.uk
-    needs: [linting, end-to-end-testing]
+    needs: [linting, unit-testing, end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
