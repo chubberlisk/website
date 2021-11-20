@@ -8,8 +8,9 @@ const AboutMeSection = () => (
 
       <p>
         After accidentally discovering a passion for programming during
-        A-Levels, I embarked on a journey to learn more software engineering -
-        getting a degree in Computer Science and eventually joining the{" "}
+        A-Levels, I embarked on a journey to learn more about software
+        engineering - getting a degree in Computer Science and eventually
+        joining the{" "}
         <a
           href="https://madetech.com/careers/academy"
           target="_blank"
