@@ -17,6 +17,7 @@ const ComicCard = ({
       height={250}
       layout="responsive"
       className="w-full object-fill"
+      quality={100}
     />
 
     <div className="pt-5">

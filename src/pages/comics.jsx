@@ -10,17 +10,25 @@ const Comics = () => (
       <div className="container">
         <h1>Comics</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {comics.map(({ image, title, publishDate, tags }, index) => (
-            <ComicCard
-              title={title}
-              publishDate={publishDate}
-              image={image}
-              tags={tags}
-              number={index + 1}
-              key={title}
-            />
-          ))}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+          data-testid="comics"
+        >
+          {comics
+            .sort(
+              (comicA, comicB) =>
+                new Date(comicB.publishDate) - new Date(comicA.publishDate)
+            )
+            .map(({ image, title, publishDate, tags }, index) => (
+              <ComicCard
+                title={title}
+                publishDate={publishDate}
+                image={image}
+                tags={tags}
+                number={comics.length - index}
+                key={title}
+              />
+            ))}
         </div>
       </div>
     </Section>
