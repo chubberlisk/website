@@ -5,7 +5,31 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "2rem",
+        sm: "2rem",
+        md: "4rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
+    minHeight: {
+      0: "0",
+      "1/4": "25%",
+      "1/2": "50%",
+      "3/4": "75%",
+      full: "100%",
+      "screen-10": "10vh",
+      "screen-20": "20vh",
+      "screen-30": "30vh",
+      "screen-40": "40vh",
+      "screen-50": "50vh",
+      "screen-60": "60vh",
+      "screen-70": "70vh",
+      "screen-80": "80vh",
+      "screen-90": "90vh",
+      screen: "100vh",
     },
     extend: {
       colors: {
