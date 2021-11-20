@@ -15,7 +15,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run linting
         run: yarn lint
@@ -34,7 +34,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run linting
         run: yarn test
