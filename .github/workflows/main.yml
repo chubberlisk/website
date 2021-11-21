@@ -76,7 +76,7 @@ jobs:
       - name: Install dependencies from cache
         run: yarn --offline --frozen-lockfile
 
-      - name: Cache or restore built application
+      - name: Restore built application from cache
         uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
