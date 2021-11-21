@@ -5,7 +5,7 @@ import comics from "../../../content/comics";
 
 const ComicsSection = () => (
   <Section id="comics">
-    <div className="container">
+    <div className="container md:my-5 lg:my-10">
       <h2>Comics</h2>
 
       <p className="mb-5">
