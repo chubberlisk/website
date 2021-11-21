@@ -62,13 +62,28 @@ jobs:
   end-to-end-testing:
     name: 🖥 End to end testing
     runs-on: ubuntu-latest
+    needs: dependencies
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
+      - name: Setup Nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Install dependencies from cache
+        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
+
+      - name: Build application
+        run: yarn build
+
       - name: Run end to end tests
         uses: cypress-io/github-action@v2
         with:
+          start: yarn start -p 3001
+          wait-on: http://localhost:3001/
           command: yarn test:e2e
 
       - name: Upload screenshots
