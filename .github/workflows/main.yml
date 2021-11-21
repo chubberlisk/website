@@ -17,7 +17,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.setup-nodejs.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile --ignore-optional --ignore-scripts
+        run: yarn --frozen-lockfile
 
   linting:
     name: 🧹 Linting
@@ -74,7 +74,14 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile --ignore-optional
+        run: yarn --offline --frozen-lockfile
+
+      - name: Cache or restore built application
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**.js', '**.jsx') }}
+          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
 
       - name: Build application
         run: yarn build
@@ -82,6 +89,7 @@ jobs:
       - name: Run end to end tests
         uses: cypress-io/github-action@v2
         with:
+          install: false
           start: yarn start -p 3001
           wait-on: http://localhost:3001/
           command: yarn test:e2e
