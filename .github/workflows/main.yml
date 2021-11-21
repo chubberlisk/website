@@ -74,7 +74,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
+        run: yarn --offline --frozen-lockfile --ignore-optional
 
       - name: Build application
         run: yarn build
