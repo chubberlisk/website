@@ -18,6 +18,15 @@ const ComicsSection = () => (
           aria-label="I am Tingker Bell on Webtoons"
         >
           Webtoons
+        </a>
+        {", "}
+        <a
+          href="https://www.instagram.com/chubbertiste/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chubbertiste's Instagram"
+        >
+          Instagram
         </a>{" "}
         and{" "}
         <a
