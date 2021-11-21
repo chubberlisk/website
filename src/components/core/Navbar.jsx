@@ -18,11 +18,11 @@ const Navbar = () => (
         <Link href="/#about-me">
           <a className="inline-block mr-5 md:mr-10">About</a>
         </Link>
-        <Link href="/#contact-me">
-          <a className="inline-block mr-5 md:mr-10">Contact</a>
+        <Link href="/#comics">
+          <a className="inline-block mr-5 md:mr-10">Comics</a>
         </Link>
-        <Link href="/comics">
-          <a className="inline-block">Comics</a>
+        <Link href="/#contact-me">
+          <a className="inline-block">Contact</a>
         </Link>
       </div>
     </nav>

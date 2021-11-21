@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Comics from "../../src/pages/comics";
+import ComicsSection from "./ComicsSection";
 
-jest.mock("../../content/comics", () => [
+jest.mock("../../../content/comics", () => [
   {
     title: "Comic title 1",
     publishDate: "2021-03-01",
@@ -24,7 +24,7 @@ jest.mock("../../content/comics", () => [
 ]);
 
 it("orders comics by publish date with most recent first", () => {
-  render(<Comics />);
+  render(<ComicsSection />);
 
   const comics = screen.getByTestId("comics");
 
@@ -33,7 +33,7 @@ it("orders comics by publish date with most recent first", () => {
 });
 
 it("sets a number for each comic with the most recent highest", () => {
-  render(<Comics />);
+  render(<ComicsSection />);
 
   const comics = screen.getByTestId("comics");
 
