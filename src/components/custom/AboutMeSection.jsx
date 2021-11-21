@@ -30,7 +30,7 @@ const AboutMeSection = () => (
         pair (or 🍐) programming.
       </p>
 
-      <p>Technologies I&apos;m currently working with:</p>
+      <p>Technologies I&apos;m currently working with include:</p>
 
       <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-4">
         <div className="flex justify-start items-center">
@@ -65,6 +65,7 @@ const AboutMeSection = () => (
           </svg>
           <span>TypeScript</span>
         </div>
+
         <div className="flex justify-start items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,6 +109,7 @@ const AboutMeSection = () => (
           </svg>
           <span>C# .NET</span>
         </div>
+
         <div className="flex justify-start items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
