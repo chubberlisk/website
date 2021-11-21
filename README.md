@@ -27,8 +27,10 @@
   - [🏗 Installation](#-installation)
 - [👩‍💻 Usage](#-usage)
   - [🖥 Running the application](#-running-the-application)
-  - [🧪 Running the tests](#-running-the-tests)
+  - [🧪 Running the unit tests](#-running-the-unit-tests)
+  - [🖥 Running the end-to-end tests](#-running-the-end-to-end-tests)
   - [🧹 Running the linter](#-running-the-linter)
+  - [❤ Running the formatter](#-running-the-formatter)
 - [📜 License](#-license)
 
 ## 📘 About the project
@@ -79,18 +81,30 @@ yarn dev
 
 Then visit [http://localhost:3000](http://localhost:3000).
 
-### 🧪 Running the tests
+### 🧪 Running the unit tests
 
-To run just the end-to-end tests using [Cypress](https://www.cypress.io/):
+To run the unit tests that use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
+
+```sh
+yarn test
+```
+
+### 🖥 Running the end-to-end tests
+
+To run the end-to-end tests using [Cypress](https://www.cypress.io/)'s headless mode:
 
 ```sh
 yarn test:e2e
+# or with a server as well
+yarn test:e2e:with-server
 ```
 
 To interactively run the end-to-end tests:
 
 ```sh
 yarn test:e2e:interactive
+# or with a server as well
+yarn test:e2e:interactive:with-server
 ```
 
 ### 🧹 Running the linter
@@ -99,6 +113,14 @@ To run linting using [ESLint](https://eslint.org/):
 
 ```sh
 yarn lint
+```
+
+### ❤ Running the formatter
+
+To run linting that uses [Prettier](https://prettier.io/):
+
+```sh
+yarn format
 ```
 
 ## 📜 License
