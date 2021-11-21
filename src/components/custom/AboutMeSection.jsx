@@ -25,9 +25,9 @@ const AboutMeSection = () => (
 
       <p>
         Now I&apos;m a Software Engineer 2 at the company, building software
-        that makes our clients and users happy, using Agile practices and
-        techniques such as continuous delivery, TDD and pair (or 🍐)
-        programming.
+        that makes our clients and users happy, using a silly sense of humour
+        and Agile practices and techniques such as continuous delivery, TDD and
+        pair (or 🍐) programming.
       </p>
 
       <p>Technologies I&apos;m currently working with:</p>
