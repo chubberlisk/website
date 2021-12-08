@@ -6,13 +6,17 @@ const Navbar = () => (
   <div className="container">
     <nav className="flex items-center justify-between flex-wrap h-screen-10">
       <div className="flex items-center flex-shrink-0 mr-6">
-        <Logo
-          cropped={true}
-          height="75px"
-          width="75px"
-          backgroundColor="bg-wtw-black"
-          textColor="text-wtw-yellow"
-        />
+        <Link href="/">
+          <a>
+            <Logo
+              cropped={true}
+              height="75px"
+              width="75px"
+              backgroundColor="bg-wtw-black"
+              textColor="text-wtw-yellow"
+            />
+          </a>
+        </Link>
       </div>
       <div className="block">
         <Link href="/#about-me">
