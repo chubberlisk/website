@@ -26,6 +26,7 @@ const ContactMeSection = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Wen Ting Wang's GitHub Profile"
+          className="text-wtw-white"
         >
           GitHub
         </a>
@@ -35,6 +36,7 @@ const ContactMeSection = () => (
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Wen Ting Wang's LinkedIn Profile"
+          className="text-wtw-white"
         >
           LinkedIn
         </a>

@@ -16,13 +16,13 @@ const Navbar = () => (
       </div>
       <div className="block">
         <Link href="/#about-me">
-          <a className="inline-block mr-5 md:mr-10">About</a>
+          <a className="inline-block mr-5 md:mr-10 text-wtw-white">About</a>
         </Link>
         <Link href="/#paintings">
-          <a className="inline-block mr-5 md:mr-10">Paintings</a>
+          <a className="inline-block mr-5 md:mr-10 text-wtw-white">Paintings</a>
         </Link>
         <Link href="/#contact-me">
-          <a className="inline-block">Contact</a>
+          <a className="inline-block text-wtw-white">Contact</a>
         </Link>
       </div>
     </nav>

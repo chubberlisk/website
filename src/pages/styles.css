@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  @apply text-base md:text-lg underline;
+  @apply text-base md:text-lg underline text-blue-500;
 }
 
 a:hover {

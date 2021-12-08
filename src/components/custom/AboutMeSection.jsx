@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import Section from "../core/Section";
 
@@ -27,10 +28,16 @@ const AboutMeSection = () => (
         Now I&apos;m a Software Engineer 2 at the company, building software
         that makes our clients and users happy, using a silly sense of humour
         and Agile practices and techniques such as continuous delivery, TDD and
-        pair (or 🍐) programming.
+        pair (or 🍐) programming. Oh, and I may or may not have had a phase
+        where I made some{" "}
+        <Link href="#paintings">
+          <a className="inline-block">&quot;paintings&quot;</a>
+        </Link>{" "}
+        (emphasis on the &quot;pain&quot; and &quot;ting&quot;) using Microsoft
+        Paint. It&apos;s related to creating amazing software, I promise!
       </p>
 
-      <p>Technologies I&apos;m currently working with include:</p>
+      <p>Anyway, technologies I&apos;m currently working with include:</p>
 
       <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-4">
         <div className="flex justify-start items-center">
