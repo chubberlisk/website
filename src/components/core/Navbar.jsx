@@ -18,8 +18,8 @@ const Navbar = () => (
         <Link href="/#about-me">
           <a className="inline-block mr-5 md:mr-10">About</a>
         </Link>
-        <Link href="/#comics">
-          <a className="inline-block mr-5 md:mr-10">Comics</a>
+        <Link href="/#paintings">
+          <a className="inline-block mr-5 md:mr-10">Paintings</a>
         </Link>
         <Link href="/#contact-me">
           <a className="inline-block">Contact</a>

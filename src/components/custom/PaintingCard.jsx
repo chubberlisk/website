@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { formatDate } from "../../../lib/formatters/date";
 
-const ComicCard = ({
+const PaintingCard = ({
   title,
   publishDate,
   image: { src, alt },
@@ -45,4 +45,4 @@ const ComicCard = ({
   </div>
 );
 
-export default ComicCard;
+export default PaintingCard;

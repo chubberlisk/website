@@ -1,12 +1,12 @@
 import React from "react";
 import Section from "../core/Section";
-import ComicCard from "./ComicCard";
-import comics from "../../../content/comics";
+import PaintingCard from "./PaintingCard";
+import paintings from "../../../content/paintings";
 
-const ComicsSection = () => (
-  <Section id="comics">
+const PaintingsSection = () => (
+  <Section id="paintings">
     <div className="container md:my-5 lg:my-10">
-      <h2>Comics</h2>
+      <h2>Paintings</h2>
 
       <p className="mb-5">
         These are a poor attempt at making comics using Microsoft Paint. It
@@ -42,20 +42,20 @@ const ComicsSection = () => (
 
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
-        data-testid="comics"
+        data-testid="paintings"
       >
-        {comics
+        {paintings
           .sort(
-            (comicA, comicB) =>
-              new Date(comicB.publishDate) - new Date(comicA.publishDate)
+            (paintingA, paintingB) =>
+              new Date(paintingB.publishDate) - new Date(paintingA.publishDate)
           )
           .map(({ image, title, publishDate, tags }, index) => (
-            <ComicCard
+            <PaintingCard
               title={title}
               publishDate={publishDate}
               image={image}
               tags={tags}
-              number={comics.length - index}
+              number={paintings.length - index}
               key={title}
             />
           ))}
@@ -64,4 +64,4 @@ const ComicsSection = () => (
   </Section>
 );
 
-export default ComicsSection;
+export default PaintingsSection;

@@ -1,11 +1,11 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ComicCard from "./ComicCard";
+import PaintingCard from "./PaintingCard";
 
 it("displays the title", () => {
   render(
-    <ComicCard
-      title="Amazing comic title"
+    <PaintingCard
+      title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
@@ -13,13 +13,13 @@ it("displays the title", () => {
     />
   );
 
-  expect(screen.getByText("Amazing comic title")).toBeVisible();
+  expect(screen.getByText("Amazing painting title")).toBeVisible();
 });
 
 it("formats the publish date", () => {
   render(
-    <ComicCard
-      title="Amazing comic title"
+    <PaintingCard
+      title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
@@ -30,10 +30,10 @@ it("formats the publish date", () => {
   expect(screen.getByText("Published on 1st March 2021")).toBeVisible();
 });
 
-it("displays the comic number", () => {
+it("displays the painting number", () => {
   render(
-    <ComicCard
-      title="Amazing comic title"
+    <PaintingCard
+      title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
@@ -46,8 +46,8 @@ it("displays the comic number", () => {
 
 it("displays all tags", () => {
   render(
-    <ComicCard
-      title="Amazing comic title"
+    <PaintingCard
+      title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
