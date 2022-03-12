@@ -25,7 +25,7 @@ const LandingSection = () => (
         >
           Made Tech
         </a>{" "}
-        helping to build services for the public sector.
+        helping to build services for the public sector and making Ting puns.
       </p>
     </div>
   </Section>
