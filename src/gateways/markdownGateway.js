@@ -11,12 +11,19 @@ export default class MarkdownGateway {
     const slug = file.replace(/\.md$/, "");
     const fullPath = join(resolve("./", this.postsDirectory), `${slug}.md`);
     const fileContents = fileSystem.readFileSync(fullPath, "utf8");
-
     const { data: metadata, content } = matter(fileContents);
 
     return {
       metadata,
       content,
+    };
+  }
+
+  retrieveBlogPosts() {
+    const files = fileSystem.readdirSync(resolve("./", this.postsDirectory));
+
+    return {
+      blogPosts: files.map((file) => this.retrieveBlogPost(file)),
     };
   }
 }

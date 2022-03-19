@@ -81,3 +81,38 @@ describe("#retrieveBlogPost", () => {
     expect(post.content).toEqual("\nPost 1 content.\n");
   });
 });
+
+describe("#retrieveBlogPosts", () => {
+  it("returns all blog posts", () => {
+    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
+
+    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
+
+    expect(blogPosts.blogPosts).toHaveLength(3);
+  });
+
+  it("returns metadata of blog post", () => {
+    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
+
+    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
+
+    expect(blogPosts.blogPosts[0].metadata).toEqual(
+      expect.objectContaining({
+        title: "Post 1",
+        publishDate: "2021-03-01T15:30:00Z",
+        summary: "Post 1 blog post.",
+        coverImage: "/images/post-1.png",
+        draft: false,
+        tags: ["test"],
+      })
+    );
+  });
+
+  it("returns content of blog post", () => {
+    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
+
+    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
+
+    expect(blogPosts.blogPosts[0].content).toEqual("\nPost 1 content.\n");
+  });
+});
