@@ -1,6 +1,6 @@
 ---
 title: "Post 2"
-date: "2021-03-02T16:30:00Z"
+publishDate: "2021-01-02T16:30:00"
 summary: "Post 2 blog post."
 coverImage: "/images/post-2.png"
 draft: false

@@ -23,7 +23,14 @@ export default class MarkdownGateway {
     const files = fileSystem.readdirSync(resolve("./", this.postsDirectory));
 
     return {
-      blogPosts: files.map((file) => this.retrieveBlogPost(file)),
+      blogPosts: files
+        .map((file) => this.retrieveBlogPost(file))
+        .sort((postA, postB) =>
+          new Date(postA.metadata.publishDate) >
+          new Date(postB.metadata.publishDate)
+            ? -1
+            : 1
+        ),
     };
   }
 }
