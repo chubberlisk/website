@@ -1,12 +1,16 @@
 import MarkdownGateway from "./markdownGateway";
 
+const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
+
 describe("#retrieveBlogPost", () => {
+  let blogPost;
+
+  beforeAll(() => {
+    blogPost = markdownGateway.retrieveBlogPost("post-1.md");
+  });
+
   it("returns title in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         title: "Post 1",
       })
@@ -14,11 +18,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns publish date in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         publishDate: "2021-03-01T15:30:00Z",
       })
@@ -26,11 +26,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns summary in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         summary: "Post 1 blog post.",
       })
@@ -38,11 +34,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns cover image in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         coverImage: "/images/post-1.png",
       })
@@ -50,11 +42,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns draft in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         draft: false,
       })
@@ -62,11 +50,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns tags in metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.metadata).toEqual(
+    expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         tags: ["test"],
       })
@@ -74,28 +58,22 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns content of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const post = markdownGateway.retrieveBlogPost("post-1.md");
-
-    expect(post.content).toEqual("\nPost 1 content.\n");
+    expect(blogPost.content).toEqual("\nPost 1 content.\n");
   });
 });
 
 describe("#retrieveBlogPosts", () => {
+  let blogPosts;
+
+  beforeAll(() => {
+    blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
+  });
+
   it("returns all blog posts", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
-
     expect(blogPosts.blogPosts).toHaveLength(3);
   });
 
   it("returns metadata of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
-
     expect(blogPosts.blogPosts[0].metadata).toEqual(
       expect.objectContaining({
         title: "Post 1",
@@ -109,10 +87,6 @@ describe("#retrieveBlogPosts", () => {
   });
 
   it("returns content of blog post", () => {
-    const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
-
-    const blogPosts = markdownGateway.retrieveBlogPosts("post-1.md");
-
     expect(blogPosts.blogPosts[0].content).toEqual("\nPost 1 content.\n");
   });
 });
