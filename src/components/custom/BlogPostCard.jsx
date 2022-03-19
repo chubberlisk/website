@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { formatDate } from "../../lib/formatters/date";
 
@@ -18,6 +19,11 @@ const BlogPostCard = ({ title, publishDate, summary, tags }) => {
           ))}
         </div>
         <p className="w-fit xl:w-3/4">{summary}</p>
+        <Link href="#">
+          <a>
+            Read <span className="hidden">{title} blog post</span> →
+          </a>
+        </Link>
       </div>
     </article>
   );
