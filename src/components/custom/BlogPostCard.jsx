@@ -2,14 +2,24 @@ import React from "react";
 import Link from "next/link";
 import { formatDate } from "../../lib/formatters/date";
 
-export default function BlogPostCard({ title, publishDate, summary, tags }) {
+export default function BlogPostCard({
+  title,
+  publishDate,
+  summary,
+  tags,
+  headingLevel,
+}) {
+  const Heading = `h${headingLevel}`;
+
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
         <p>{formatDate(publishDate)}</p>
       </div>
       <div className="basis-4/5">
-        <h2 className="text-xl md:text-2xl font-semibold mb-3">{title}</h2>
+        <Heading className="text-xl md:text-2xl font-semibold mb-3">
+          {title}
+        </Heading>
         <div className="flex flex-wrap mb-3">
           {tags.map((tag) => (
             <span

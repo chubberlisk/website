@@ -11,6 +11,7 @@ export default function Blog({ blogPosts }) {
         blogPosts={blogPosts}
         title={<h1 className="mb-8">All blog posts</h1>}
         minHeight="min-h-screen-90"
+        cardHeadingLevel={2}
       />
     </Layout>
   );

@@ -9,6 +9,7 @@ export default function PaintingsSection({
   description,
   children,
   minHeight,
+  cardHeadingLevel = 2,
 }) {
   return (
     <Section id="paintings" minHeight={minHeight}>
@@ -36,6 +37,7 @@ export default function PaintingsSection({
                 tags={tags}
                 number={paintings.length - index}
                 key={title}
+                headingLevel={cardHeadingLevel}
               />
             ))}
         </div>

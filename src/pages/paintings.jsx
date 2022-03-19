@@ -44,6 +44,7 @@ export default function Paintings() {
           </p>
         }
         minHeight="min-h-screen-90"
+        cardHeadingLevel={2}
       />
     </Layout>
   );

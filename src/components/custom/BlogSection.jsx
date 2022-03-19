@@ -2,7 +2,13 @@ import React from "react";
 import Section from "../core/Section";
 import BlogPostCard from "./BlogPostCard";
 
-export default function BlogSection({ blogPosts, title, children, minHeight }) {
+export default function BlogSection({
+  blogPosts,
+  title,
+  children,
+  minHeight,
+  cardHeadingLevel,
+}) {
   return (
     <Section id="blog" minHeight={minHeight}>
       <div className="container">
@@ -15,6 +21,7 @@ export default function BlogSection({ blogPosts, title, children, minHeight }) {
             publishDate={blogPost.metadata.publishDate}
             summary={blogPost.metadata.summary}
             tags={blogPost.metadata.tags}
+            headingLevel={cardHeadingLevel}
           />
         ))}
 

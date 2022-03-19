@@ -8,7 +8,10 @@ export default function PaintingCard({
   image: { src, alt },
   tags,
   number,
+  headingLevel = 2,
 }) {
+  const Heading = `h${headingLevel}`;
+
   return (
     <div className="border-2 border-wtw-yellow p-5">
       <Image
@@ -22,7 +25,9 @@ export default function PaintingCard({
       />
 
       <div className="pt-5">
-        <h2 className="text-lg md:text-xl font-semibold mb-3">{title}</h2>
+        <Heading className="text-lg md:text-xl font-semibold mb-3">
+          {title}
+        </Heading>
 
         <p className="text-sm md:text-base w-full">
           Published on {formatDate(publishDate)}
