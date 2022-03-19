@@ -5,7 +5,9 @@ import { formatDate } from "../../lib/formatters/date";
 const BlogPostCard = ({ title, publishDate, summary, tags }) => {
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
-      <div className="basis-1/5">{formatDate(publishDate)}</div>
+      <div className="basis-1/5">
+        <p>{formatDate(publishDate)}</p>
+      </div>
       <div className="basis-4/5">
         <h2 className="text-xl md:text-2xl font-semibold mb-3">{title}</h2>
         <div className="flex flex-wrap mb-3">

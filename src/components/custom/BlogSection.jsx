@@ -2,10 +2,10 @@ import React from "react";
 import Section from "../core/Section";
 import BlogPostCard from "./BlogPostCard";
 
-const BlogSection = ({ blogPosts }) => (
-  <Section id="blog" minHeight="min-h-screen-90">
+const BlogSection = ({ blogPosts, title, children, minHeight }) => (
+  <Section id="blog" minHeight={minHeight}>
     <div className="container">
-      <h1 className="mb-8">All blog posts</h1>
+      {title}
 
       {blogPosts.map((blogPost) => (
         <BlogPostCard
@@ -16,6 +16,8 @@ const BlogSection = ({ blogPosts }) => (
           tags={blogPost.metadata.tags}
         />
       ))}
+
+      {children}
     </div>
   </Section>
 );

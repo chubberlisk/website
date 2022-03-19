@@ -6,7 +6,11 @@ import BlogSection from "../components/custom/BlogSection";
 
 const Blog = ({ blogPosts }) => (
   <Layout>
-    <BlogSection blogPosts={blogPosts} />
+    <BlogSection
+      blogPosts={blogPosts}
+      title={<h1 className="mb-8">All blog posts</h1>}
+      minHeight="min-h-screen-90"
+    />
   </Layout>
 );
 
