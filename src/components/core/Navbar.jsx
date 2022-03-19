@@ -1,9 +1,9 @@
 import React from "react";
-import Logo from "./Logo";
-import Link from "next/link";
 import { useFlags } from "@happykit/flags/client";
+import Link from "next/link";
+import Logo from "./Logo";
 
-const Navbar = () => {
+export default function Navbar() {
   const { flags } = useFlags();
 
   return (
@@ -43,6 +43,4 @@ const Navbar = () => {
       </nav>
     </div>
   );
-};
-
-export default Navbar;
+}

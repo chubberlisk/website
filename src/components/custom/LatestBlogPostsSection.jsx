@@ -1,9 +1,9 @@
 import React from "react";
-import BlogSection from "./BlogSection";
 import { useFlags } from "@happykit/flags/client";
 import Link from "next/link";
+import BlogSection from "./BlogSection";
 
-const LatestBlogPostsSection = ({ latestBlogPosts }) => {
+export default function LatestBlogPostsSection({ latestBlogPosts }) {
   const { flags } = useFlags();
 
   return flags?.enableBlog ? (
@@ -16,6 +16,4 @@ const LatestBlogPostsSection = ({ latestBlogPosts }) => {
       </Link>
     </BlogSection>
   ) : null;
-};
-
-export default LatestBlogPostsSection;
+}

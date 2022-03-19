@@ -1,13 +1,13 @@
 import React from "react";
 
-const Footer = () => (
-  <footer className="bg-black p-5">
-    <div className="container">
-      <div className="text-xs md:text-sm text-center">
-        © {new Date().getFullYear()} Copyright: Wen Ting Wang
+export default function Footer() {
+  return (
+    <footer className="bg-black p-5">
+      <div className="container">
+        <div className="text-xs md:text-sm text-center">
+          © {new Date().getFullYear()} Copyright: Wen Ting Wang
+        </div>
       </div>
-    </div>
-  </footer>
-);
-
-export default Footer;
+    </footer>
+  );
+}

@@ -1,8 +1,8 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
 import { formatDate } from "../../lib/formatters/date";
 
-const BlogPostCard = ({ title, publishDate, summary, tags }) => {
+export default function BlogPostCard({ title, publishDate, summary, tags }) {
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
@@ -29,6 +29,4 @@ const BlogPostCard = ({ title, publishDate, summary, tags }) => {
       </div>
     </article>
   );
-};
-
-export default BlogPostCard;
+}

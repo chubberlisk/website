@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/core/Layout";
 import Section from "../components/core/Section";
 
-export default function Custom404() {
+export default function Custom500() {
   return (
     <Layout title="Internal server error | Wen Ting Wang">
       <Section minHeight="min-h-screen-90">

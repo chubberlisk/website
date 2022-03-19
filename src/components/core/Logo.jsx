@@ -1,12 +1,12 @@
 import React from "react";
 
-const Logo = ({
+export default function Logo({
   cropped = false,
   backgroundColor = "bg-wtw-yellow",
   textColor = "text-wtw-black",
   height = "100px",
   width = "100px",
-}) => {
+}) {
   if (cropped) {
     return (
       <svg
@@ -44,6 +44,4 @@ const Logo = ({
       </g>
     </svg>
   );
-};
-
-export default Logo;
+}
