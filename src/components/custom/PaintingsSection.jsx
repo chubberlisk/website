@@ -4,14 +4,12 @@ import PaintingCard from "./PaintingCard";
 import paintings from "../../../content/paintings";
 
 export default function PaintingsSection({
-  displayLatest,
+  displayLatest = paintings.length,
   title,
   description,
   children,
   minHeight,
 }) {
-  displayLatest = displayLatest == null ? paintings.length : displayLatest;
-
   return (
     <Section id="paintings" minHeight={minHeight}>
       <div className="container">
