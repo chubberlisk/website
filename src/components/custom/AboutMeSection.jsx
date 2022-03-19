@@ -31,7 +31,7 @@ export default function AboutMeSection() {
           and Agile practices and techniques such as continuous delivery, TDD
           and pair (or 🍐) programming. Oh, and I may or may not have had a
           phase where I made some{" "}
-          <Link href="#paintings">
+          <Link href="/paintings">
             <a className="inline-block">&quot;paintings&quot;</a>
           </Link>{" "}
           (emphasis on the &quot;pain&quot; and &quot;ting&quot;) using

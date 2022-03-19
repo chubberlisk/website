@@ -3,43 +3,21 @@ import Section from "../core/Section";
 import PaintingCard from "./PaintingCard";
 import paintings from "../../../content/paintings";
 
-export default function PaintingsSection() {
-  return (
-    <Section id="paintings">
-      <div className="container md:my-5 lg:my-10">
-        <h2>Paintings</h2>
+export default function PaintingsSection({
+  displayLatest,
+  title,
+  description,
+  children,
+  minHeight,
+}) {
+  displayLatest = displayLatest == null ? paintings.length : displayLatest;
 
-        <p className="mb-5">
-          These are a poor attempt at making comics using Microsoft Paint. It
-          focuses on a fairy called Tingker Bell among other Tings. Find them on{" "}
-          <a
-            href="https://www.webtoons.com/en/challenge/i-am-tingker-bell/list?title_no=578845"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="I am Tingker Bell on Webtoons"
-          >
-            Webtoons
-          </a>
-          {", "}
-          <a
-            href="https://www.instagram.com/chubbertiste/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chubbertiste's Instagram"
-          >
-            Instagram
-          </a>{" "}
-          and{" "}
-          <a
-            href="https://twitter.com/chubbertiste"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chubbertiste's Twitter"
-          >
-            Twitter
-          </a>{" "}
-          as well.
-        </p>
+  return (
+    <Section id="paintings" minHeight={minHeight}>
+      <div className="container">
+        {title}
+
+        {description}
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
@@ -51,6 +29,7 @@ export default function PaintingsSection() {
                 new Date(paintingB.publishDate) -
                 new Date(paintingA.publishDate)
             )
+            .slice(0, displayLatest)
             .map(({ image, title, publishDate, tags }, index) => (
               <PaintingCard
                 title={title}
@@ -62,6 +41,8 @@ export default function PaintingsSection() {
               />
             ))}
         </div>
+
+        {children}
       </div>
     </Section>
   );

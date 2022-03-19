@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/core/Layout";
 import LandingSection from "../components/custom/LandingSection";
 import AboutMeSection from "../components/custom/AboutMeSection";
-import PaintingsSection from "../components/custom/PaintingsSection";
+import LatestPaintingsSection from "../components/custom/LatestPaintingsSection";
 import ContactMeSection from "../components/custom/ContactMeSection";
 import GetBlogPosts from "../useCases/getBlogPosts";
 import MarkdownGateway from "../gateways/markdownGateway";
@@ -15,7 +15,7 @@ export default function Home({ latestBlogPosts }) {
         <LandingSection />
         <AboutMeSection />
         <LatestBlogPostsSection latestBlogPosts={latestBlogPosts} />
-        <PaintingsSection />
+        <LatestPaintingsSection />
         <ContactMeSection />
       </div>
     </Layout>

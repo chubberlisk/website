@@ -31,7 +31,7 @@ export default function Navbar() {
               <a className="inline-block mr-5 md:mr-10 text-wtw-white">Blog</a>
             </Link>
           )}
-          <Link href="/#paintings">
+          <Link href="/paintings">
             <a className="inline-block mr-5 md:mr-10 text-wtw-white">
               Paintings
             </a>
