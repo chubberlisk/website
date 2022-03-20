@@ -14,8 +14,8 @@ export default class MarkdownGateway {
     const { data: metadata, content } = matter(fileContents);
 
     return {
-      metadata,
-      content,
+      metadata: { ...metadata, slug },
+      content: content.trim(),
     };
   }
 
