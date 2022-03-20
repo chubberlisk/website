@@ -56,7 +56,7 @@ jobs:
       - name: Install dependencies from cache
         run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
-      - name: Run linting
+      - name: Run unit tests
         run: yarn test
 
   end-to-end-testing:
