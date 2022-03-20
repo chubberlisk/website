@@ -15,7 +15,7 @@ export default function BlogPostCard({
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
-        <p>
+        <p className="text-wtw-yellow">
           <time dateTime={publishDate}>{formatDate(publishDate)}</time>
         </p>
       </div>

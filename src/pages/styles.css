@@ -49,4 +49,22 @@ ul {
   -webkit-text-fill-color: transparent;
 }
 
+table {
+  @apply border-2 border-wtw-yellow;
+}
+
+thead,
+tr,
+th {
+  @apply border-2 border-wtw-yellow;
+}
+
+th {
+  @apply p-3;
+}
+
+td {
+  @apply p-3 border-2 border-wtw-yellow;
+}
+
 @tailwind utilities;

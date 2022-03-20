@@ -7,120 +7,44 @@ draft: false
 tags: ["Some tag"]
 ---
 
-# h1 Heading 8-)
+Bacon ipsum dolor amet turducken brisket pancetta, spare ribs ground round jerky beef bacon cupim kielbasa andouille ham hock ribeye picanha porchetta. Porchetta turkey tongue chislic pancetta, andouille ball tip frankfurter.
 
-## h2 Heading
+## Shankle bacon capicola
 
-### h3 Heading
+Shankle bacon capicola, jowl chicken hamburger buffalo prosciutto turducken pastrami drumstick salami. Drumstick chicken tongue kielbasa ball tip salami porchetta short ribs. Meatloaf bresaola pork belly, short ribs alcatra ribeye pastrami turkey chuck.
 
-#### h4 Heading
+```jsx
+import React from "react";
+import classNames from "classnames";
 
-##### h5 Heading
-
-###### h6 Heading
-
-## Horizontal Rules
-
----
-
----
-
----
-
-## Typographic replacements
-
-Enable typographer option to see result.
-
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,, -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-## Emphasis
-
-**This is bold text**
-
-**This is bold text**
-
-_This is italic text_
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Blockquotes can also be nested...
->
-> > ...by using additional greater-than signs right next to each other...
-> >
-> > > ...or with spaces between arrows.
-
-## Lists
-
-Unordered
-
-- Create a list by starting a line with `+`, `-`, or `*`
-- Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    - Ac tristique libero volutpat at
-    * Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-- Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-Block code "fences"
-
-```
-Sample text here...
+export default function Section({
+  id,
+  backgroundColor = "bg-wtw-black",
+  minHeight = "min-h-screen",
+  className,
+  children,
+}) {
+  return (
+    <section
+      id={id}
+      className={classNames(
+        "flex flex-col justify-center py-8 md:py-5",
+        backgroundColor,
+        minHeight,
+        className
+      )}
+    >
+      {children}
+    </section>
+  );
+}
 ```
 
-Syntax highlighting
+## Pork rump capicola landjaeger
 
-```js
-var foo = function (bar) {
-  return bar++;
-};
+Pork rump capicola landjaeger leberkas andouille bacon turkey flank pastrami chuck ribeye shoulder. Bacon shoulder meatloaf shank, pork jerky cupim sausage ball tip ham ribeye strip steak meatball biltong.
 
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
-
-Right aligned columns
+Short ribs beef leberkas pancetta turducken frankfurter. Jerky meatball pig sausage. Andouille kielbasa fatback spare ribs, jowl pork loin pork chop tail corned beef brisket chicken t-bone ribeye. Hamburger turducken pastrami ham hock t-bone.
 
 | Option |                                                               Description |
 | -----: | ------------------------------------------------------------------------: |
@@ -128,10 +52,6 @@ Right aligned columns
 | engine |    engine to be used for processing templates. Handlebars is the default. |
 |    ext |                                      extension to be used for dest files. |
 
-## Links
+## Pig tenderloin alcatra
 
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Pig tenderloin alcatra, chuck meatloaf landjaeger tongue pork belly tri-tip pork chop ham hock bacon sirloin. Short ribs spare ribs ham, ribeye cupim sirloin shank tenderloin. Prosciutto kevin shank jowl, corned beef capicola swine leberkas doner rump short loin venison pork belly porchetta beef.
