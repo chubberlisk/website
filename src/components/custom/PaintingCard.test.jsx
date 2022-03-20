@@ -16,7 +16,7 @@ it("displays the title", () => {
   expect(screen.getByText("Amazing painting title")).toBeVisible();
 });
 
-it("formats the publish date", () => {
+it("formats the publish date like 1st March 2021", () => {
   render(
     <PaintingCard
       title="Amazing painting title"
