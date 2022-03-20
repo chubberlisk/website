@@ -21,6 +21,7 @@ export default function BlogSection({
             publishDate={blogPost.metadata.publishDate}
             summary={blogPost.metadata.summary}
             tags={blogPost.metadata.tags}
+            slug={blogPost.metadata.slug}
             headingLevel={cardHeadingLevel}
           />
         ))}

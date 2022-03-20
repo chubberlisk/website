@@ -10,6 +10,7 @@ it("displays the title", () => {
       publishDate="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
+      slug="post-1"
     />
   );
 
@@ -24,6 +25,7 @@ it("formats the publish date like 1st March 2021", () => {
       publishDate="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
+      slug="post-1"
     />
   );
 
@@ -38,6 +40,7 @@ it("displays all the tags", () => {
       publishDate="2021-03-01T13:00:00"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       headingLevel={2}
+      slug="post-1"
     />
   );
 
@@ -54,9 +57,13 @@ it("displays read link to blog page", () => {
       publishDate="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
+      slug="post-1"
     />
   );
 
   expect(screen.getByText("Read →")).toBeVisible();
-  expect(screen.getByText("Read →").closest("a")).toHaveAttribute("href", "/#");
+  expect(screen.getByText("Read →").closest("a")).toHaveAttribute(
+    "href",
+    "/blog/post-1"
+  );
 });

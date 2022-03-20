@@ -8,6 +8,7 @@ export default function BlogPostCard({
   summary,
   tags,
   headingLevel,
+  slug,
 }) {
   const Heading = `h${headingLevel}`;
 
@@ -33,7 +34,7 @@ export default function BlogPostCard({
           ))}
         </div>
         <p className="w-fit xl:w-3/4">{summary}</p>
-        <Link href="#">
+        <Link href={`blog/${slug}`}>
           <a>
             Read <span className="hidden">{title} blog post</span> →
           </a>
