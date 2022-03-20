@@ -4,7 +4,7 @@ describe("User visits home page", function () {
 
     thenISeeThePageTitle();
     andISeeTheWelcomeText();
-    andISeePaintings();
+    andISeeTheLatestPaintings();
     andISeeTheSlogan();
     andISeeTheGitHubLink();
     andISeeTheLinkedInLink();
@@ -23,8 +23,8 @@ describe("User visits home page", function () {
     cy.contains("Hi there!").should("be.visible");
   }
 
-  function andISeePaintings() {
-    cy.contains("Paintings").should("be.visible");
+  function andISeeTheLatestPaintings() {
+    cy.contains("Latest paintings").should("be.visible");
   }
 
   function andISeeTheSlogan() {
