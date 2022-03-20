@@ -1,13 +1,13 @@
 describe("User visits paintings page", function () {
   it("displays all paintings", function () {
-    whenIVisitTheBlogPage();
+    whenIVisitThePaintingsPage();
 
     thenISeeThePageTitle();
     andISeeAllPaintings();
   });
 
-  function whenIVisitTheBlogPage() {
-    cy.visit("/blog");
+  function whenIVisitThePaintingsPage() {
+    cy.visit("/paintings");
   }
 
   function thenISeeThePageTitle() {
