@@ -5,7 +5,7 @@ import paintings from "../../content/paintings";
 
 export default function Paintings() {
   return (
-    <Layout>
+    <Layout title="Paintings - Wen Ting Wang">
       <PaintingsSection
         paintings={paintings}
         title={<h1>Paintings</h1>}

@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../components/core/Layout";
-import GetBlogPosts from "../useCases/getBlogPosts";
-import MarkdownGateway from "../gateways/markdownGateway";
-import BlogSection from "../components/custom/BlogSection";
+import Layout from "../../components/core/Layout";
+import GetBlogPosts from "../../useCases/getBlogPosts";
+import MarkdownGateway from "../../gateways/markdownGateway";
+import BlogSection from "../../components/custom/BlogSection";
 
 export default function Blog({ blogPosts }) {
   return (
-    <Layout>
+    <Layout title="Blog - Wen Ting Wang">
       <BlogSection
         blogPosts={blogPosts}
         title={<h1 className="mb-8">All blog posts</h1>}

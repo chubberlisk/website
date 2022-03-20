@@ -9,6 +9,14 @@ describe("#retrieveBlogPost", () => {
     blogPost = markdownGateway.retrieveBlogPost("post-1.md");
   });
 
+  it("returns slug in metadata of blog post", () => {
+    expect(blogPost.metadata).toEqual(
+      expect.objectContaining({
+        slug: "post-1",
+      })
+    );
+  });
+
   it("returns title in metadata of blog post", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
@@ -58,7 +66,7 @@ describe("#retrieveBlogPost", () => {
   });
 
   it("returns content of blog post", () => {
-    expect(blogPost.content).toEqual("\nPost 1 content.\n");
+    expect(blogPost.content).toBe("Post 1 content.");
   });
 });
 

@@ -30,7 +30,8 @@ export default function PaintingCard({
         </Heading>
 
         <p className="text-sm md:text-base w-full">
-          Published on {formatDate(publishDate)}
+          Published on{" "}
+          <time dateTime={publishDate}>{formatDate(publishDate)}</time>
         </p>
 
         <div className="text-sm md:text-base w-full mb-0">
