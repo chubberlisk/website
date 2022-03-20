@@ -27,7 +27,7 @@ it("formats the publish date like 1st March 2021", () => {
     />
   );
 
-  expect(screen.getByText("Published on 1st March 2021")).toBeVisible();
+  expect(screen.getByText("1st March 2021")).toBeVisible();
 });
 
 it("displays the painting number", () => {
