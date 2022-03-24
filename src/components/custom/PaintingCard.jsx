@@ -25,16 +25,14 @@ export default function PaintingCard({
       />
 
       <div className="pt-5">
+        <span className="block text-wtw-yellow">
+          <time dateTime={publishDate}>{formatDate(publishDate)}</time>
+        </span>
         <Heading className="text-lg md:text-xl font-semibold mb-3">
           {title}
         </Heading>
 
-        <p className="text-sm md:text-base w-full">
-          Published on{" "}
-          <time dateTime={publishDate}>{formatDate(publishDate)}</time>
-        </p>
-
-        <div className="text-sm md:text-base w-full mb-0">
+        <div className="w-full mb-0">
           <span className="float-left mr-5">#{number}</span>
 
           <div className="flex flex-wrap">
