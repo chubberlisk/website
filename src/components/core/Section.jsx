@@ -18,7 +18,7 @@ export default function Section({
         className
       )}
     >
-      {children}
+      <div className="container">{children}</div>
     </section>
   );
 }

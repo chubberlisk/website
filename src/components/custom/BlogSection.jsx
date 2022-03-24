@@ -11,23 +11,21 @@ export default function BlogSection({
 }) {
   return (
     <Section id="blog" minHeight={minHeight}>
-      <div className="container">
-        {title}
+      {title}
 
-        {blogPosts.map((blogPost) => (
-          <BlogPostCard
-            key={blogPost.metadata.title}
-            title={blogPost.metadata.title}
-            publishDate={blogPost.metadata.publishDate}
-            summary={blogPost.metadata.summary}
-            tags={blogPost.metadata.tags}
-            slug={blogPost.metadata.slug}
-            headingLevel={cardHeadingLevel}
-          />
-        ))}
+      {blogPosts.map((blogPost) => (
+        <BlogPostCard
+          key={blogPost.metadata.title}
+          title={blogPost.metadata.title}
+          publishDate={blogPost.metadata.publishDate}
+          summary={blogPost.metadata.summary}
+          tags={blogPost.metadata.tags}
+          slug={blogPost.metadata.slug}
+          headingLevel={cardHeadingLevel}
+        />
+      ))}
 
-        {children}
-      </div>
+      {children}
     </Section>
   );
 }
