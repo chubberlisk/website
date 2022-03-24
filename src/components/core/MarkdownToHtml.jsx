@@ -34,6 +34,7 @@ const p = ({ children }) => <p className="mb-5">{children}</p>;
 export default function MarkdownToHtml({ markdown }) {
   return (
     <ReactMarkdown
+      className="text-sm md:text-base"
       components={{ code: CodeBlock, h2, p }}
       remarkPlugins={[remarkGfm]}
     >
