@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { formatDate } from "../../lib/formatters/date";
+import { formatDate } from "../../formatters/date";
 
 export default function BlogPostCard({
   title,

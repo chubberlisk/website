@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../../components/core/Section";
 import MarkdownToHtml from "../../components/core/MarkdownToHtml";
-import { formatDate } from "../../lib/formatters/date";
+import { formatDate } from "../../formatters/date";
 import Link from "next/link";
 
 export default function BlogPostSection({ blogPost }) {

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { formatDate } from "../../lib/formatters/date";
+import { formatDate } from "../../formatters/date";
 
 export default function PaintingCard({
   title,
