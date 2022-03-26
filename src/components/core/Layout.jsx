@@ -45,8 +45,11 @@ export default function Layout({ title, children }) {
           href="/images/icons/icon-16x16.png"
         />
       </Head>
+      <a href="#content" className="sr-only focus:not-sr-only">
+        Skip to main content
+      </a>
       <Navbar />
-      <main>{children}</main>
+      <main id="content">{children}</main>
       <Footer />
     </>
   );
