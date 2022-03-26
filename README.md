@@ -40,6 +40,7 @@ This is the personal website for Wen Ting Wang, see [previous version that's bui
 ### 🧱 Built with
 
 - [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Cypress](https://www.cypress.io/)
 
 ### 🚀 Deployed using
