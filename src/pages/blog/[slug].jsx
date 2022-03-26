@@ -7,7 +7,7 @@ import BlogPostSection from "../../components/custom/BlogPostSection";
 
 export default function Blog({ blogPost }) {
   return (
-    <Layout title={`${blogPost.metadata.title} - Blog - Wen Ting Wang`}>
+    <Layout title={`${blogPost.metadata.title} - Blog`}>
       <BlogPostSection blogPost={blogPost} />
     </Layout>
   );

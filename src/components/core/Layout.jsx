@@ -3,11 +3,11 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-export default function Layout({ title = "Wen Ting Wang", children }) {
+export default function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{title && `${title} - `}Wen Ting Wang</title>
         <meta
           name="description"
           content="Wen Ting Wang, software engineer at Made Tech, based in London, UK."

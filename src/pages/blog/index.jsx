@@ -6,7 +6,7 @@ import BlogSection from "../../components/custom/BlogSection";
 
 export default function Blog({ blogPosts }) {
   return (
-    <Layout title="Blog - Wen Ting Wang">
+    <Layout title="Blog">
       <BlogSection
         blogPosts={blogPosts}
         title={<h1 className="mb-8">All blog posts</h1>}

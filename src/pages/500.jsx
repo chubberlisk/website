@@ -4,7 +4,7 @@ import Section from "../components/core/Section";
 
 export default function Custom500() {
   return (
-    <Layout title="Internal server error | Wen Ting Wang">
+    <Layout title="Internal server error">
       <Section minHeight="min-h-screen-90">
         <div className="container">
           <h1>🔥 Internal server error</h1>
