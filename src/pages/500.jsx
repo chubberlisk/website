@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/core/Layout";
 import Section from "../components/core/Section";
+import ExternalLink from "../components/core/ExternalLink";
 
 export default function Custom500() {
   return (
@@ -11,14 +12,12 @@ export default function Custom500() {
           <p>Eh, sorry lah! Something has seriously gone wrong.</p>
           <p>
             Try refreshing this page or please{" "}
-            <a
+            <ExternalLink
               href="https://github.com/chubberlisk/website/issues/new"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Create a GitHub issues for Wen Ting Wang's website"
             >
               create an issue on my GitHub repository
-            </a>{" "}
+            </ExternalLink>{" "}
             if this issue persists.
           </p>
         </div>

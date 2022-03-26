@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Section from "../core/Section";
+import ExternalLink from "../core/ExternalLink";
 
 export default function AboutMeSection() {
   return (
@@ -12,14 +13,13 @@ export default function AboutMeSection() {
         A-Levels, I embarked on a journey to learn more about software
         engineering - getting a degree in Computer Science and eventually
         joining the{" "}
-        <a
+        <ExternalLink
           href="https://madetech.com/careers/academy"
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-made-tech"
+          ariaLabel="Made Tech Academy"
         >
           Made Tech Academy
-        </a>{" "}
+        </ExternalLink>{" "}
         programme in 2019 where I learnt about things like Clean Architecture,
         test-driven development (TDD), etc.
       </p>
@@ -31,7 +31,7 @@ export default function AboutMeSection() {
         pair (or 🍐) programming. Oh, and I may or may not have had a phase
         where I made some{" "}
         <Link href="/paintings">
-          <a className="inline-block">&quot;paintings&quot;</a>
+          <a>&quot;paintings&quot;</a>
         </Link>{" "}
         (emphasis on the &quot;pain&quot; and &quot;ting&quot;) using Microsoft
         Paint. It&apos;s related to creating amazing software, I promise!

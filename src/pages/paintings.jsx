@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/core/Layout";
 import PaintingsSection from "../components/custom/PaintingsSection";
 import paintings from "../../content/paintings";
+import ExternalLink from "../components/core/ExternalLink";
 
 export default function Paintings() {
   return (
@@ -14,32 +15,26 @@ export default function Paintings() {
             These are a poor attempt at making comics using Microsoft Paint. It
             focuses on a fairy called Tingker Bell among other Tings. Find them
             on{" "}
-            <a
+            <ExternalLink
               href="https://www.webtoons.com/en/challenge/i-am-tingker-bell/list?title_no=578845"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="I am Tingker Bell on Webtoons"
             >
               Webtoons
-            </a>
+            </ExternalLink>
             {", "}
-            <a
+            <ExternalLink
               href="https://www.instagram.com/chubbertiste/"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Chubbertiste's Instagram"
             >
               Instagram
-            </a>{" "}
+            </ExternalLink>{" "}
             and{" "}
-            <a
+            <ExternalLink
               href="https://twitter.com/chubbertiste"
-              target="_blank"
-              rel="noopener noreferrer"
               aria-label="Chubbertiste's Twitter"
             >
               Twitter
-            </a>{" "}
+            </ExternalLink>{" "}
             as well.
           </p>
         }
