@@ -26,7 +26,7 @@
   - [✅ Prerequisites](#-prerequisites)
   - [🏗 Installation](#-installation)
 - [👩‍💻 Usage](#-usage)
-  - [🖥 Running the application](#-running-the-application)
+  - [� Running the application](#-running-the-application)
   - [🧪 Running the unit tests](#-running-the-unit-tests)
   - [🖥 Running the end-to-end tests](#-running-the-end-to-end-tests)
   - [🧹 Running the linter](#-running-the-linter)
@@ -72,7 +72,7 @@ yarn
 
 ## 👩‍💻 Usage
 
-### 🖥 Running the application
+### 💻 Running the application
 
 To run the application for local development:
 
