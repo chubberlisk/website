@@ -1,13 +1,13 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Navbar from "./Navbar";
-import { useFlags } from "@happykit/flags/client";
+import { useFlagBag } from "@happykit/flags/context";
 
-jest.mock("@happykit/flags/client");
+jest.mock("@happykit/flags/context");
 
 describe("when enable blog feature flag is on", () => {
   beforeAll(() => {
-    useFlags.mockReturnValue({
+    useFlagBag.mockReturnValue({
       flags: { enableBlog: true },
     });
   });
@@ -22,7 +22,7 @@ describe("when enable blog feature flag is on", () => {
 
 describe("when enable blog feature flag is off", () => {
   beforeAll(() => {
-    useFlags.mockReturnValue({
+    useFlagBag.mockReturnValue({
       flags: { enableBlog: false },
     });
   });

@@ -1,10 +1,10 @@
 import React from "react";
-import { useFlags } from "@happykit/flags/client";
+import { useFlagBag } from "@happykit/flags/context";
 import Link from "next/link";
 import BlogSection from "./BlogSection";
 
 export default function LatestBlogPostsSection({ latestBlogPosts }) {
-  const { flags } = useFlags();
+  const { flags } = useFlagBag();
 
   return flags?.enableBlog ? (
     <BlogSection
