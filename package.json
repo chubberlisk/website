@@ -22,7 +22,7 @@
     "gray-matter": "^4.0.3",
     "moment": "^2.29.2",
     "next": "12.1.5",
-    "next-pwa": "^5.5.0",
+    "next-pwa": "^5.5.2",
     "node-fetch": "^3.2.3",
     "postcss": "^8.4.12",
     "postcss-preset-env": "^7.4.3",
