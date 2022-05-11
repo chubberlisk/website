@@ -14,7 +14,7 @@ export default function Layout({ title, children }) {
         ></meta>
         <meta name="theme-color" content="#eac435" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
