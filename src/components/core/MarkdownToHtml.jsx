@@ -26,7 +26,7 @@ const CodeBlock = ({ node, inline, className, children, ...props }) => {
 };
 
 const h2 = ({ children }) => (
-  <h2 className="text-3xl md:text-5xl mt-8">{children}</h2>
+  <h2 className="text-2xl md:text-4xl mt-8">{children}</h2>
 );
 
 const p = ({ children }) => <p className="mb-5">{children}</p>;

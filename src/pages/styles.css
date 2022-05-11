@@ -23,8 +23,28 @@ h4 {
   @apply text-2xl md:text-4xl mb-5;
 }
 
-p {
-  @apply text-base md:text-lg mb-3 md:w-3/4;
+ul,
+ol {
+  @apply list-inside ml-3 md:ml-5;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol {
+  @apply list-decimal;
+}
+
+p,
+li {
+  @apply text-base md:text-lg;
+}
+
+p,
+ul,
+ol {
+  @apply mb-3 md:w-3/4;
 }
 
 a {
@@ -37,10 +57,6 @@ a:hover {
 
 mark {
   padding: 0.25rem 0.5rem;
-}
-
-ul {
-  @apply list-disc list-inside;
 }
 
 .textGradient {
