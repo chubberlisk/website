@@ -9,11 +9,17 @@ export default function BlogSection({
   minHeight,
   cardHeadingLevel,
 }) {
+  const environment = process.env.NODE_ENV;
+  const blogPostsToShow =
+    environment == "development"
+      ? blogPosts
+      : blogPosts.filter((blogPost) => !blogPost.metadata.draft);
+
   return (
     <Section id="blog" minHeight={minHeight}>
       {title}
 
-      {blogPosts.map((blogPost) => (
+      {blogPostsToShow.map((blogPost) => (
         <BlogPostCard
           key={blogPost.metadata.title}
           title={blogPost.metadata.title}
