@@ -19,17 +19,21 @@ export default function BlogSection({
     <Section id="blog" minHeight={minHeight}>
       {title}
 
-      {blogPostsToShow.map((blogPost) => (
-        <BlogPostCard
-          key={blogPost.metadata.title}
-          title={blogPost.metadata.title}
-          publishDate={blogPost.metadata.publishDate}
-          summary={blogPost.metadata.summary}
-          tags={blogPost.metadata.tags}
-          slug={blogPost.metadata.slug}
-          headingLevel={cardHeadingLevel}
-        />
-      ))}
+      {blogPostsToShow.length == 0 ? (
+        <p>There are no existing blog posts.</p>
+      ) : (
+        blogPostsToShow.map((blogPost) => (
+          <BlogPostCard
+            key={blogPost.metadata.title}
+            title={blogPost.metadata.title}
+            publishDate={blogPost.metadata.publishDate}
+            summary={blogPost.metadata.summary}
+            tags={blogPost.metadata.tags}
+            slug={blogPost.metadata.slug}
+            headingLevel={cardHeadingLevel}
+          />
+        ))
+      )}
 
       {children}
     </Section>

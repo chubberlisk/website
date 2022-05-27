@@ -82,3 +82,11 @@ it("displays children", () => {
 
   expect(screen.getByText("Children")).toBeVisible();
 });
+
+describe("when there are no blog posts", () => {
+  it("displays a message", () => {
+    render(<BlogSection blogPosts={[]} tags={[]} cardHeadingLevel={2} />);
+
+    expect(screen.getByText("There are no existing blog posts.")).toBeVisible();
+  });
+});
