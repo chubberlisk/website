@@ -70,6 +70,12 @@ git clone git@github.com:chubberlisk/website.git
 yarn
 ```
 
+3. Create a `.env.local` using the `.env.local.sample` and fill in the missing environment variables
+
+```sh
+cp .env.local.sample .env.local
+```
+
 ## 👩‍💻 Usage
 
 ### 💻 Running the application
