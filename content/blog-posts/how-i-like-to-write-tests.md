@@ -1,13 +1,13 @@
 ---
 title: "How I like to write tests"
 publishDate: "2022-05-19T13:31:00"
-summary: "Bacon ipsum dolor amet fatback brisket doner ribeye biltong tenderloin beef ribs burgdoggen shank chislic turducken bacon strip steak."
+summary: "A blog post about how I like to name and organise my tests."
 coverImage: "/images/blog/cover-images/how-i-like-to-write-tests.png"
 draft: true
 tags: ["Test Ting", "Test-driven development"]
 ---
 
-After 3 years of software engineering (and making Ting puns), I now have a sense of how _I_ like to do things instead of simply following the guidance of more senior engineers. Having the opportunity to be a part of a number of projects throughout my time so far at [Made Tech](https://www.madetech.com/) has exposed me to a wide range of technology stacks, disciplines and ways of developing software. One aspect I have gained a passion for is testing and using test-driven development (TDD). As a result for my first blog post, I want to show you the little rules and guides I have in my brain about naming and organising my tests in the hope that at least one person might find something useful. Be warned though, most of them might be more realisations of my preferences than hard and fast rules with some things I included I can't make up my mind about! That being said, I think that's okay and natural as I grow more as a software engineer.
+After 3 years of software engineering (and making Ting puns), I now have a sense of how _I_ like to do things instead of simply following the guidance of more senior engineers. Having the opportunity to be a part of a number of projects throughout my time so far at [Made Tech](https://www.madetech.com/) has exposed me to a wide range of technology stacks, disciplines and ways of developing software. One aspect I have gained a passion for is testing and using test-driven development (TDD). As a result for my first blog post, I want to show you the little rules and guides I have in my brain about naming and organising tests in the hope that at least one person might find something useful. Be warned though, most of them might be more realisations of my preferences than hard and fast rules with some things I included I can't make up my mind about! That being said, I think that's okay and natural as I grow more as a software engineer.
 
 ## Explain your code through tests
 
@@ -40,7 +40,7 @@ I guess what I’m thinking is “what user need does this code help to fulfil?�
 
 Growing up with Ruby, RSpec and the amazing [Better Specs](https://www.betterspecs.org/) website helped me get into the habit of grouping tests by context e.g. when a feature flag is on or when a user is signed in and of course, the opposite scenario: when a feature flag is off and when a user is not signed in. For these I always start a context with “when” instead of “if” as “when” indicates that it will happen, whereas “if” indicates that it can happen.
 
-One thing I try to avoid is too many nested contexts (i.e. deeply nested contexts) - my rule of thumb is no more than three levels. I do this by seeing if I can combine contexts to reduce the number of indented blocks.
+One thing I try to avoid is too many nested contexts - my rule of thumb is no more than three levels. I do this by seeing if I can combine contexts to reduce the number of indented blocks.
 
 ```js
 // nested contexts
@@ -70,15 +70,17 @@ describe("when a user is signed in", () => {
 
 ## Avoid “should” or “can”
 
-In a recent pairing (or 🍐-ing) session, I was driving (or playing the role as the typist) and began writing a test with “returns”. My partner then asked “I usually start my tests with ‘should’, don’t you?”. I realised then that I don't like starting tests with “should” or “can” or anything like that. It's because it unnecessarily makes the test name longer than it needs to be. Test descriptions should be as concise as possible whilst being descriptive and the extra “should” or similar is noise to me. Also practically, it means if you’re on a small (or smol) screen there’s more horizontal scrolling than needed. Instead I prefer to begin tests with a verb in the present tense such as “returns”, “displays”, “sets”, “orders”, “retrieves”, “creates” and “hides”.
+In a recent pairing (or 🍐-ing) session, I was driving (or playing the role as the typist) and began writing a test with “returns”. My partner then asked “I usually start my tests with ‘should’, don’t you?”. I realised then that I don't like starting tests with “should” or “can” or anything like that. It's because it unnecessarily makes the test name longer than it needs to be. Test descriptions should be as concise as possible whilst being descriptive and the extra “should” or similar is noise to me. Also practically, it means if you’re on a small (or smol) screen there’s more horizontal scrolling than needed. Instead I prefer to begin tests with a verb in the present tense such as “returns”, “displays”, “sets”, “orders”, “retrieves”, “creates” and “hides”, etc.
 
 ## Order your tests with purpose
 
-When using TDD, your tests will come in the order that you implemented your functionality. However, this isn’t always the best way to order your tests in. It might be that the simplest next failing test is to do a positive case then a negative and back and forth so it might not be easy to follow. When doing the refactor step of TDD, I think about whether I should reorder the tests to follow the steps in code or group things into contexts and have opposite contexts together. Usually I run my test file and see how it displays in the terminal with all the test names together (with [RSpec you can use `--format documentation`](https://relishapp.com/rspec/rspec-core/v/2-6/docs/command-line/format-option) or with Jest when you run a single file it will display all your test names) and see if I should move anything around.
+When using TDD, your tests will come in the order that you implemented your functionality. However, this isn’t always the best way to order your tests in. It might be that the simplest next failing test is to do a positive case then a negative and back and forth so it might not be easy to follow. When doing the refactor step of TDD, I think about whether I should reorder the tests to follow the steps in code or group things into contexts and have opposite contexts together. Usually I run my test file and see how it displays in the terminal with all the test names together and see if I should move anything around.
+
+> 💡 Hint: With [RSpec you can use --format documentation](https://relishapp.com/rspec/rspec-core/v/2-6/docs/command-line/format-option) and with [Jest](https://jestjs.io/) when you run a single test file, it'll display all your test names.
 
 ## Add newlines to easily spot the arrange, act and assert
 
-An easy and the simplest thing to help readability is to add newlines. It always surprises me when I see tests without them. It's such an effortless thing to do but seems neglected quite often in my experience. In a test I’m looking to clearly see the arrange, act and assert parts of a test and adding newlines between these makes it way easier to read than a block of code.
+An easy and the simplest thing to improve readability is to add newlines. It always surprises me when I see tests without them. It's such an effortless thing to do but seems neglected quite often in my experience. In a test I’m looking to clearly see the arrange, act and assert parts of a test and adding newlines between these makes it way easier to read than a block of code.
 
 ## Do away with the top-level describe in Jest
 
