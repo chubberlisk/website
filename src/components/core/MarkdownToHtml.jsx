@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-const CodeBlock = ({ node, inline, className, children, ...props }) => {
+const code = ({ node, inline, className, children, ...props }) => {
   const match = /language-(\w+)/.exec(className || "");
 
   return !inline && match ? (
@@ -13,7 +13,6 @@ const CodeBlock = ({ node, inline, className, children, ...props }) => {
       language={match[1]}
       PreTag="div"
       showLineNumbers={true}
-      className="lg:w-3/4"
       {...props}
     >
       {String(children).replace(/\n$/, "")}
@@ -43,11 +42,19 @@ const a = ({ href, children }) => {
   return <a href={href}>{children}</a>;
 };
 
+const blockquote = ({ children }) => {
+  return (
+    <div className="pt-7 px-7 pb-2 border-l-4 border-wtw-yellow bg-black">
+      {children}
+    </div>
+  );
+};
+
 export default function MarkdownToHtml({ markdown }) {
   return (
     <ReactMarkdown
-      className="text-sm md:text-base"
-      components={{ code: CodeBlock, h2, p, a }}
+      className="text-sm md:text-base md:w-3/4"
+      components={{ code, h2, p, a, blockquote }}
       remarkPlugins={[remarkGfm]}
     >
       {markdown}
