@@ -44,7 +44,7 @@ const a = ({ href, children }) => {
 
 const blockquote = ({ children }) => {
   return (
-    <div className="pt-7 px-7 pb-2 border-l-4 border-wtw-yellow bg-black">
+    <div className="pt-6 px-6 pb-1 border-l-4 border-wtw-yellow">
       {children}
     </div>
   );
