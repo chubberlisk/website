@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../core/Section";
 import PaintingCard from "./PaintingCard";
 import paintings from "../../../content/paintings";
+import Text from "../core/Text";
 
 export default function PaintingsSection({
   displayLatest = paintings.length,
@@ -15,7 +16,7 @@ export default function PaintingsSection({
     <Section id="paintings" minHeight={minHeight}>
       {title}
 
-      {description}
+      <Text>{description}</Text>
 
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"

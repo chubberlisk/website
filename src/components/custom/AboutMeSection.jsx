@@ -2,42 +2,46 @@ import React from "react";
 import Link from "next/link";
 import Section from "../core/Section";
 import ExternalLink from "../core/ExternalLink";
+import Text from "../core/Text";
 
 export default function AboutMeSection() {
   return (
     <Section id="about-me">
       <h2>A bit about me</h2>
 
-      <p>
-        After accidentally discovering a passion for programming during
-        A-Levels, I embarked on a journey to learn more about software
-        engineering - getting a degree in Computer Science and eventually
-        joining the{" "}
-        <ExternalLink
-          href="https://madetech.com/careers/academy"
-          className="text-made-tech"
-          ariaLabel="Made Tech Academy"
-        >
-          Made Tech Academy
-        </ExternalLink>{" "}
-        programme in 2019 where I learnt about things like Clean Architecture,
-        test-driven development (TDD), etc.
-      </p>
+      <Text>
+        <p>
+          After accidentally discovering a passion for programming during
+          A-Levels, I embarked on a journey to learn more about software
+          engineering - getting a degree in Computer Science and eventually
+          joining the{" "}
+          <ExternalLink
+            href="https://madetech.com/careers/academy"
+            className="text-made-tech"
+            ariaLabel="Made Tech Academy"
+          >
+            Made Tech Academy
+          </ExternalLink>{" "}
+          programme in 2019 where I learnt about things like Clean Architecture,
+          test-driven development (TDD), etc.
+        </p>
 
-      <p>
-        Now I&apos;m a Software Engineer 2 at the company, building software
-        that makes our clients and users happy, using a silly sense of humour
-        and Agile practices and techniques such as continuous delivery, TDD and
-        pair (or 🍐) programming. Oh, and I may or may not have had a phase
-        where I made some{" "}
-        <Link href="/paintings">
-          <a>&quot;paintings&quot;</a>
-        </Link>{" "}
-        (emphasis on the &quot;pain&quot; and &quot;ting&quot;) using Microsoft
-        Paint. It&apos;s related to creating amazing software, I promise!
-      </p>
+        <p>
+          Now I&apos;m a Software Engineer 2 at the company, building software
+          that makes our clients and users happy, using a silly sense of humour
+          and Agile practices and techniques such as continuous delivery, TDD
+          and pair (or 🍐) programming. Oh, and I may or may not have had a
+          phase where I made some{" "}
+          <Link href="/paintings">
+            <a>&quot;paintings&quot;</a>
+          </Link>{" "}
+          (emphasis on the &quot;pain&quot; and &quot;ting&quot;) using
+          Microsoft Paint. It&apos;s related to creating amazing software, I
+          promise!
+        </p>
 
-      <p>Anyway, technologies I&apos;m currently working with include:</p>
+        <p>Anyway, technologies I&apos;m currently working with include:</p>
+      </Text>
 
       <div className="grid grid-rows-3 md:grid-rows-2 grid-flow-col gap-4">
         <div className="flex justify-start items-center">

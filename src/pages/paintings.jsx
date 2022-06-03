@@ -11,7 +11,7 @@ export default function Paintings() {
         paintings={paintings}
         title={<h1>Paintings</h1>}
         description={
-          <p className="mb-5">
+          <p>
             These are a poor attempt at making comics using Microsoft Paint. It
             focuses on a fairy called Tingker Bell among other Tings. Find them
             on{" "}
