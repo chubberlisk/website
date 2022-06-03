@@ -19,7 +19,7 @@ const CodeBlock = ({ node, inline, className, children, ...props }) => {
       {String(children).replace(/\n$/, "")}
     </SyntaxHighlighter>
   ) : (
-    <code className={className} {...props}>
+    <code className="text-wtw-code-lime bg-wtw-code-black p-1" {...props}>
       {children}
     </code>
   );
@@ -31,11 +31,23 @@ const h2 = ({ children }) => (
 
 const p = ({ children }) => <p className="mb-5">{children}</p>;
 
+const a = ({ href, children }) => {
+  if (href.includes("madetech")) {
+    return (
+      <a href={href} className="text-made-tech">
+        {children}
+      </a>
+    );
+  }
+
+  return <a href={href}>{children}</a>;
+};
+
 export default function MarkdownToHtml({ markdown }) {
   return (
     <ReactMarkdown
       className="text-sm md:text-base"
-      components={{ code: CodeBlock, h2, p }}
+      components={{ code: CodeBlock, h2, p, a }}
       remarkPlugins={[remarkGfm]}
     >
       {markdown}

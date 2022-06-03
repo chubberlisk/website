@@ -36,6 +36,8 @@ module.exports = {
         "wtw-black": "#121212",
         "wtw-white": "#F3F4F6",
         "made-tech": "#40c842",
+        "wtw-code-black": "#2f2f2f",
+        "wtw-code-lime": "#a5e844",
       },
       height: (theme) => ({
         "screen-10": "10vh",

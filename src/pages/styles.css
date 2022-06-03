@@ -37,7 +37,8 @@ ol {
 }
 
 p,
-li {
+li,
+code {
   @apply text-base md:text-lg;
 }
 
