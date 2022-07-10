@@ -1087,10 +1087,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@happykit/flags@^2.0.5":
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/@happykit/flags/-/flags-2.0.5.tgz#dafba61c2f18aeacb91fa2b7c75df76e777af2dd"
-  integrity sha512-WG0wAuJbhsGGxLHDz9AcijGbZtkD2SyWVG7hw49tg5pWvsRn5H69MRFs8UjyyllKJCT7Py/PkkL9jH7i2vG84Q==
+"@happykit/flags@^2.0.6":
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@happykit/flags/-/flags-2.0.6.tgz#5f2ba6053fd998ec35a6f0bf90dd1c658ef32734"
+  integrity sha512-DYEESPYW+FZ24V54F4Ro5p7x1M/eoqC3Eio6dJfc0rynRwTT6FCRkFT7KuZBEQlf5Mcg5I1lewA5b2kBZdmawQ==
   dependencies:
     abort-controller "3.0.0"
     nanoid "3.2.0"
