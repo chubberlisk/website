@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@happykit/flags": "^2.0.6",
-    "autoprefixer": "^10.4.5",
+    "autoprefixer": "^10.4.8",
     "classnames": "^2.3.1",
     "gray-matter": "^4.0.3",
     "moment": "^2.29.4",
