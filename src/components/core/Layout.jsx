@@ -4,10 +4,12 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 export default function Layout({ title, children }) {
+  const pageTitle = `${title == null ? "" : `${title} - `}Wen Ting Wang`;
+
   return (
     <>
       <Head>
-        <title>{title && `${title} - `}Wen Ting Wang</title>
+        <title>{pageTitle}</title>
         <meta
           name="description"
           content="Wen Ting Wang, software engineer at Made Tech, based in London, UK."
