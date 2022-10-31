@@ -1,9 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import Navbar from "./Navbar";
-import { useFlagBag } from "@happykit/flags/context";
-
-jest.mock("@happykit/flags/context");
+import { useFlagBag } from "../../../flags/client";
 
 describe("when enable blog feature flag is on", () => {
   beforeAll(() => {
