@@ -1,9 +1,6 @@
-const withPWA = require("next-pwa");
-
-module.exports = withPWA({
-  pwa: {
-    dest: "public",
-    disable: process.env.NODE_ENV != "production",
-  },
-  webpack5: true,
+const withPWA = require("next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV != "production",
 });
+
+module.exports = withPWA({});
