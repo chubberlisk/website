@@ -34,3 +34,6 @@ cypress/
 
 # Vercel
 .vercel
+
+# JetBrains
+.idea

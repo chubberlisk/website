@@ -1,5 +1,5 @@
 import React from "react";
-import { useFlagBag } from "@happykit/flags/context";
+import { useFlagBag } from "../../../flags/client";
 import Link from "next/link";
 import BlogSection from "./BlogSection";
 

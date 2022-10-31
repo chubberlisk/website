@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.css";
-import "../../flags.config";
 import { FlagBagProvider } from "@happykit/flags/context";
-import { useFlags } from "@happykit/flags/client";
+import { useFlags } from "../../flags/client";
 
 export default function CustomApp({ Component, pageProps }) {
   const flagBag = useFlags();
