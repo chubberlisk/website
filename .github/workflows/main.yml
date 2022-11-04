@@ -28,14 +28,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Nodejs
-        id: setup-nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: yarn
 
       - name: Install dependencies from cache
-        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run linting
@@ -50,14 +48,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Nodejs
-        id: setup-nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: yarn
 
       - name: Install dependencies from cache
-        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run unit tests
@@ -74,14 +70,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Nodejs
-        id: setup-nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: yarn
 
       - name: Install dependencies from cache
-        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile
 
       - name: Restore built application from cache
