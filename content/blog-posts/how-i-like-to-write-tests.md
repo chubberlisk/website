@@ -3,7 +3,7 @@ title: "How I like to write tests"
 publishDate: "2022-05-19T13:31:00"
 summary: "A blog post about how I like to name and organise my tests."
 coverImage: "/images/blog/cover-images/how-i-like-to-write-tests.png"
-draft: true
+draft: false
 tags: ["Test Ting", "Test-driven development"]
 ---
 
