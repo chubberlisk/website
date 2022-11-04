@@ -33,6 +33,11 @@ export default function Blog({ blogPost }) {
             },
           ],
         }}
+        twitter={{
+          handle: "@chubberlisk",
+          site: "@chubberlisk",
+          cardType: "summary_large_image",
+        }}
       />
       <Layout>
         <BlogPostSection blogPost={blogPost} />
