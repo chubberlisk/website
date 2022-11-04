@@ -11,7 +11,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between flex-wrap h-screen-10">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link href="/">
-            <a>
+            <>
               <Logo
                 cropped={true}
                 height="75px"
@@ -19,25 +19,32 @@ export default function Navbar() {
                 backgroundColor="bg-wtw-black"
                 textColor="text-wtw-yellow"
               />
-            </a>
+            </>
           </Link>
         </div>
         <div className="block">
-          <Link href="/#about-me">
-            <a className="inline-block mr-5 md:mr-10 text-wtw-white">About</a>
+          <Link
+            href="/#about-me"
+            className="inline-block mr-5 md:mr-10 text-wtw-white"
+          >
+            About
           </Link>
           {flags?.enableBlog && (
-            <Link href="/blog">
-              <a className="inline-block mr-5 md:mr-10 text-wtw-white">Blog</a>
+            <Link
+              href="/blog"
+              className="inline-block mr-5 md:mr-10 text-wtw-white"
+            >
+              Blog
             </Link>
           )}
-          <Link href="/paintings">
-            <a className="inline-block mr-5 md:mr-10 text-wtw-white">
-              Paintings
-            </a>
+          <Link
+            href="/paintings"
+            className="inline-block mr-5 md:mr-10 text-wtw-white"
+          >
+            Paintings
           </Link>
-          <Link href="/#contact-me">
-            <a className="inline-block text-wtw-white">Contact</a>
+          <Link href="/#contact-me" className="inline-block text-wtw-white">
+            Contact
           </Link>
         </div>
       </nav>

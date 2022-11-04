@@ -9,9 +9,7 @@ export default function BlogPostSection({ blogPost }) {
   return (
     <Section minHeight="min-h-screen-90" id={blogPost.metadata.slug}>
       <div className="mb-5 xl:mb-8">
-        <Link href="/blog">
-          <a>← Back to all blog posts</a>
-        </Link>
+        <Link href="/blog">← Back to all blog posts</Link>
       </div>
 
       <div className="lg:w-3/5 mb-5">

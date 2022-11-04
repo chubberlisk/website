@@ -12,9 +12,7 @@ export default function LatestBlogPostsSection({ latestBlogPosts }) {
       title={<h2>Latest blog posts</h2>}
       cardHeadingLevel={3}
     >
-      <Link href="/blog">
-        <a>View all blog posts →</a>
-      </Link>
+      <Link href="/blog">View all blog posts →</Link>
     </BlogSection>
   ) : null;
 }
