@@ -1,7 +1,7 @@
 export default [
   {
     title: "Emperor King Yusuf",
-    publishDate: "2021-01-21T17:43:00",
+    publishDate: "2021-01-21T17:43:00Z",
     image: {
       src: "/images/paintings/emperor-king-yusuf-character-bio.png",
       alt: [
@@ -18,7 +18,7 @@ export default [
   },
   {
     title: "Quoting Emperor King Yusuf",
-    publishDate: "2021-01-19T18:55:00",
+    publishDate: "2021-01-19T18:55:00Z",
     image: {
       src: "/images/paintings/quoting-emperor-king-yusuf.png",
       alt: [
@@ -37,7 +37,7 @@ export default [
   },
   {
     title: "Repeat Ting",
-    publishDate: "2021-01-17T20:53:00",
+    publishDate: "2021-01-17T20:53:00Z",
     image: {
       src: "/images/paintings/repeat-ting-character-bio.png",
       alt: [
@@ -54,7 +54,7 @@ export default [
   },
   {
     title: "Stop it",
-    publishDate: "2021-01-16T17:32:00",
+    publishDate: "2021-01-16T17:32:00Z",
     image: {
       src: "/images/paintings/stop-it.png",
       alt: [
@@ -70,7 +70,7 @@ export default [
   },
   {
     title: "Finding puns",
-    publishDate: "2021-01-13T21:21:00",
+    publishDate: "2021-01-13T21:21:00Z",
     image: {
       src: "/images/paintings/finding-puns.png",
       alt: [
@@ -87,7 +87,7 @@ export default [
   },
   {
     title: "Detect Ting",
-    publishDate: "2021-01-13T21:20:00",
+    publishDate: "2021-01-13T21:20:00Z",
     image: {
       src: "/images/paintings/detect-ting-character-bio.png",
       alt: [
@@ -104,7 +104,7 @@ export default [
   },
   {
     title: "Hate Ting",
-    publishDate: "2021-01-13T21:19:00",
+    publishDate: "2021-01-13T21:19:00Z",
     image: {
       src: "/images/paintings/hate-ting-character-bio.png",
       alt: [
@@ -121,7 +121,7 @@ export default [
   },
   {
     title: "Meta Ting",
-    publishDate: "2021-01-13T21:18:00",
+    publishDate: "2021-01-13T21:18:00Z",
     image: {
       src: "/images/paintings/meta-ting-character-bio.png",
       alt: [
@@ -138,7 +138,7 @@ export default [
   },
   {
     title: "Paint Ting",
-    publishDate: "2021-01-13T21:17:00",
+    publishDate: "2021-01-13T21:17:00Z",
     image: {
       src: "/images/paintings/paint-ting-character-bio.png",
       alt: [
@@ -155,7 +155,7 @@ export default [
   },
   {
     title: "You f**k up",
-    publishDate: "2021-01-10T14:33:00",
+    publishDate: "2021-01-10T14:33:00Z",
     image: {
       src: "/images/paintings/you-f__k-up.png",
       alt: [
@@ -172,7 +172,7 @@ export default [
   },
   {
     title: "It actually doesn't make sense",
-    publishDate: "2021-01-09T23:02:00",
+    publishDate: "2021-01-09T23:02:00Z",
     image: {
       src: "/images/paintings/it-actually-doesnt-make-sense.png",
       alt: [
@@ -190,7 +190,7 @@ export default [
   },
   {
     title: "Nope",
-    publishDate: "2021-01-09T22:56:00",
+    publishDate: "2021-01-09T22:56:00Z",
     image: {
       src: "/images/paintings/nope.png",
       alt: [
@@ -205,7 +205,7 @@ export default [
   },
   {
     title: "Some Tings",
-    publishDate: "2021-01-09T22:51:00",
+    publishDate: "2021-01-09T22:51:00Z",
     image: {
       src: "/images/paintings/some-tings.png",
       alt: [
@@ -220,7 +220,7 @@ export default [
   },
   {
     title: "I am Tingker Bell",
-    publishDate: "2021-01-09T22:50:00",
+    publishDate: "2021-01-09T22:50:00Z",
     image: {
       src: "/images/paintings/i-am-tingker-bell.png",
       alt: [

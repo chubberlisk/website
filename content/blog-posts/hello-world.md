@@ -1,6 +1,6 @@
 ---
 title: "Hello world!"
-publishDate: "2021-03-19T13:31:00"
+publishDate: "2021-03-19T13:31:00Z"
 summary: "Bacon ipsum dolor amet fatback brisket doner ribeye biltong tenderloin beef ribs burgdoggen shank chislic turducken bacon strip steak."
 coverImage: "/images/blog/cover-images/how-i-like-to-write-tests.png"
 draft: true
