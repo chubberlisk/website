@@ -20,6 +20,7 @@
     "@happykit/flags": "^3.0.0",
     "autoprefixer": "^10.4.13",
     "classnames": "^2.3.2",
+    "font-awesome": "^4.7.0",
     "gray-matter": "^4.0.3",
     "moment": "^2.29.4",
     "next": "^13.0.0",
