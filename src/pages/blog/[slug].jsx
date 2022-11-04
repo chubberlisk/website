@@ -4,12 +4,19 @@ import MarkdownGateway from "../../gateways/markdownGateway";
 import GetBlogPostBySlug from "../../useCases/getBlogPostBySlug";
 import GetBlogPosts from "../../useCases/getBlogPosts";
 import BlogPostSection from "../../components/custom/BlogPostSection";
+import { NextSeo } from "next-seo";
 
 export default function Blog({ blogPost }) {
   return (
-    <Layout title={`${blogPost.metadata.title} - Blog`}>
-      <BlogPostSection blogPost={blogPost} />
-    </Layout>
+    <>
+      <NextSeo
+        title={`${blogPost.metadata.title} - Blog`}
+        description={blogPost.metadata.summary}
+      />
+      <Layout>
+        <BlogPostSection blogPost={blogPost} />
+      </Layout>
+    </>
   );
 }
 
