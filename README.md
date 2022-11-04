@@ -27,8 +27,10 @@
   - [🏗 Installation](#-installation)
 - [👩‍💻 Usage](#-usage)
   - [💻 Running the application](#-running-the-application)
-  - [🧪 Running the unit tests](#-running-the-unit-tests)
-  - [🖥 Running the end-to-end tests](#-running-the-end-to-end-tests)
+  - [🧪 Running the tests](#-running-the-tests)
+    - [Running the unit tests](#running-the-unit-tests)
+    - [Running the end-to-end tests](#running-the-end-to-end-tests)
+    - [Running all the tests](#running-all-the-tests)
   - [🧹 Running the linter](#-running-the-linter)
   - [❤ Running the formatter](#-running-the-formatter)
 - [📜 License](#-license)
@@ -88,15 +90,17 @@ yarn dev
 
 Then visit [http://localhost:3000](http://localhost:3000).
 
-### 🧪 Running the unit tests
+### 🧪 Running the tests
+
+#### Running the unit tests
 
 To run the unit tests that use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
 
 ```sh
-yarn test
+yarn test:unit
 ```
 
-### 🖥 Running the end-to-end tests
+#### Running the end-to-end tests
 
 To run the end-to-end tests using [Cypress](https://www.cypress.io/)'s headless mode:
 
@@ -112,6 +116,14 @@ To interactively run the end-to-end tests:
 yarn test:e2e:interactive
 # or with a server as well
 yarn test:e2e:interactive:with-server
+```
+
+#### Running all the tests
+
+To run the unit tests and end-to-end tests
+
+```sh
+yarn test
 ```
 
 ### 🧹 Running the linter
