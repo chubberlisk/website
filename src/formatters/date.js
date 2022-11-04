@@ -6,7 +6,7 @@ export const formatDate = (date) => {
   const parsedDate = moment(date);
 
   if (parsedDate.isValid()) {
-    return parsedDate.format("Do MMMM YYYY");
+    return parsedDate.format("D MMMM YYYY");
   } else {
     return null;
   }
