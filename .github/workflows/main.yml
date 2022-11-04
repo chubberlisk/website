@@ -34,6 +34,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
+        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run linting
@@ -54,6 +55,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
+        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run unit tests
@@ -76,6 +78,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
+        if: steps.setup-nodejs.outputs.cache-hit != 'true'
         run: yarn --offline --frozen-lockfile
 
       - name: Restore built application from cache
