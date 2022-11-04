@@ -34,10 +34,10 @@ export default function BlogPostCard({
           ))}
         </div>
         <p className="w-fit xl:w-3/4">{summary}</p>
-        <Link href={`/blog/${slug}`}>
-          <a>
+        <Link href={`/blog/${slug}`} passHref>
+          <div data-testid="readBlogPostLink">
             Read <span className="hidden">{title} blog post</span> →
-          </a>
+          </div>
         </Link>
       </div>
     </article>

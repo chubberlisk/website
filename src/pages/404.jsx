@@ -14,11 +14,8 @@ export default function Custom404() {
             for.
           </p>
           <p>
-            Try heading back to the{" "}
-            <Link href="/">
-              <a>homepage</a>
-            </Link>
-            , that should exist.
+            Try heading back to the <Link href="/">homepage</Link>, that should
+            exist.
           </p>
         </div>
       </Section>

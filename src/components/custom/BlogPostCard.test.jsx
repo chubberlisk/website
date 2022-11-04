@@ -61,8 +61,10 @@ it("displays read link to blog page", () => {
     />
   );
 
-  expect(screen.getByText("Read →")).toBeVisible();
-  expect(screen.getByText("Read →").closest("a")).toHaveAttribute(
+  expect(screen.getByTestId("readBlogPostLink")).toHaveTextContent(
+    "Read Blog post 1 blog post →"
+  );
+  expect(screen.getByTestId("readBlogPostLink")).toHaveAttribute(
     "href",
     "/blog/post-1"
   );
