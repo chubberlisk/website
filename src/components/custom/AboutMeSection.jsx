@@ -7,6 +7,7 @@ import TypeScriptLogo from "../core/icons/TypeScriptLogo";
 import TerraformLogo from "../core/icons/TerraformLogo";
 import CSharpLogo from "../core/icons/CSharpLogo";
 import ReactLogo from "../core/icons/ReactLogo";
+import ServerlessFrameworkLogo from "../core/icons/ServerlessFrameworkLogo";
 
 export default function AboutMeSection() {
   return (
@@ -66,30 +67,7 @@ export default function AboutMeSection() {
         </div>
 
         <div className="flex justify-start items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            role="img"
-            width="2rem"
-            height="2rem"
-            className="mr-3"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 256 204"
-          >
-            <rect
-              x="0"
-              y="0"
-              width="256"
-              height="204"
-              fill="none"
-              stroke="none"
-            />
-            <path
-              d="M0 161.202h45.312l-14.039 42.396H0v-42.396zM0 80.6h72l-14.036 42.396H0V80.601zM0 0h98.692l-14.04 42.395H0V0zm143.349 0H256v42.395H129.312L143.349 0zM116.66 80.6H256v42.397H102.622l14.038-42.396zm-26.69 80.602H256v42.396H75.933l14.037-42.396z"
-              fill="#F26D61"
-            />
-          </svg>
+          <ServerlessFrameworkLogo />
           <span>Serverless Framework</span>
         </div>
 
