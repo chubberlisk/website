@@ -17,11 +17,9 @@ export default function PaintingCard({
       <Image
         src={src}
         alt={alt}
-        width={250}
-        height={250}
-        layout="responsive"
         className="w-full object-fill"
-        quality={100}
+        width={1080}
+        height={1080}
       />
 
       <div className="pt-5">
