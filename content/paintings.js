@@ -1,5 +1,22 @@
 export default [
   {
+    title: "Pain",
+    publishDate: "2022-11-05T22:00:00Z",
+    image: {
+      src: "/images/paintings/pain.png",
+      alt: [
+        "4 panel comic.",
+        "In the top left panel, paint Ting and Tingker Bell are standing.",
+        "Paint Ting asks, 'Why haven't you asked me to create any paintings?'.",
+        "In the top right panel, Tingker Bell thinks and replies, 'Well...'.",
+        "In the bottom left panel, a car drifting right with a sign above.",
+        "The direction ahead says 'Making paints' and the direction right says 'Only seeing the pain in paintings'.",
+        "In the bottom right panel, Paint Ting stands with a neutral expression and says 'This didn't last long...'.",
+      ].join(" "),
+    },
+    tags: ["Paint Ting", "Tingker Bell"],
+  },
+  {
     title: "Emperor King Yusuf",
     publishDate: "2021-01-21T17:43:00Z",
     image: {
