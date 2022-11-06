@@ -5,7 +5,7 @@ import PaintingsSection from "./PaintingsSection";
 export default function LatestPaintingsSection() {
   return (
     <PaintingsSection
-      displayLatest={4}
+      displayLatest={3}
       title={<h2>Latest paintings</h2>}
       cardHeadingLevel={3}
     >
