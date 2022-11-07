@@ -115,14 +115,10 @@ jobs:
           path: .next
 
   deployment:
-    name: 🚀 Deployment
+    name: 🚀 Test Deployment
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    concurrency: deployment
-    environment:
-      name: Production
-      url: https://wentingwang.co.uk
     needs: [linting, unit-testing, end-to-end-testing]
     runs-on: ubuntu-latest
     steps:
