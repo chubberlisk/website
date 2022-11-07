@@ -107,7 +107,7 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
-      - name: Upload project
+      - name: Upload built project
         if: success()
         uses: actions/upload-artifact@v3
         with:
@@ -118,7 +118,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v3
         with:
-          name: project
+          name: build-output
           path: .vercel/output
 
   deployment:
@@ -151,6 +151,12 @@ jobs:
         with:
           name: project
           path: .next
+
+      - name: Download build output
+        uses: actions/download-artifact@v3
+        with:
+          name: build-output
+          path: .vercel/output
 
       - name: Deploy built project to production
         run: yarn deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
