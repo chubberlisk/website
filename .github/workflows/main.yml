@@ -79,7 +79,7 @@ jobs:
       - name: Pull production environment information
         run: yarn deploy:env --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Build project artifacts
+      - name: Build project artifact
         run: yarn deploy:build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Run end to end tests
@@ -104,7 +104,7 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
-      - name: Upload project artifacts
+      - name: Upload project artifact
         if: success()
         uses: actions/upload-artifact@v3
         with:
@@ -136,11 +136,11 @@ jobs:
       - name: Install dependencies from cache
         run: yarn --offline --frozen-lockfile
 
-      - name: Download project artifacts
+      - name: Download project artifact
         uses: actions/download-artifact@v3
         with:
           name: project
           path: .next
 
-      - name: Deploy project artifacts to production
+      - name: Deploy project artifact to production
         run: yarn deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
