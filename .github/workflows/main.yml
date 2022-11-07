@@ -76,6 +76,9 @@ jobs:
           node-version: 16
           cache: yarn
 
+      - name: Install dependencies from cache
+        run: yarn --offline --frozen-lockfile
+
       - name: Pull production environment information
         run: yarn deploy:env --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
