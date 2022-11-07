@@ -93,12 +93,6 @@ jobs:
           wait-on: http://localhost:3001/
           command: yarn test:e2e
 
-      - name: Upload project artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: project
-          path: .next
-
       - name: Upload screenshots
         uses: actions/upload-artifact@v1
         if: failure()
@@ -113,12 +107,18 @@ jobs:
           name: cypress-videos
           path: cypress/videos
 
+      - name: Upload project artifacts
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: project
+          path: .next
+
   deployment:
     name: 🚀 Deployment
     env:
       VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
       VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-    if: github.ref == 'refs/heads/main'
     concurrency: deployment
     environment:
       name: Production
