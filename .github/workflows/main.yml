@@ -64,7 +64,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: dependencies
     env:
-      NEXT_PUBLIC_FLAGS_ENVIRONMENT_KEY: ${{secrets.FLAGS_DEVELOPMENT_KEY}}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -78,15 +79,14 @@ jobs:
       - name: Install dependencies from cache
         run: yarn --offline --frozen-lockfile
 
-      - name: Restore built application from cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx') }}
-          restore-keys: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+      - name: Install Vercel CLI
+        run: yarn global add vercel@latest
 
-      - name: Build application
-        run: yarn build
+      - name: Pull Vercel production environment information
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build project artifacts
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Run end to end tests
         uses: cypress-io/github-action@v4
