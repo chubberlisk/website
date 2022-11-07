@@ -93,6 +93,12 @@ jobs:
           wait-on: http://localhost:3001/
           command: yarn test:e2e
 
+      - name: Upload project artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: project
+          path: .next
+
       - name: Upload screenshots
         uses: actions/upload-artifact@v1
         if: failure()
@@ -123,14 +129,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+      - name: Download project artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: project
 
-      - name: Pull Vercel production environment information
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build project artifacts
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Deploy project artifacts to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Run end to end tests
+        uses: cypress-io/github-action@v4
+        with:
+          install: false
+          start: yarn start -p 3001
+          wait-on: http://localhost:3001/
+          command: yarn test:e2e
