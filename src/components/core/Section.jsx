@@ -7,12 +7,13 @@ export default function Section({
   minHeight = "min-h-screen",
   className,
   children,
+  padding = "py-14",
 }) {
   return (
     <section
       id={id}
       className={classNames(
-        "flex flex-col justify-center py-8 md:py-5",
+        `flex flex-col justify-center ${padding}`,
         backgroundColor,
         minHeight,
         className

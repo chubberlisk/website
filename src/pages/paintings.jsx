@@ -2,8 +2,8 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import Layout from "../components/core/Layout";
 import PaintingsSection from "../components/custom/PaintingsSection";
-import paintings from "../../content/paintings";
 import ExternalLink from "../components/core/ExternalLink";
+import paintings from "../../content/paintings";
 
 export default function Paintings() {
   return (
@@ -47,6 +47,7 @@ export default function Paintings() {
           }
           minHeight="min-h-screen-90"
           cardHeadingLevel={2}
+          padding="py-6 xs:pb-8 xs:pt-0"
         />
       </Layout>
     </>

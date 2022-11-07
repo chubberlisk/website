@@ -5,7 +5,7 @@ import ExternalLink from "../core/ExternalLink";
 
 export default function ContactMeSection() {
   return (
-    <Section id="contact-me" minHeight="h-auto">
+    <Section id="contact-me" minHeight="h-auto" padding="py-6">
       <div className="mt-1 mb-5">
         <Logo height="72px" width="72px" />
       </div>

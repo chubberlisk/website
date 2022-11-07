@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <div className="container">
-      <nav className="flex items-center justify-between flex-wrap h-screen-10">
+      <nav className="flex items-center justify-between flex-wrap min-h-screen-10">
         <div className="flex items-center flex-shrink-0 mr-6">
           <Link href="/">
             <>

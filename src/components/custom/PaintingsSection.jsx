@@ -11,15 +11,16 @@ export default function PaintingsSection({
   children,
   minHeight,
   cardHeadingLevel = 2,
+  padding,
 }) {
   return (
-    <Section id="paintings" minHeight={minHeight}>
+    <Section id="paintings" minHeight={minHeight} padding={padding}>
       {title}
 
       <Text>{description}</Text>
 
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
         data-testid="paintings"
       >
         {paintings
