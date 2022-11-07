@@ -76,9 +76,6 @@ jobs:
           node-version: 16
           cache: yarn
 
-      - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile
-
       - name: Install Vercel CLI
         run: yarn global add vercel@latest
 
