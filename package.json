@@ -14,6 +14,9 @@
     "test:e2e:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e'",
     "test:e2e:interactive": "cypress open",
     "test:e2e:interactive:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e:interactive'",
+    "deploy": "vercel deploy",
+    "deploy:env": "vercel pull",
+    "deploy:build": "vercel build",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -51,6 +54,7 @@
     "prettier": "^2.7.1",
     "react-test-renderer": "^18.2.0",
     "start-server-and-test": "^1.14.0",
+    "vercel": "^28.4.14",
     "webpack": "^5.74.0"
   }
 }
