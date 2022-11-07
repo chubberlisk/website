@@ -1,12 +1,31 @@
 export default [
   {
+    title: "CBA",
+    publishDate: "2022-11-07T21:10:00Z",
+    image: {
+      src: "/images/paintings/cba.png",
+      alt: [
+        "4 panel comic.",
+        "In the top left panel, Paint Ting and Tingker Bell are standing.",
+        "Paint Ting asks, 'Why are we going to do?'.",
+        "Tingker Bell replies, 'About what?'.",
+        "In the top right panel, Tingker Bell thinks and Paint Ting informs, 'You know, about the fact that we don't have a side fringe anymore...'.",
+        "In the bottom left panel, Tingker Bell smiles and says 'Oh... Well, can you be bothered to redesign me and all the other Tings.'.",
+        "Paint Ting bluntly replies, 'No.'.",
+        "In the bottom right panel, Tingker Bell laughs and says, 'Nothing it is then!'.",
+        "Paint Ting celebrates with their arms up and their paint brush in the air.",
+      ].join(" "),
+    },
+    tags: ["Paint Ting", "Tingker Bell"],
+  },
+  {
     title: "Pain",
     publishDate: "2022-11-05T22:00:00Z",
     image: {
       src: "/images/paintings/pain.png",
       alt: [
         "4 panel comic.",
-        "In the top left panel, paint Ting and Tingker Bell are standing.",
+        "In the top left panel, Paint Ting and Tingker Bell are standing.",
         "Paint Ting asks, 'Why haven't you asked me to create any paintings?'.",
         "In the top right panel, Tingker Bell thinks and replies, 'Well...'.",
         "In the bottom left panel, a car drifting right with a sign above.",
