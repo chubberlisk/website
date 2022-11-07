@@ -28,17 +28,22 @@ export default function PaintingsSection({
               new Date(paintingB.publishDate) - new Date(paintingA.publishDate)
           )
           .slice(0, displayLatest)
-          .map(({ image, title, publishDate, tags }, index) => (
-            <PaintingCard
-              title={title}
-              publishDate={publishDate}
-              image={image}
-              tags={tags}
-              number={paintings.length - index}
-              key={title}
-              headingLevel={cardHeadingLevel}
-            />
-          ))}
+          .map(({ image, title, publishDate, tags }, index) => {
+            const number = paintings.length - index;
+
+            return (
+              <PaintingCard
+                id={number}
+                title={title}
+                publishDate={publishDate}
+                image={image}
+                tags={tags}
+                number={number}
+                key={title}
+                headingLevel={cardHeadingLevel}
+              />
+            );
+          })}
       </div>
 
       {children}

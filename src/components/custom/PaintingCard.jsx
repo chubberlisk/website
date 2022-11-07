@@ -3,6 +3,7 @@ import Image from "next/image";
 import { formatDate } from "../../formatters/date";
 
 export default function PaintingCard({
+  id,
   title,
   publishDate,
   image: { src, alt },
@@ -13,7 +14,7 @@ export default function PaintingCard({
   const Heading = `h${headingLevel}`;
 
   return (
-    <div className="border-2 border-wtw-yellow p-5">
+    <div id={id} className="border-2 border-wtw-yellow p-5">
       <Image
         src={src}
         alt={alt}
