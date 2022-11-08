@@ -108,14 +108,14 @@ jobs:
           path: cypress/videos
 
       - name: Upload built project
-        if: success()
+        if: success() && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v3
         with:
           name: project
           path: .next
 
       - name: Upload build output
-        if: success()
+        if: success() && github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v3
         with:
           name: build-output
