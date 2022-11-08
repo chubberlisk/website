@@ -79,11 +79,14 @@ jobs:
       - name: Install dependencies from cache
         run: yarn --offline --frozen-lockfile
 
+      - name: Install Vercel CLI
+        run: yarn global add vercel
+
       - name: Pull production environment information
-        run: yarn deploy:env --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Build project
-        run: yarn deploy:build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Run end to end tests
         uses: cypress-io/github-action@v4
