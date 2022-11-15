@@ -5,9 +5,13 @@ import { formatDate } from "../../formatters/date";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function BlogPostSection({ blogPost }) {
+export default function BlogPostSection({ blogPost, padding }) {
   return (
-    <Section minHeight="min-h-screen-90" id={blogPost.metadata.slug}>
+    <Section
+      minHeight="min-h-screen-90"
+      id={blogPost.metadata.slug}
+      padding={padding}
+    >
       <div className="mb-5 xl:mb-8">
         <Link href="/blog">← Back to all blog posts</Link>
       </div>

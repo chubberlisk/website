@@ -40,7 +40,7 @@ export default function Blog({ blogPost }) {
         }}
       />
       <Layout>
-        <BlogPostSection blogPost={blogPost} />
+        <BlogPostSection blogPost={blogPost} padding="py-6 xs:pb-8 xs:pt-0" />
       </Layout>
     </>
   );
