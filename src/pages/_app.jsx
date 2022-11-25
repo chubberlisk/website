@@ -1,4 +1,5 @@
 import React from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { FlagBagProvider } from "@happykit/flags/context";
 import { useFlags } from "../../flags/client";
 import { DefaultSeo } from "next-seo";
@@ -12,6 +13,7 @@ export default function CustomApp({ Component, pageProps }) {
     <FlagBagProvider value={flagBag}>
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
+      <Analytics />
     </FlagBagProvider>
   );
 }
