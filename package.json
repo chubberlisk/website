@@ -10,9 +10,9 @@
     "format": "prettier --write . --loglevel warn",
     "test": "yarn test:unit && yarn test:e2e:with-server",
     "test:unit": "jest",
-    "test:e2e": "cypress run --headless",
+    "test:e2e": "cypress run --headless --project test/e2e",
     "test:e2e:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e'",
-    "test:e2e:interactive": "cypress open",
+    "test:e2e:interactive": "cypress open --project test/e2e",
     "test:e2e:interactive:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e:interactive'",
     "prepare": "husky install"
   },

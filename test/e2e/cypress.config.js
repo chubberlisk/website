@@ -3,8 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   e2e: {
     baseUrl: "http://localhost:3001/",
-    specPattern: "test/e2e/**/*.test.js",
-    fixturesFolder: "test/e2e/fixtures",
+    specPattern: "**/*.test.js",
+    fixturesFolder: "fixtures",
     supportFile: false,
   },
 });
