@@ -40,7 +40,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "babel-jest": "^29.4.2",
+    "babel-jest": "^29.4.3",
     "cypress": "^12.5.1",
     "eslint": "<9.0.0",
     "eslint-config-next": "^13.1.6",
