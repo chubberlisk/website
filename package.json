@@ -51,7 +51,7 @@
     "jest-environment-jsdom": "^29.4.3",
     "prettier": "^2.8.4",
     "react-test-renderer": "^18.2.0",
-    "start-server-and-test": "^1.15.3",
+    "start-server-and-test": "^1.15.4",
     "webpack": "^5.75.0"
   }
 }
