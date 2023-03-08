@@ -6,13 +6,22 @@ import { DefaultSeo } from "next-seo";
 import SEO from "../../next-seo.config";
 import "./styles.css";
 
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function CustomApp({ Component, pageProps }) {
   const flagBag = useFlags();
 
   return (
     <FlagBagProvider value={flagBag}>
       <DefaultSeo {...SEO} />
-      <Component {...pageProps} />
+      <main className={dmSans.className}>
+        <Component {...pageProps} />
+      </main>
       <Analytics />
     </FlagBagProvider>
   );
