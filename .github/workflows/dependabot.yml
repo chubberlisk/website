@@ -7,6 +7,7 @@ permissions:
 
 jobs:
   dependabot:
+    name: Approve and auto-merge Dependabot PR
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
