@@ -41,9 +41,9 @@ export default function AboutMeSection() {
         <p>
           Now I&apos;m a{" "}
           <ExternalLink
-            href="https://github.com/madetech/handbook/blob/main/roles/sfia/mid_software_engineer.md"
+            href="https://github.com/madetech/handbook/blob/main/roles/mid_software_engineer.md"
             className="text-made-tech"
-            ariaLabel="Made Tech SFIA Role Guidance: Software Engineer"
+            ariaLabel="Made Tech Role Guidance: Software Engineer"
           >
             Software Engineer
           </ExternalLink>{" "}
