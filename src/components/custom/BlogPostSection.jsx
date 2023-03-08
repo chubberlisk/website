@@ -22,7 +22,6 @@ export default function BlogPostSection({ blogPost, padding }) {
           alt="hello"
           width={1000}
           height={420}
-          layout="intrinsic"
           quality={100}
         />
       </div>
