@@ -1,5 +1,8 @@
 name: Dependabot
-on: pull_request
+workflow_run:
+  workflows: ["CI/CD"]
+  types: [completed]
+  branches: ["dependabot/**"]
 
 permissions:
   contents: write
@@ -9,7 +12,7 @@ jobs:
   dependabot:
     name: Approve and auto-merge Dependabot PR
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success'}}
     steps:
       - name: Fetch metadata
         id: metadata
