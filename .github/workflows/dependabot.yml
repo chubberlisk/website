@@ -1,8 +1,11 @@
 name: Dependabot
-workflow_run:
-  workflows: ["CI/CD"]
-  types: [completed]
-  branches: ["dependabot/**"]
+
+on:
+  pull_request:
+  workflow_run:
+    workflows: ["CI/CD"]
+    types: [completed]
+    branches: ["dependabot/**"]
 
 permissions:
   contents: write
