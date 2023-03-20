@@ -96,7 +96,7 @@ jobs:
         run: vercel build --prod --token=${{ secrets.vercel-token }}
 
       - name: Upload built project
-        if: success() && github.ref == 'refs/heads/main'
+        if: success()
         uses: actions/upload-artifact@v3
         with:
           name: project
