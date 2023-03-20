@@ -1,4 +1,4 @@
-name: Build and Test
+name: CI
 
 on:
   workflow_call:
@@ -30,7 +30,7 @@ jobs:
         run: yarn --frozen-lockfile
 
   linting:
-    name: 🧹 Run linting
+    name: 🧹 Linting
     runs-on: ubuntu-latest
     needs: dependencies
     steps:
@@ -50,7 +50,7 @@ jobs:
         run: yarn lint
 
   unit-testing:
-    name: 🧪 Run unit tests
+    name: 🧪 Unit testing
     runs-on: ubuntu-latest
     needs: dependencies
     steps:
@@ -69,8 +69,8 @@ jobs:
       - name: Run unit tests
         run: yarn test:unit
 
-  end-to-end-testing:
-    name: 🖥 Run end-to-end tests
+  build:
+    name: 👷 Build application
     runs-on: ubuntu-latest
     needs: dependencies
     env:
@@ -98,6 +98,43 @@ jobs:
       - name: Build project
         run: vercel build --prod --token=${{ secrets.vercel-token }}
 
+      - name: Upload built project
+        if: success() && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v3
+        with:
+          name: project
+          path: .next
+
+      - name: Upload build output
+        if: success() && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-output
+          path: .vercel/output
+
+  end-to-end-testing:
+    name: 🖥 End-to-end testing
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
+      VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js with Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: Download built project
+        uses: actions/download-artifact@v3
+        with:
+          name: project
+          path: .next
+
       - name: Run end to end tests
         uses: cypress-io/github-action@v4
         with:
@@ -119,17 +156,3 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
-
-      - name: Upload built project
-        if: success() && github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v3
-        with:
-          name: project
-          path: .next
-
-      - name: Upload build output
-        if: success() && github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-output
-          path: .vercel/output
