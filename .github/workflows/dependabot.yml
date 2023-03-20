@@ -2,10 +2,6 @@ name: Dependabot
 
 on:
   pull_request:
-  workflow_run:
-    workflows: ["CI/CD"]
-    types: [completed]
-    branches: ["dependabot/**"]
 
 permissions:
   contents: write
@@ -15,17 +11,20 @@ jobs:
   dependabot:
     name: Approve and auto-merge Dependabot PR
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success'}}
+    if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
       - name: Fetch metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Approve and auto-merge PR
+      - name: Approve and auto-merge PR for non-major version upgrades
         if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
         run: |
-          gh pr review --approve "$PR_URL"
+          gh pr checkout "$PR_URL"
+          if [ "$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)" != "APPROVED" ];
+          then gh pr review --approve "$PR_URL"
+          fi
           gh pr merge --merge --auto "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
