@@ -129,6 +129,9 @@ jobs:
           node-version: 16
           cache: yarn
 
+      - name: Install dependencies from cache
+        run: yarn --offline --frozen-lockfile
+
       - name: Download built project
         uses: actions/download-artifact@v3
         with:

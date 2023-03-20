@@ -16,7 +16,7 @@ jobs:
   cd:
     name: CD
     uses: ./.github/workflows/cd.yml
-    needs: [ci]
+    needs: ci
     secrets:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
       vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
