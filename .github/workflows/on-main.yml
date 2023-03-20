@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   build-and-test:
-    uses: ./.github/workflows/build-and-test.yml@main
+    uses: ./.github/workflows/build-and-test.yml
 
   deploy:
     name: 🚀 Deploy to production
