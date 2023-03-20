@@ -9,6 +9,10 @@ permissions:
 jobs:
   build-and-test:
     uses: ./.github/workflows/build-and-test.yml
+    secrets:
+      vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+      vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+
   approve-and-auto-merge-dependabot-pr:
     name: Approve and auto-merge Dependabot PR
     runs-on: ubuntu-latest
