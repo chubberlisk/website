@@ -28,6 +28,13 @@ jobs:
         uses: dependabot/fetch-metadata@v1
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Dismiss approvals
+        run: |
+          gh api repos/${{ github.event.repo.name }}/pulls/${{ github.event.number }}/reviews --jq '.[] | \
+            [.id,.state] | join("=")' | grep -Po '\d+(?=\=APPROVED)' | \
+            xargs -I '@(review_id)' gh api --method PUT -H "Accept: application/vnd.github+json" \
+            repos/${{ github.event.repo.name }}/pulls/${{ github.event.number }}/reviews/@(review_id)/dismissals \
+            -f message='Dismiss stale review.' -f event='DISMISS'
       - name: Approve and auto-merge PR for non-major version upgrades
         if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
         run: |
