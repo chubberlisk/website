@@ -21,6 +21,8 @@ jobs:
     needs: ci
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Fetch metadata
         id: metadata
         uses: dependabot/fetch-metadata@v1
