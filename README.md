@@ -1,4 +1,4 @@
-[![CI/CD](https://github.com/chubberlisk/website/actions/workflows/main.yml/badge.svg)](https://github.com/chubberlisk/website/actions/workflows/main.yml)
+[![CI/CD](https://github.com/chubberlisk/website/actions/workflows/on-main.yml/badge.svg)](https://github.com/chubberlisk/website/actions/workflows/main.yml)
 
 <p align="center">
   <a href="https://github.com/chubberlisk/website">
