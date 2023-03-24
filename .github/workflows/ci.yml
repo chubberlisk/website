@@ -11,40 +11,15 @@ on:
         required: true
 
 jobs:
-  dependencies:
-    name: 🏗 Install dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js with Yarn
-        id: setup-nodejs
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-
-      - name: Install dependencies
-        if: steps.setup-nodejs.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
-
   linting:
     name: 🧹 Linting
     runs-on: ubuntu-latest
-    needs: dependencies
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js with Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-
       - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
+        run: yarn --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run linting
         run: yarn lint
@@ -52,7 +27,6 @@ jobs:
   unit-testing:
     name: 🧪 Unit testing
     runs-on: ubuntu-latest
-    needs: dependencies
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -64,7 +38,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile --ignore-optional --ignore-scripts
+        run: yarn --frozen-lockfile --ignore-optional --ignore-scripts
 
       - name: Run unit tests
         run: yarn test:unit
@@ -72,19 +46,12 @@ jobs:
   build:
     name: 👷 Build application
     runs-on: ubuntu-latest
-    needs: dependencies
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
       VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Set up Node.js with Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
 
       - name: Install Vercel CLI
         run: yarn global add vercel
@@ -120,14 +87,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node.js with Yarn
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: yarn
-
       - name: Install dependencies from cache
-        run: yarn --offline --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Download built project
         uses: actions/download-artifact@v3
