@@ -9,6 +9,8 @@ on:
         required: true
       vercel-project-id:
         required: true
+      flags-key:
+        required: true
 
 jobs:
   linting:
@@ -43,62 +45,24 @@ jobs:
       - name: Run unit tests
         run: yarn test:unit
 
-  build:
-    name: 👷 Build application
-    runs-on: ubuntu-latest
-    env:
-      VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
-      VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Install Vercel CLI
-        run: yarn global add vercel
-
-      - name: Pull production environment information
-        run: vercel pull --yes --environment=production --token=${{ secrets.vercel-token }}
-
-      - name: Build project
-        run: vercel build --prod --token=${{ secrets.vercel-token }}
-
-      - name: Upload built project
-        if: success()
-        uses: actions/upload-artifact@v3
-        with:
-          name: project
-          path: .next
-
-      - name: Upload build output
-        if: success() && github.ref == 'refs/heads/main'
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-output
-          path: .vercel/output
-
   end-to-end-testing:
     name: 🖥 End-to-end testing
     runs-on: ubuntu-latest
-    needs: build
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
       VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Download built project
-        uses: actions/download-artifact@v3
-        with:
-          name: project
-          path: .next
 
       - name: Run end to end tests
         uses: cypress-io/github-action@v4
         with:
-          start: yarn start -p 3001
-          wait-on: http://localhost:3001/
+          start: yarn dev -p 3001
+          wait-on: http://localhost:3001
           command: yarn test:e2e
+        env:
+          NEXT_PUBLIC_FLAGS_ENVIRONMENT_KEY: ${{ secrets.flags-key }}
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v3
