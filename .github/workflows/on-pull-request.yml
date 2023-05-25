@@ -14,6 +14,7 @@ jobs:
       vercel-token: ${{ secrets.VERCEL_TOKEN }}
       vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
       vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      flags-key: ${{ secrets.FLAGS_DEVELOPMENT_KEY }}
 
   approve-and-auto-merge-dependabot-pr:
     name: ✅ Approve and auto-merge Dependabot PR
