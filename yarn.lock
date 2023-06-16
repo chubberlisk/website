@@ -1276,10 +1276,10 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@happykit/flags@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@happykit/flags/-/flags-3.2.0.tgz#0c0118d4958ab2ce6d915d0a9e239e0a56194230"
-  integrity sha512-mX7UBioTQWg9b5Fe/AGTow9+Cz44pbC5sj2evP69llg3pg0b0LHvQ7OIEXcINTB+UuXw4fIFweUDcDqiERIvhw==
+"@happykit/flags@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@happykit/flags/-/flags-3.3.0.tgz#d163e45ed7810bd7f8c62c274390d7fa112be151"
+  integrity sha512-QyywkKYctdo0bnNf+bBd+3B/3Rsnjdaz+jtVA+jSqLxm0/lw51Z1+q2sEfc62MyNwQnY6w7eqajdwhuvH3VWAw==
   dependencies:
     nanoid "3.2.0"
 
