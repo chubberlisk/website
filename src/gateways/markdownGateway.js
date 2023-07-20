@@ -5,6 +5,7 @@ import matter from "gray-matter";
 export default class MarkdownGateway {
   constructor({ contentDirectory }) {
     this.blogPostsDirectory = `${contentDirectory}/blog-posts`;
+    this.tingPostsDirectory = `${contentDirectory}/ting-posts`;
   }
 
   retrieveBlogPost(file) {
@@ -33,6 +34,18 @@ export default class MarkdownGateway {
             ? -1
             : 1,
         ),
+    };
+  }
+
+  retrieveTingPost(file) {
+    const slug = file.replace(/\.md$/, "");
+    const fullPath = join(resolve("./", this.tingPostsDirectory), `${slug}.md`);
+    const fileContents = fileSystem.readFileSync(fullPath, "utf8");
+    const { data: metadata, content } = matter(fileContents);
+
+    return {
+      metadata: { ...metadata, slug },
+      content: content.trim(),
     };
   }
 }

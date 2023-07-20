@@ -106,3 +106,39 @@ describe("#retrieveBlogPosts", () => {
     );
   });
 });
+
+describe("#retrieveTingPost", () => {
+  let tingPost;
+
+  beforeAll(() => {
+    tingPost = markdownGateway.retrieveTingPost("ting-1.md");
+  });
+
+  it("returns slug in metadata of ting post", () => {
+    expect(tingPost.metadata).toEqual(
+      expect.objectContaining({
+        slug: "ting-1",
+      }),
+    );
+  });
+
+  it("returns publish date in metadata of ting post", () => {
+    expect(tingPost.metadata).toEqual(
+      expect.objectContaining({
+        publishDate: "2021-03-01T15:30:00",
+      }),
+    );
+  });
+
+  it("returns draft in metadata of ting post", () => {
+    expect(tingPost.metadata).toEqual(
+      expect.objectContaining({
+        draft: false,
+      }),
+    );
+  });
+
+  it("returns content of ting post", () => {
+    expect(tingPost.content).toBe("Ting 1 content.");
+  });
+});
