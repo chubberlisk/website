@@ -48,4 +48,21 @@ export default class MarkdownGateway {
       content: content.trim(),
     };
   }
+
+  retrieveTingPosts() {
+    const files = fileSystem.readdirSync(
+      resolve("./", this.tingPostsDirectory),
+    );
+
+    return {
+      tingPosts: files
+        .map((file) => this.retrieveTingPost(file))
+        .sort((postA, postB) =>
+          new Date(postA.metadata.publishDate) >
+          new Date(postB.metadata.publishDate)
+            ? -1
+            : 1,
+        ),
+    };
+  }
 }

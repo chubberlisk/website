@@ -82,6 +82,7 @@ describe("#retrieveBlogPosts", () => {
   });
 
   it("returns metadata of blog post", () => {
+    expect(blogPosts.blogPosts[0].metadata).toHaveProperty("slug");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("title");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("publishDate");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("summary");
@@ -140,5 +141,39 @@ describe("#retrieveTingPost", () => {
 
   it("returns content of ting post", () => {
     expect(tingPost.content).toBe("Ting 1 content.");
+  });
+});
+
+describe("#retrieveTingPosts", () => {
+  let tingPosts;
+
+  beforeAll(() => {
+    tingPosts = markdownGateway.retrieveTingPosts();
+  });
+
+  it("returns all ting posts", () => {
+    expect(tingPosts.tingPosts).toHaveLength(3);
+  });
+
+  it("returns metadata of ting post", () => {
+    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("slug");
+    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("publishDate");
+    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("draft");
+  });
+
+  it("returns content of ting post", () => {
+    expect(tingPosts.tingPosts[0]).toHaveProperty("content");
+  });
+
+  it("sorts ting posts by publish date with most recent first", () => {
+    expect(tingPosts.tingPosts[0].metadata.publishDate).toBe(
+      "2021-03-03T17:30:00",
+    );
+    expect(tingPosts.tingPosts[1].metadata.publishDate).toBe(
+      "2021-03-01T15:30:00",
+    );
+    expect(tingPosts.tingPosts[2].metadata.publishDate).toBe(
+      "2021-01-02T16:30:00",
+    );
   });
 });
