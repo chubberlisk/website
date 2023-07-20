@@ -22,7 +22,7 @@ describe("when enable blog feature flag is on", () => {
     expect(screen.getByText("View all blog posts →")).toBeVisible();
     expect(screen.getByText("View all blog posts →")).toHaveAttribute(
       "href",
-      "/blog"
+      "/blog",
     );
   });
 
@@ -40,7 +40,7 @@ describe("when enable blog feature flag is on", () => {
             metadata: { title: "Blog post 3" },
           },
         ]}
-      />
+      />,
     );
 
     expect(screen.getByText("Blog post 1")).toBeVisible();
@@ -64,7 +64,7 @@ describe("when enable blog feature flag is off", () => {
             metadata: { title: "Blog post 1" },
           },
         ]}
-      />
+      />,
     );
 
     expect(screen.queryByText("Blog post 1")).not.toBeInTheDocument();

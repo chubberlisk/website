@@ -26,7 +26,7 @@ export default function PaintingsSection({
         {paintings
           .sort(
             (paintingA, paintingB) =>
-              new Date(paintingB.publishDate) - new Date(paintingA.publishDate)
+              new Date(paintingB.publishDate) - new Date(paintingA.publishDate),
           )
           .slice(0, displayLatest)
           .map(({ image, title, publishDate, tags }, index) => {

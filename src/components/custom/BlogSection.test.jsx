@@ -9,7 +9,7 @@ it("displays the title", () => {
       blogPosts={[]}
       tags={[]}
       cardHeadingLevel={2}
-    />
+    />,
   );
 
   expect(screen.getByText("All blog posts")).toBeVisible();
@@ -35,7 +35,7 @@ describe("when the environment is development", () => {
         ]}
         tags={[]}
         cardHeadingLevel={2}
-      />
+      />,
     );
 
     expect(screen.getByText("Draft blog post 1")).toBeVisible();
@@ -64,7 +64,7 @@ describe("when the environment is production", () => {
         ]}
         tags={[]}
         cardHeadingLevel={2}
-      />
+      />,
     );
 
     expect(screen.queryByText("Draft blog post 1")).not.toBeInTheDocument();
@@ -77,7 +77,7 @@ it("displays children", () => {
   render(
     <BlogSection blogPosts={[]} tags={[]} cardHeadingLevel={2}>
       <p>Children</p>
-    </BlogSection>
+    </BlogSection>,
   );
 
   expect(screen.getByText("Children")).toBeVisible();

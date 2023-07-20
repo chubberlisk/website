@@ -11,7 +11,7 @@ it("displays the title", () => {
       tags={[]}
       headingLevel={2}
       slug="post-1"
-    />
+    />,
   );
 
   expect(screen.getByText("Blog post 1")).toBeVisible();
@@ -26,7 +26,7 @@ it("formats the publish date like 1st March 2021", () => {
       tags={[]}
       headingLevel={2}
       slug="post-1"
-    />
+    />,
   );
 
   expect(screen.getByText("1 March 2021")).toBeVisible();
@@ -41,7 +41,7 @@ it("displays all the tags", () => {
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       headingLevel={2}
       slug="post-1"
-    />
+    />,
   );
 
   expect(screen.getByText("Tag 1")).toBeVisible();
@@ -58,14 +58,14 @@ it("displays read link to blog page", () => {
       tags={[]}
       headingLevel={2}
       slug="post-1"
-    />
+    />,
   );
 
   expect(screen.getByTestId("readBlogPostLink")).toHaveTextContent(
-    "Read Blog post 1 blog post →"
+    "Read Blog post 1 blog post →",
   );
   expect(screen.getByTestId("readBlogPostLink").closest("a")).toHaveAttribute(
     "href",
-    "/blog/post-1"
+    "/blog/post-1",
   );
 });

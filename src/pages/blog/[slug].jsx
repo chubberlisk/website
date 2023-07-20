@@ -47,7 +47,7 @@ export default function Blog({ blogPost }) {
 }
 
 export async function getStaticPaths() {
-  const markdownGateway = new MarkdownGateway("content/blog-posts");
+  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
   const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
   const paths = blogPosts.blogPosts.map((blogPost) => ({
@@ -63,7 +63,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const markdownGateway = new MarkdownGateway("content/blog-posts");
+  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
   const getBlogPostBySlug = new GetBlogPostBySlug(markdownGateway);
   const blogPost = getBlogPostBySlug.execute(params.slug);
 

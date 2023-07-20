@@ -1,6 +1,6 @@
 import MarkdownGateway from "./markdownGateway";
 
-const markdownGateway = new MarkdownGateway("fixtures/blog-posts");
+const markdownGateway = new MarkdownGateway({ contentDirectory: "fixtures" });
 
 describe("#retrieveBlogPost", () => {
   let blogPost;
@@ -13,7 +13,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         slug: "post-1",
-      })
+      }),
     );
   });
 
@@ -21,7 +21,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         title: "Post 1",
-      })
+      }),
     );
   });
 
@@ -29,7 +29,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         publishDate: "2021-03-01T15:30:00",
-      })
+      }),
     );
   });
 
@@ -37,7 +37,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         summary: "Post 1 blog post.",
-      })
+      }),
     );
   });
 
@@ -45,7 +45,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         coverImage: "/images/post-1.png",
-      })
+      }),
     );
   });
 
@@ -53,7 +53,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         draft: false,
-      })
+      }),
     );
   });
 
@@ -61,7 +61,7 @@ describe("#retrieveBlogPost", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
         tags: ["test"],
-      })
+      }),
     );
   });
 
@@ -96,13 +96,13 @@ describe("#retrieveBlogPosts", () => {
 
   it("sorts blog posts by publish date with most recent first", () => {
     expect(blogPosts.blogPosts[0].metadata.publishDate).toBe(
-      "2021-03-03T17:30:00"
+      "2021-03-03T17:30:00",
     );
     expect(blogPosts.blogPosts[1].metadata.publishDate).toBe(
-      "2021-03-01T15:30:00"
+      "2021-03-01T15:30:00",
     );
     expect(blogPosts.blogPosts[2].metadata.publishDate).toBe(
-      "2021-01-02T16:30:00"
+      "2021-01-02T16:30:00",
     );
   });
 });

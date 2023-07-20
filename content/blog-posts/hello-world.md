@@ -31,7 +31,7 @@ export default function Section({
         "flex flex-col justify-center py-8 md:py-5",
         backgroundColor,
         minHeight,
-        className
+        className,
       )}
     >
       {children}

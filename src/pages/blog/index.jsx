@@ -22,7 +22,7 @@ export default function Blog({ blogPosts }) {
 }
 
 export async function getStaticProps() {
-  const markdownGateway = new MarkdownGateway("content/blog-posts");
+  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
   const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
 

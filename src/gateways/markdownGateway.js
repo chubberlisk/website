@@ -3,13 +3,13 @@ import { join, resolve } from "path";
 import matter from "gray-matter";
 
 export default class MarkdownGateway {
-  constructor(postsDirectory) {
-    this.postsDirectory = postsDirectory;
+  constructor({ contentDirectory }) {
+    this.blogPostsDirectory = `${contentDirectory}/blog-posts`;
   }
 
   retrieveBlogPost(file) {
     const slug = file.replace(/\.md$/, "");
-    const fullPath = join(resolve("./", this.postsDirectory), `${slug}.md`);
+    const fullPath = join(resolve("./", this.blogPostsDirectory), `${slug}.md`);
     const fileContents = fileSystem.readFileSync(fullPath, "utf8");
     const { data: metadata, content } = matter(fileContents);
 
@@ -20,7 +20,9 @@ export default class MarkdownGateway {
   }
 
   retrieveBlogPosts() {
-    const files = fileSystem.readdirSync(resolve("./", this.postsDirectory));
+    const files = fileSystem.readdirSync(
+      resolve("./", this.blogPostsDirectory),
+    );
 
     return {
       blogPosts: files
@@ -29,7 +31,7 @@ export default class MarkdownGateway {
           new Date(postA.metadata.publishDate) >
           new Date(postB.metadata.publishDate)
             ? -1
-            : 1
+            : 1,
         ),
     };
   }

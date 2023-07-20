@@ -10,7 +10,7 @@ it("displays the title", () => {
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
-    />
+    />,
   );
 
   expect(screen.getByText("Amazing painting title")).toBeVisible();
@@ -24,7 +24,7 @@ it("formats the publish date like 1st March 2021", () => {
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
-    />
+    />,
   );
 
   expect(screen.getByText("1 March 2021")).toBeVisible();
@@ -38,7 +38,7 @@ it("displays the painting number", () => {
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
-    />
+    />,
   );
 
   expect(screen.getByText("#1")).toBeVisible();
@@ -52,7 +52,7 @@ it("displays all tags", () => {
       publishDate="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
-    />
+    />,
   );
 
   expect(screen.getByText("Tag 1")).toBeVisible();

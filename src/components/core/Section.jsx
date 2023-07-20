@@ -16,7 +16,7 @@ export default function Section({
         `flex flex-col justify-center ${padding}`,
         backgroundColor,
         minHeight,
-        className
+        className,
       )}
     >
       <div className="container">{children}</div>
