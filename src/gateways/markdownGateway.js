@@ -58,8 +58,8 @@ export default class MarkdownGateway {
       tingPosts: files
         .map((file) => this.retrieveTingPost(file))
         .sort((postA, postB) =>
-          new Date(postA.metadata.publishDate) >
-          new Date(postB.metadata.publishDate)
+          new Date(postA.metadata.timestamp) >
+          new Date(postB.metadata.timestamp)
             ? -1
             : 1,
         ),

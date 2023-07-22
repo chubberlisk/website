@@ -126,7 +126,7 @@ describe("#retrieveTingPost", () => {
   it("returns publish date in metadata of ting post", () => {
     expect(tingPost.metadata).toEqual(
       expect.objectContaining({
-        publishDate: "2021-03-01T15:30:00",
+        timestamp: "2021-03-01T15:30:00",
       }),
     );
   });
@@ -157,7 +157,7 @@ describe("#retrieveTingPosts", () => {
 
   it("returns metadata of ting post", () => {
     expect(tingPosts.tingPosts[0].metadata).toHaveProperty("slug");
-    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("publishDate");
+    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("timestamp");
     expect(tingPosts.tingPosts[0].metadata).toHaveProperty("draft");
   });
 
@@ -166,13 +166,13 @@ describe("#retrieveTingPosts", () => {
   });
 
   it("sorts ting posts by publish date with most recent first", () => {
-    expect(tingPosts.tingPosts[0].metadata.publishDate).toBe(
+    expect(tingPosts.tingPosts[0].metadata.timestamp).toBe(
       "2021-03-03T17:30:00",
     );
-    expect(tingPosts.tingPosts[1].metadata.publishDate).toBe(
+    expect(tingPosts.tingPosts[1].metadata.timestamp).toBe(
       "2021-03-01T15:30:00",
     );
-    expect(tingPosts.tingPosts[2].metadata.publishDate).toBe(
+    expect(tingPosts.tingPosts[2].metadata.timestamp).toBe(
       "2021-01-02T16:30:00",
     );
   });
