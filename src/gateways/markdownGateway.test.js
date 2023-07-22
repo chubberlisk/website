@@ -115,6 +115,14 @@ describe("#retrieveWriting", () => {
     writing = markdownGateway.retrieveWriting("writing-1.md");
   });
 
+  it("returns title in metadata of a writing", () => {
+    expect(writing.metadata).toEqual(
+      expect.objectContaining({
+        title: "Writing 1",
+      }),
+    );
+  });
+
   it("returns publish date time in metadata of a writing", () => {
     expect(writing.metadata).toEqual(
       expect.objectContaining({
@@ -156,6 +164,7 @@ describe("#retrieveWritings", () => {
   });
 
   it("returns metadata of a writing", () => {
+    expect(writings.writings[0].metadata).toHaveProperty("title");
     expect(writings.writings[0].metadata).toHaveProperty("publishDateTime");
     expect(writings.writings[0].metadata).toHaveProperty("draft");
     expect(writings.writings[0].metadata).toHaveProperty("tags");

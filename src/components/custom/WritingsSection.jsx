@@ -8,6 +8,7 @@ export default function WritingsSection({
   title,
   children,
   minHeight,
+  cardHeadingLevel = 2,
 }) {
   const environment = process.env.NODE_ENV;
   const writingsToShow =
@@ -30,20 +31,27 @@ export default function WritingsSection({
                 new Date(writingA.metadata.publishDateTime),
             )
             .slice(0, displayLatest || writings.length)
-            .map(({ metadata: { publishDateTime, tags }, content }, index) => {
-              const number = writingsToShow.length - index;
+            .map(
+              (
+                { metadata: { title, publishDateTime, tags }, content },
+                index,
+              ) => {
+                const number = writingsToShow.length - index;
 
-              return (
-                <WritingCard
-                  id={`writing-${number}`}
-                  key={publishDateTime}
-                  publishDateTime={publishDateTime}
-                  tags={tags}
-                  content={content}
-                  number={number}
-                />
-              );
-            })
+                return (
+                  <WritingCard
+                    id={`writing-${number}`}
+                    title={title}
+                    key={publishDateTime}
+                    publishDateTime={publishDateTime}
+                    tags={tags}
+                    content={content}
+                    number={number}
+                    headingLevel={cardHeadingLevel}
+                  />
+                );
+              },
+            )
         )}
       </div>
 

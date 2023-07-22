@@ -9,6 +9,18 @@ jest.mock(
       markdown,
 );
 
+it("displays the title", () => {
+  render(
+    <WritingCard
+      title="Writing 1"
+      publishDateTime="2021-03-01T13:00:00"
+      content="Writing content."
+    />,
+  );
+
+  expect(screen.getByText("Writing 1")).toBeVisible();
+});
+
 it("displays the content", () => {
   render(
     <WritingCard

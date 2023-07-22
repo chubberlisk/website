@@ -8,6 +8,7 @@ export default function LatestWritingsSection({ writings }) {
       displayLatest={2}
       writings={writings}
       title={<h2>Latest writings</h2>}
+      cardHeadingLevel={3}
     >
       <Link href="/writings" className="inline-block">
         View all writings →

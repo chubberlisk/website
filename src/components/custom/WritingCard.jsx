@@ -5,11 +5,15 @@ import Tag from "../core/Tag";
 
 export default function WritingCard({
   id,
+  title,
   publishDateTime,
   tags,
   content,
   number,
+  headingLevel = 2,
 }) {
+  const Heading = `h${headingLevel}`;
+
   return (
     <article
       id={id}
@@ -21,8 +25,10 @@ export default function WritingCard({
         </span>
       </div>
       <div className="basis-4/5">
+        <Heading className="text-lg md:text-xl font-medium mb-3">
+          <span className="mr-1">#{number}</span> {title}
+        </Heading>
         <div className="flex flex-wrap mb-3">
-          <span className="float-left mr-5 font-medium">#{number}</span>
           {tags?.map((tag) => (
             <Tag key={tag} tag={tag} />
           ))}
