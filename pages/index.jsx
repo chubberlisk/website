@@ -17,8 +17,8 @@ export default function Home({ latestBlogPosts, writings }) {
         <LandingSection />
         <AboutMeSection />
         <LatestBlogPostsSection latestBlogPosts={latestBlogPosts} />
-        <LatestPaintingsSection />
         <LatestWritingsSection writings={writings} />
+        <LatestPaintingsSection />
         <ContactMeSection />
       </div>
     </Layout>
