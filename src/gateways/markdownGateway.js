@@ -50,9 +50,9 @@ export default class MarkdownGateway {
   }
 
   retrieveTingPosts() {
-    const files = fileSystem.readdirSync(
-      resolve("./", this.tingPostsDirectory),
-    );
+    const files = fileSystem
+      .readdirSync(resolve("./", this.tingPostsDirectory))
+      .filter((file) => file.includes(".md"));
 
     return {
       tingPosts: files

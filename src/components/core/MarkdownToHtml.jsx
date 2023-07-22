@@ -28,7 +28,9 @@ const h2 = ({ children }) => (
   <h2 className="text-2xl md:text-4xl mt-8">{children}</h2>
 );
 
-const p = ({ children }) => <p className="mb-5">{children}</p>;
+const p = ({ children }) => (
+  <p className="mb-5 whitespace-pre-wrap">{children}</p>
+);
 
 const a = ({ href, children }) => {
   if (href.includes("madetech")) {
