@@ -2,7 +2,7 @@ import React from "react";
 import { formatDate } from "../../formatters/date";
 import MarkdownToHtml from "../core/MarkdownToHtml";
 
-export default function TingPostCard({ timestamp, content }) {
+export default function WritingCard({ timestamp, content }) {
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">

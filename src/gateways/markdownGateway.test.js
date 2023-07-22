@@ -108,63 +108,57 @@ describe("#retrieveBlogPosts", () => {
   });
 });
 
-describe("#retrieveTingPost", () => {
-  let tingPost;
+describe("#retrieveWriting", () => {
+  let writing;
 
   beforeAll(() => {
-    tingPost = markdownGateway.retrieveTingPost("ting-1.md");
+    writing = markdownGateway.retrieveWriting("writing-1.md");
   });
 
-  it("returns timestamp in metadata of ting post", () => {
-    expect(tingPost.metadata).toEqual(
+  it("returns timestamp in metadata of a writing", () => {
+    expect(writing.metadata).toEqual(
       expect.objectContaining({
         timestamp: "2021-03-01T15:30:00",
       }),
     );
   });
 
-  it("returns draft in metadata of ting post", () => {
-    expect(tingPost.metadata).toEqual(
+  it("returns draft in metadata of a writing", () => {
+    expect(writing.metadata).toEqual(
       expect.objectContaining({
         draft: false,
       }),
     );
   });
 
-  it("returns content of ting post", () => {
-    expect(tingPost.content).toBe("Ting 1 content.");
+  it("returns content of a writing", () => {
+    expect(writing.content).toBe("Writing 1 content.");
   });
 });
 
-describe("#retrieveTingPosts", () => {
-  let tingPosts;
+describe("#retrieveWritings", () => {
+  let writings;
 
   beforeAll(() => {
-    tingPosts = markdownGateway.retrieveTingPosts();
+    writings = markdownGateway.retrieveWritings();
   });
 
-  it("returns all ting posts", () => {
-    expect(tingPosts.tingPosts).toHaveLength(3);
+  it("returns all writings", () => {
+    expect(writings.writings).toHaveLength(3);
   });
 
-  it("returns metadata of ting post", () => {
-    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("timestamp");
-    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("draft");
+  it("returns metadata of a writing", () => {
+    expect(writings.writings[0].metadata).toHaveProperty("timestamp");
+    expect(writings.writings[0].metadata).toHaveProperty("draft");
   });
 
-  it("returns content of ting post", () => {
-    expect(tingPosts.tingPosts[0]).toHaveProperty("content");
+  it("returns content of a writing", () => {
+    expect(writings.writings[0]).toHaveProperty("content");
   });
 
-  it("sorts ting posts by publish date with most recent first", () => {
-    expect(tingPosts.tingPosts[0].metadata.timestamp).toBe(
-      "2021-03-03T17:30:00",
-    );
-    expect(tingPosts.tingPosts[1].metadata.timestamp).toBe(
-      "2021-03-01T15:30:00",
-    );
-    expect(tingPosts.tingPosts[2].metadata.timestamp).toBe(
-      "2021-01-02T16:30:00",
-    );
+  it("sorts writings by publish date with most recent first", () => {
+    expect(writings.writings[0].metadata.timestamp).toBe("2021-03-03T17:30:00");
+    expect(writings.writings[1].metadata.timestamp).toBe("2021-03-01T15:30:00");
+    expect(writings.writings[2].metadata.timestamp).toBe("2021-01-02T16:30:00");
   });
 });

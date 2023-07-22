@@ -5,7 +5,7 @@ import matter from "gray-matter";
 export default class MarkdownGateway {
   constructor({ contentDirectory }) {
     this.blogPostsDirectory = `${contentDirectory}/blog-posts`;
-    this.tingPostsDirectory = `${contentDirectory}/ting-posts`;
+    this.writingsDirectory = `${contentDirectory}/writings`;
   }
 
   retrieveBlogPost(file) {
@@ -37,9 +37,9 @@ export default class MarkdownGateway {
     };
   }
 
-  retrieveTingPost(file) {
+  retrieveWriting(file) {
     const slug = file.replace(/\.md$/, "");
-    const fullPath = join(resolve("./", this.tingPostsDirectory), `${slug}.md`);
+    const fullPath = join(resolve("./", this.writingsDirectory), `${slug}.md`);
     const fileContents = fileSystem.readFileSync(fullPath, "utf8");
     const { data: metadata, content } = matter(fileContents);
 
@@ -49,14 +49,14 @@ export default class MarkdownGateway {
     };
   }
 
-  retrieveTingPosts() {
+  retrieveWritings() {
     const files = fileSystem
-      .readdirSync(resolve("./", this.tingPostsDirectory))
+      .readdirSync(resolve("./", this.writingsDirectory))
       .filter((file) => file.includes(".md"));
 
     return {
-      tingPosts: files
-        .map((file) => this.retrieveTingPost(file))
+      writings: files
+        .map((file) => this.retrieveWriting(file))
         .sort((postA, postB) =>
           new Date(postA.metadata.timestamp) >
           new Date(postB.metadata.timestamp)
