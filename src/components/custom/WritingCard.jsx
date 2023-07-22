@@ -14,7 +14,7 @@ export default function WritingCard({ timestamp, tags, content }) {
         <div className="flex flex-wrap mb-3">
           {tags?.map((tag) => (
             <span
-              className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-black mr-2 mb-1"
+              className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-bold mr-2 mb-1"
               key={tag}
             >
               {tag}

@@ -10,7 +10,7 @@ export default function ContactMeSection() {
         <Logo height="72px" width="72px" />
       </div>
 
-      <h2 className="text-2xl textGradient font-black mb-1">Wen Ting Wang</h2>
+      <h2 className="text-2xl textGradient font-medium mb-1">Wen Ting Wang</h2>
 
       <p className="text-xl text-gray-100">
         Let&apos;s develop Tings together.

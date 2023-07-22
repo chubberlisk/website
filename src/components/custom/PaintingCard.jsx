@@ -27,7 +27,7 @@ export default function PaintingCard({
         <span className="block text-wtw-yellow">
           <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
         </span>
-        <Heading className="text-lg md:text-xl font-semibold mb-3">
+        <Heading className="text-lg md:text-xl font-medium mb-3">
           {title}
         </Heading>
 
@@ -37,7 +37,7 @@ export default function PaintingCard({
           <div className="flex flex-wrap">
             {tags.map((tag) => (
               <span
-                className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-black mr-2 mb-1"
+                className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-medium mr-2 mb-1"
                 key={tag}
               >
                 {tag}
