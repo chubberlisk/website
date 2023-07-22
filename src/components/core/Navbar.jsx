@@ -38,6 +38,12 @@ export default function Navbar() {
             </Link>
           )}
           <Link
+            href="/writings"
+            className="inline-block mr-5 md:mr-10 text-wtw-white"
+          >
+            Writings
+          </Link>
+          <Link
             href="/paintings"
             className="inline-block mr-5 md:mr-10 text-wtw-white"
           >

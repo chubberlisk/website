@@ -131,6 +131,14 @@ describe("#retrieveWriting", () => {
     );
   });
 
+  it("returns tags in metadata of a writing", () => {
+    expect(writing.metadata).toEqual(
+      expect.objectContaining({
+        tags: ["Some Tag"],
+      }),
+    );
+  });
+
   it("returns content of a writing", () => {
     expect(writing.content).toBe("Writing 1 content.");
   });
@@ -150,6 +158,7 @@ describe("#retrieveWritings", () => {
   it("returns metadata of a writing", () => {
     expect(writings.writings[0].metadata).toHaveProperty("timestamp");
     expect(writings.writings[0].metadata).toHaveProperty("draft");
+    expect(writings.writings[0].metadata).toHaveProperty("tags");
   });
 
   it("returns content of a writing", () => {

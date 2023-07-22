@@ -1,6 +1,7 @@
 ---
 timestamp: "2019-09-27T16:30:00Z"
 draft: false
+tags: ["Tingker Bell", "Brian"]
 ---
 
 Tingker Bell: I need a demo slide.

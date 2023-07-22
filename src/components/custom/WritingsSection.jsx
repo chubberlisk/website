@@ -25,6 +25,7 @@ export default function WritingsSection({
           <WritingCard
             key={writing.metadata.timestamp}
             timestamp={writing.metadata.timestamp}
+            tags={writing.metadata.tags}
             content={writing.content}
           />
         ))
