@@ -28,7 +28,7 @@ describe("#retrieveBlogPost", () => {
   it("returns publish date in metadata of blog post", () => {
     expect(blogPost.metadata).toEqual(
       expect.objectContaining({
-        publishDate: "2021-03-01T15:30:00",
+        publishDateTime: "2021-03-01T15:30:00",
       }),
     );
   });
@@ -84,7 +84,7 @@ describe("#retrieveBlogPosts", () => {
   it("returns metadata of blog post", () => {
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("slug");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("title");
-    expect(blogPosts.blogPosts[0].metadata).toHaveProperty("publishDate");
+    expect(blogPosts.blogPosts[0].metadata).toHaveProperty("publishDateTime");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("summary");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("coverImage");
     expect(blogPosts.blogPosts[0].metadata).toHaveProperty("draft");
@@ -96,13 +96,13 @@ describe("#retrieveBlogPosts", () => {
   });
 
   it("sorts blog posts by publish date with most recent first", () => {
-    expect(blogPosts.blogPosts[0].metadata.publishDate).toBe(
+    expect(blogPosts.blogPosts[0].metadata.publishDateTime).toBe(
       "2021-03-03T17:30:00",
     );
-    expect(blogPosts.blogPosts[1].metadata.publishDate).toBe(
+    expect(blogPosts.blogPosts[1].metadata.publishDateTime).toBe(
       "2021-03-01T15:30:00",
     );
-    expect(blogPosts.blogPosts[2].metadata.publishDate).toBe(
+    expect(blogPosts.blogPosts[2].metadata.publishDateTime).toBe(
       "2021-01-02T16:30:00",
     );
   });

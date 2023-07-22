@@ -4,7 +4,7 @@ import { formatDate } from "../../formatters/date";
 
 export default function BlogPostCard({
   title,
-  publishDate,
+  publishDateTime,
   summary,
   tags,
   headingLevel,
@@ -16,7 +16,7 @@ export default function BlogPostCard({
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
         <span className="block text-wtw-yellow">
-          <time dateTime={publishDate}>{formatDate(publishDate)}</time>
+          <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
         </span>
       </div>
       <div className="basis-4/5">

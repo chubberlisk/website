@@ -5,7 +5,7 @@ import { formatDate } from "../../formatters/date";
 export default function PaintingCard({
   id,
   title,
-  publishDate,
+  publishDateTime,
   image: { src, alt },
   tags,
   number,
@@ -25,7 +25,7 @@ export default function PaintingCard({
 
       <div className="pt-5">
         <span className="block text-wtw-yellow">
-          <time dateTime={publishDate}>{formatDate(publishDate)}</time>
+          <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
         </span>
         <Heading className="text-lg md:text-xl font-semibold mb-3">
           {title}

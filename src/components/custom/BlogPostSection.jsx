@@ -15,7 +15,6 @@ export default function BlogPostSection({ blogPost, padding }) {
       <div className="mb-5 xl:mb-8">
         <Link href="/blog">← Back to all blog posts</Link>
       </div>
-
       <div className="lg:w-3/5 mb-5">
         <Image
           src={blogPost.metadata.coverImage}
@@ -25,15 +24,12 @@ export default function BlogPostSection({ blogPost, padding }) {
           quality={100}
         />
       </div>
-
       <span className="block text-xl text-wtw-yellow">
-        <time dateTime={blogPost.metadata.publishDate}>
-          {formatDate(blogPost.metadata.publishDate)}
+        <time dateTime={blogPost.metadata.publishDateTime}>
+          {formatDate(blogPost.metadata.publishDateTime)}
         </time>
       </span>
-
       <h1 className="text-3xl md:text-5xl">{blogPost.metadata.title}</h1>
-
       <div className="flex flex-wrap mb-3">
         {blogPost.metadata.tags?.map((tag) => (
           <span
@@ -44,7 +40,6 @@ export default function BlogPostSection({ blogPost, padding }) {
           </span>
         ))}
       </div>
-
       <MarkdownToHtml markdown={blogPost.content} />
     </Section>
   );

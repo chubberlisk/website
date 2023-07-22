@@ -29,8 +29,8 @@ export default class MarkdownGateway {
       blogPosts: files
         .map((file) => this.retrieveBlogPost(file))
         .sort((postA, postB) =>
-          new Date(postA.metadata.publishDate) >
-          new Date(postB.metadata.publishDate)
+          new Date(postA.metadata.publishDateTime) >
+          new Date(postB.metadata.publishDateTime)
             ? -1
             : 1,
         ),

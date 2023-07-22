@@ -26,17 +26,18 @@ export default function PaintingsSection({
         {paintings
           .sort(
             (paintingA, paintingB) =>
-              new Date(paintingB.publishDate) - new Date(paintingA.publishDate),
+              new Date(paintingB.publishDateTime) -
+              new Date(paintingA.publishDateTime),
           )
           .slice(0, displayLatest)
-          .map(({ image, title, publishDate, tags }, index) => {
+          .map(({ image, title, publishDateTime, tags }, index) => {
             const number = paintings.length - index;
 
             return (
               <PaintingCard
                 id={number}
                 title={title}
-                publishDate={publishDate}
+                publishDateTime={publishDateTime}
                 image={image}
                 tags={tags}
                 number={number}

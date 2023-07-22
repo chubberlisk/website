@@ -21,7 +21,7 @@ export default function Blog({ blogPost }) {
           url: `https://wentingwang.co.uk${asPath}`,
           type: "article",
           article: {
-            publishedTime: blogPost.metadata.publishDate,
+            publishedTime: blogPost.metadata.publishDateTime,
             authors: [],
             tags: blogPost.metadata.tags,
           },

@@ -1,6 +1,6 @@
 ---
 title: "How I like to write tests"
-publishDate: "2022-05-19T13:31:00Z"
+publishDateTime: "2022-05-19T13:31:00Z"
 summary: "A blog post about how I like to name and organise my tests."
 coverImage: "/images/blog/cover-images/how-i-like-to-write-tests.png"
 draft: false

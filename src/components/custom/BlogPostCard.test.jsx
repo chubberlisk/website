@@ -7,7 +7,7 @@ it("displays the title", () => {
     <BlogPostCard
       title="Blog post 1"
       summary="Amazing blog post"
-      publishDate="2021-03-01T13:00:00"
+      publishDateTime="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
       slug="post-1"
@@ -22,7 +22,7 @@ it("formats the publish date like 1st March 2021", () => {
     <BlogPostCard
       title="Blog post 1"
       summary="Amazing blog post"
-      publishDate="2021-03-01T13:00:00"
+      publishDateTime="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
       slug="post-1"
@@ -37,7 +37,7 @@ it("displays all the tags", () => {
     <BlogPostCard
       title="Blog post 1"
       summary="Amazing blog post"
-      publishDate="2021-03-01T13:00:00"
+      publishDateTime="2021-03-01T13:00:00"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       headingLevel={2}
       slug="post-1"
@@ -54,7 +54,7 @@ it("displays read link to blog page", () => {
     <BlogPostCard
       title="Blog post 1"
       summary="Amazing blog post"
-      publishDate="2021-03-01T13:00:00"
+      publishDateTime="2021-03-01T13:00:00"
       tags={[]}
       headingLevel={2}
       slug="post-1"

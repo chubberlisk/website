@@ -7,7 +7,7 @@ it("displays the title", () => {
     <PaintingCard
       title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
-      publishDate="2021-03-01"
+      publishDateTime="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
     />,
@@ -21,7 +21,7 @@ it("formats the publish date like 1st March 2021", () => {
     <PaintingCard
       title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
-      publishDate="2021-03-01"
+      publishDateTime="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
     />,
@@ -35,7 +35,7 @@ it("displays the painting number", () => {
     <PaintingCard
       title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
-      publishDate="2021-03-01"
+      publishDateTime="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
     />,
@@ -49,7 +49,7 @@ it("displays all tags", () => {
     <PaintingCard
       title="Amazing painting title"
       image={{ src: "/path/to/image.png", alt: "description" }}
-      publishDate="2021-03-01"
+      publishDateTime="2021-03-01"
       tags={["Tag 1", "Tag 2", "Tag 3"]}
       number={1}
     />,

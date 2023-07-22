@@ -5,7 +5,7 @@ import PaintingsSection from "./PaintingsSection";
 jest.mock("../../../content/paintings", () => [
   {
     title: "Painting title 1",
-    publishDate: "2021-03-01",
+    publishDateTime: "2021-03-01T13:00:00Z",
     image: {
       src: "/path/to/painting-1.png",
       alt: "description for Painting 1",
@@ -14,7 +14,7 @@ jest.mock("../../../content/paintings", () => [
   },
   {
     title: "Painting title 2",
-    publishDate: "2021-09-13",
+    publishDateTime: "2021-09-13T13:00:00Z",
     image: {
       src: "/path/to/painting-2.png",
       alt: "description for Painting 2",

@@ -26,7 +26,7 @@ export default function BlogSection({
           <BlogPostCard
             key={blogPost.metadata.title}
             title={blogPost.metadata.title}
-            publishDate={blogPost.metadata.publishDate}
+            publishDateTime={blogPost.metadata.publishDateTime}
             summary={blogPost.metadata.summary}
             tags={blogPost.metadata.tags}
             slug={blogPost.metadata.slug}
