@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import Layout from "../components/core/Layout";
-import Section from "../components/core/Section";
+import Layout from "../src/components/core/Layout";
+import Section from "../src/components/core/Section";
 
 export default function Custom404() {
   return (
@@ -22,7 +22,7 @@ export default function Custom404() {
               for.
             </p>
             <p>
-              Try heading back to the <Link href="/">homepage</Link>, that
+              Try heading back to the <Link href="/pages">homepage</Link>, that
               should exist.
             </p>
           </div>

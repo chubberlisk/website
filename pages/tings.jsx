@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../components/core/Layout";
-import GetTingPosts from "../useCases/getTingPosts";
-import MarkdownGateway from "../gateways/markdownGateway";
-import TingsSection from "../components/custom/TingsSection";
+import Layout from "../src/components/core/Layout";
+import GetTingPosts from "../src/useCases/getTingPosts";
+import MarkdownGateway from "../src/gateways/markdownGateway";
+import TingsSection from "../src/components/custom/TingsSection";
 import { NextSeo } from "next-seo";
 
 export default function Tings({ tingPosts }) {
