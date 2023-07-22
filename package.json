@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write . --loglevel warn",
+    "format": "prettier --write . --log-level=warn",
     "test": "yarn test:unit && yarn test:e2e:with-server",
     "test:unit": "jest",
     "test:e2e": "cypress run --headless --project test/e2e",
