@@ -4,13 +4,17 @@ import MarkdownToHtml from "../core/MarkdownToHtml";
 import Tag from "../core/Tag";
 
 export default function WritingCard({
+  id,
   publishDateTime,
   tags,
   content,
   number,
 }) {
   return (
-    <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
+    <article
+      id={id}
+      className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5"
+    >
       <div className="basis-1/5">
         <span className="block text-wtw-yellow">
           <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>

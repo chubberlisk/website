@@ -35,6 +35,7 @@ export default function WritingsSection({
 
               return (
                 <WritingCard
+                  id={`writing-${number}`}
                   key={publishDateTime}
                   publishDateTime={publishDateTime}
                   tags={tags}
