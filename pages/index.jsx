@@ -5,10 +5,12 @@ import AboutMeSection from "../src/components/custom/AboutMeSection";
 import LatestPaintingsSection from "../src/components/custom/LatestPaintingsSection";
 import ContactMeSection from "../src/components/custom/ContactMeSection";
 import GetBlogPosts from "../src/useCases/getBlogPosts";
+import GetWritings from "../src/useCases/getWritings";
 import MarkdownGateway from "../src/gateways/markdownGateway";
 import LatestBlogPostsSection from "../src/components/custom/LatestBlogPostsSection";
+import LatestWritingsSection from "../src/components/custom/LatestWritingsSection";
 
-export default function Home({ latestBlogPosts }) {
+export default function Home({ latestBlogPosts, writings }) {
   return (
     <Layout>
       <div className="divide-y-2 divide-wtw-yellow">
@@ -16,6 +18,7 @@ export default function Home({ latestBlogPosts }) {
         <AboutMeSection />
         <LatestBlogPostsSection latestBlogPosts={latestBlogPosts} />
         <LatestPaintingsSection />
+        <LatestWritingsSection writings={writings} />
         <ContactMeSection />
       </div>
     </Layout>
@@ -27,5 +30,13 @@ export async function getStaticProps() {
   const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
 
-  return { props: { latestBlogPosts: blogPosts.blogPosts.slice(0, 2) } };
+  const getWritings = new GetWritings(markdownGateway);
+  const writings = getWritings.execute();
+
+  return {
+    props: {
+      latestBlogPosts: blogPosts.blogPosts.slice(0, 2),
+      writings: writings.writings,
+    },
+  };
 }

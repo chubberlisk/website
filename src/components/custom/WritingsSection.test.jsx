@@ -139,6 +139,34 @@ it("displays children", () => {
   expect(screen.getByText("Children")).toBeVisible();
 });
 
+describe("when only the latest writings", () => {
+  it("displays only the number of latest writings", () => {
+    render(
+      <WritingsSection
+        displayLatest={1}
+        writings={[
+          {
+            metadata: { draft: false, publishDateTime: "2021-03-01T15:30:00" },
+            content: "Writing 1",
+          },
+          {
+            metadata: { draft: false, publishDateTime: "2021-03-02T15:30:00" },
+            content: "Writing 2",
+          },
+          {
+            metadata: { draft: false, publishDateTime: "2021-03-03T15:30:00" },
+            content: "Writing 3",
+          },
+        ]}
+      />,
+    );
+
+    expect(screen.getByText("Writing 3")).toBeVisible();
+    expect(screen.queryByText("Writing 2")).not.toBeInTheDocument();
+    expect(screen.queryByText("Writing 1")).not.toBeInTheDocument();
+  });
+});
+
 describe("when there are no writings", () => {
   it("displays a message", () => {
     render(<WritingsSection writings={[]} />);

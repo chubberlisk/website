@@ -3,6 +3,7 @@ import Section from "../core/Section";
 import WritingCard from "./WritingCard";
 
 export default function WritingsSection({
+  displayLatest,
   writings,
   title,
   children,
@@ -28,6 +29,7 @@ export default function WritingsSection({
                 new Date(writingB.metadata.publishDateTime) -
                 new Date(writingA.metadata.publishDateTime),
             )
+            .slice(0, displayLatest || writings.length)
             .map(({ metadata: { publishDateTime, tags }, content }, index) => {
               const number = writingsToShow.length - index;
 
