@@ -29,12 +29,11 @@ export default function PaintingCard({
           <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
         </span>
         <Heading className="text-lg md:text-xl font-medium mb-3">
+          <span className="mr-2">#{number}</span>
           {title}
         </Heading>
 
         <div className="w-full mb-0">
-          <span className="float-left mr-5 font-medium">#{number}</span>
-
           <div className="flex flex-wrap">
             {tags.map((tag) => (
               <Tag key={tag} tag={tag} />

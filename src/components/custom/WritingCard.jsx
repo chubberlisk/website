@@ -26,7 +26,8 @@ export default function WritingCard({
       </div>
       <div className="basis-4/5">
         <Heading className="text-lg md:text-xl font-medium mb-3">
-          <span className="mr-1">#{number}</span> {title}
+          <span className="mr-2">#{number}</span>
+          {title}
         </Heading>
         <div className="flex flex-wrap mb-3">
           {tags?.map((tag) => (
