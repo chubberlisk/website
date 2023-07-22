@@ -115,10 +115,10 @@ describe("#retrieveWriting", () => {
     writing = markdownGateway.retrieveWriting("writing-1.md");
   });
 
-  it("returns timestamp in metadata of a writing", () => {
+  it("returns publish date time in metadata of a writing", () => {
     expect(writing.metadata).toEqual(
       expect.objectContaining({
-        timestamp: "2021-03-01T15:30:00",
+        publishDateTime: "2021-03-01T15:30:00",
       }),
     );
   });
@@ -156,7 +156,7 @@ describe("#retrieveWritings", () => {
   });
 
   it("returns metadata of a writing", () => {
-    expect(writings.writings[0].metadata).toHaveProperty("timestamp");
+    expect(writings.writings[0].metadata).toHaveProperty("publishDateTime");
     expect(writings.writings[0].metadata).toHaveProperty("draft");
     expect(writings.writings[0].metadata).toHaveProperty("tags");
   });
@@ -166,8 +166,14 @@ describe("#retrieveWritings", () => {
   });
 
   it("sorts writings by publish date with most recent first", () => {
-    expect(writings.writings[0].metadata.timestamp).toBe("2021-03-03T17:30:00");
-    expect(writings.writings[1].metadata.timestamp).toBe("2021-03-01T15:30:00");
-    expect(writings.writings[2].metadata.timestamp).toBe("2021-01-02T16:30:00");
+    expect(writings.writings[0].metadata.publishDateTime).toBe(
+      "2021-03-03T17:30:00",
+    );
+    expect(writings.writings[1].metadata.publishDateTime).toBe(
+      "2021-03-01T15:30:00",
+    );
+    expect(writings.writings[2].metadata.publishDateTime).toBe(
+      "2021-01-02T16:30:00",
+    );
   });
 });

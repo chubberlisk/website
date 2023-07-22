@@ -23,8 +23,8 @@ export default function WritingsSection({
       ) : (
         writingsToShow.map((writing) => (
           <WritingCard
-            key={writing.metadata.timestamp}
-            timestamp={writing.metadata.timestamp}
+            key={writing.metadata.publishDateTime}
+            publishDateTime={writing.metadata.publishDateTime}
             tags={writing.metadata.tags}
             content={writing.content}
           />

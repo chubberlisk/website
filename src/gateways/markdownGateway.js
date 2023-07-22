@@ -58,8 +58,8 @@ export default class MarkdownGateway {
       writings: files
         .map((file) => this.retrieveWriting(file))
         .sort((postA, postB) =>
-          new Date(postA.metadata.timestamp) >
-          new Date(postB.metadata.timestamp)
+          new Date(postA.metadata.publishDateTime) >
+          new Date(postB.metadata.publishDateTime)
             ? -1
             : 1,
         ),

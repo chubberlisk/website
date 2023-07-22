@@ -23,15 +23,15 @@ describe("when the environment is development", () => {
       <WritingsSection
         writings={[
           {
-            metadata: { draft: true, timestamp: "2021-03-01T15:30:00" },
+            metadata: { draft: true, publishDateTime: "2021-03-01T15:30:00" },
             content: "Draft Writing 1",
           },
           {
-            metadata: { draft: false, timestamp: "2021-03-02T15:30:00" },
+            metadata: { draft: false, publishDateTime: "2021-03-02T15:30:00" },
             content: "Writing 2",
           },
           {
-            metadata: { draft: true, timestamp: "2021-03-03T15:30:00" },
+            metadata: { draft: true, publishDateTime: "2021-03-03T15:30:00" },
             content: "Draft Writing 3",
           },
         ]}
@@ -53,15 +53,15 @@ describe("when the environment is production", () => {
       <WritingsSection
         writings={[
           {
-            metadata: { draft: true, timestamp: "2021-03-01T15:30:00" },
+            metadata: { draft: true, publishDateTime: "2021-03-01T15:30:00" },
             content: "Draft Writing 1",
           },
           {
-            metadata: { draft: false, timestamp: "2021-03-02T15:30:00" },
+            metadata: { draft: false, publishDateTime: "2021-03-02T15:30:00" },
             content: "Writing 2",
           },
           {
-            metadata: { draft: true, timestamp: "2021-03-03T15:30:00" },
+            metadata: { draft: true, publishDateTime: "2021-03-03T15:30:00" },
             content: "Draft Writing 3",
           },
         ]}
