@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { formatDate } from "../../formatters/date";
+import Tag from "../core/Tag";
 
 export default function BlogPostCard({
   title,
@@ -25,12 +26,7 @@ export default function BlogPostCard({
         </Heading>
         <div className="flex flex-wrap mb-3">
           {tags?.map((tag) => (
-            <span
-              className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-bold mr-2 mb-1"
-              key={tag}
-            >
-              {tag}
-            </span>
+            <Tag key={tag} tag={tag} />
           ))}
         </div>
         <p className="w-fit xl:w-3/4">{summary}</p>

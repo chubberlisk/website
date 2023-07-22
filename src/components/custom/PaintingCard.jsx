@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { formatDate } from "../../formatters/date";
+import Tag from "../core/Tag";
 
 export default function PaintingCard({
   id,
@@ -36,12 +37,7 @@ export default function PaintingCard({
 
           <div className="flex flex-wrap">
             {tags.map((tag) => (
-              <span
-                className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-semibold mr-2 mb-1"
-                key={tag}
-              >
-                {tag}
-              </span>
+              <Tag key={tag} tag={tag} />
             ))}
           </div>
         </div>
