@@ -22,7 +22,7 @@ export default function Custom404() {
               for.
             </p>
             <p>
-              Try heading back to the <Link href="/pages">homepage</Link>, that
+              Try heading back to the <Link href="/">homepage</Link>, that
               should exist.
             </p>
           </div>
