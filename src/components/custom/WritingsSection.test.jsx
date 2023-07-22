@@ -2,11 +2,12 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import WritingsSection from "./WritingsSection";
 
-jest.mock("./WritingCard", () => {
-  const WritingCard = ({ content }) => <p>{content}</p>;
-
-  return WritingCard;
-});
+jest.mock(
+  "../core/MarkdownToHtml",
+  () =>
+    ({ markdown }) =>
+      markdown,
+);
 
 it("displays the title", () => {
   render(<WritingsSection title="Writings" writings={[]} />);
@@ -72,6 +73,60 @@ describe("when the environment is production", () => {
     expect(screen.getByText("Writing 2")).toBeVisible();
     expect(screen.queryByText("Draft Writing 3")).not.toBeInTheDocument();
   });
+});
+
+it("orders writings by publish date with most recent first", () => {
+  render(
+    <WritingsSection
+      writings={[
+        {
+          metadata: { draft: false, publishDateTime: "2021-01-01T15:30:00" },
+          content: "Writing 1",
+        },
+        {
+          metadata: { draft: false, publishDateTime: "2021-03-03T15:30:00" },
+          content: "Writing 3",
+        },
+        {
+          metadata: { draft: false, publishDateTime: "2021-02-02T15:30:00" },
+          content: "Writing 2",
+        },
+      ]}
+    />,
+  );
+
+  const writings = screen.getByTestId("writings");
+
+  expect(writings.childNodes[0]).toHaveTextContent("Writing 3");
+  expect(writings.childNodes[1]).toHaveTextContent("Writing 2");
+  expect(writings.childNodes[2]).toHaveTextContent("Writing 1");
+});
+
+it("sets a number for each writing with the most recent highest", () => {
+  render(
+    <WritingsSection
+      writings={[
+        {
+          metadata: { draft: false, publishDateTime: "2021-03-01T15:30:00" },
+          content: "Writing 1",
+        },
+        {
+          metadata: { draft: false, publishDateTime: "2021-03-02T15:30:00" },
+          content: "Writing 2",
+        },
+        {
+          metadata: { draft: false, publishDateTime: "2021-03-03T15:30:00" },
+          content: "Writing 3",
+        },
+      ]}
+    />,
+  );
+
+  const writings = screen.getByTestId("writings");
+
+  expect(writings.childNodes[0]).toHaveTextContent("#3");
+  expect(writings.childNodes[1]).toHaveTextContent("#2");
+  expect(writings.childNodes[2]).toHaveTextContent("#1");
 });
 
 it("displays children", () => {

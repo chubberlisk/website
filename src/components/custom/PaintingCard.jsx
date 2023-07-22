@@ -32,12 +32,12 @@ export default function PaintingCard({
         </Heading>
 
         <div className="w-full mb-0">
-          <span className="float-left mr-5">#{number}</span>
+          <span className="float-left mr-5 font-medium">#{number}</span>
 
           <div className="flex flex-wrap">
             {tags.map((tag) => (
               <span
-                className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-medium mr-2 mb-1"
+                className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-semibold mr-2 mb-1"
                 key={tag}
               >
                 {tag}

@@ -2,7 +2,12 @@ import React from "react";
 import { formatDate } from "../../formatters/date";
 import MarkdownToHtml from "../core/MarkdownToHtml";
 
-export default function WritingCard({ publishDateTime, tags, content }) {
+export default function WritingCard({
+  publishDateTime,
+  tags,
+  content,
+  number,
+}) {
   return (
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
@@ -12,9 +17,10 @@ export default function WritingCard({ publishDateTime, tags, content }) {
       </div>
       <div className="basis-4/5">
         <div className="flex flex-wrap mb-3">
+          <span className="float-left mr-5 font-medium">#{number}</span>
           {tags?.map((tag) => (
             <span
-              className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-bold mr-2 mb-1"
+              className="flex-shrink rounded-lg bg-gradient-to-r from-wtw-yellow to-wtw-orange text-wtw-black px-3 font-semibold mr-2 mb-1"
               key={tag}
             >
               {tag}
