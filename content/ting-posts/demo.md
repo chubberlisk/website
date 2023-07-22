@@ -1,6 +1,6 @@
 ---
 timestamp: "2019-09-27T16:30:00Z"
-draft: true
+draft: false
 ---
 
 Me: I need a demo slide.
