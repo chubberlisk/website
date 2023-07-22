@@ -115,15 +115,7 @@ describe("#retrieveTingPost", () => {
     tingPost = markdownGateway.retrieveTingPost("ting-1.md");
   });
 
-  it("returns slug in metadata of ting post", () => {
-    expect(tingPost.metadata).toEqual(
-      expect.objectContaining({
-        slug: "ting-1",
-      }),
-    );
-  });
-
-  it("returns publish date in metadata of ting post", () => {
+  it("returns timestamp in metadata of ting post", () => {
     expect(tingPost.metadata).toEqual(
       expect.objectContaining({
         timestamp: "2021-03-01T15:30:00",
@@ -156,7 +148,6 @@ describe("#retrieveTingPosts", () => {
   });
 
   it("returns metadata of ting post", () => {
-    expect(tingPosts.tingPosts[0].metadata).toHaveProperty("slug");
     expect(tingPosts.tingPosts[0].metadata).toHaveProperty("timestamp");
     expect(tingPosts.tingPosts[0].metadata).toHaveProperty("draft");
   });
