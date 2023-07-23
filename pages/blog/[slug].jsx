@@ -2,7 +2,7 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import Layout from "@/components/core/Layout";
-import MarkdownGateway from "@/gateways/markdownGateway";
+import MarkdownGateway from "@/gateways/MarkdownGateway";
 import GetBlogPostBySlug from "@/useCases/getBlogPostBySlug";
 import GetBlogPosts from "@/useCases/getBlogPosts";
 import BlogPostSection from "@/components/custom/BlogPostSection";

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@/components/core/Layout";
 import GetWritings from "@/useCases/getWritings";
-import MarkdownGateway from "@/gateways/markdownGateway";
+import MarkdownGateway from "@/gateways/MarkdownGateway";
 import WritingsSection from "@/components/custom/WritingsSection";
 import { NextSeo } from "next-seo";
 

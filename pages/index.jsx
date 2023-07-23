@@ -6,7 +6,7 @@ import LatestPaintingsSection from "@/components/custom/LatestPaintingsSection";
 import ContactMeSection from "@/components/custom/ContactMeSection";
 import GetBlogPosts from "@/useCases/getBlogPosts";
 import GetWritings from "@/useCases/getWritings";
-import MarkdownGateway from "@/gateways/markdownGateway";
+import MarkdownGateway from "@/gateways/MarkdownGateway";
 import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";
 import LatestWritingsSection from "@/components/custom/LatestWritingsSection";
 
