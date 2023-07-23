@@ -1,9 +1,9 @@
 import React from "react";
-import Section from "../../components/core/Section";
-import MarkdownToHtml from "../../components/core/MarkdownToHtml";
 import Link from "next/link";
 import Image from "next/image";
-import DateTime from "../core/DateTime";
+import Section from "@/components/core/Section";
+import MarkdownToHtml from "@/components/core/MarkdownToHtml";
+import DateTime from "@/components/core/DateTime";
 
 export default function BlogPostSection({ blogPost, padding }) {
   return (

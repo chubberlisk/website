@@ -1,11 +1,11 @@
 import React from "react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
-import Layout from "../../src/components/core/Layout";
-import MarkdownGateway from "../../src/gateways/markdownGateway";
-import GetBlogPostBySlug from "../../src/useCases/getBlogPostBySlug";
-import GetBlogPosts from "../../src/useCases/getBlogPosts";
-import BlogPostSection from "../../src/components/custom/BlogPostSection";
+import Layout from "@/components/core/Layout";
+import MarkdownGateway from "@/gateways/markdownGateway";
+import GetBlogPostBySlug from "@/useCases/getBlogPostBySlug";
+import GetBlogPosts from "@/useCases/getBlogPosts";
+import BlogPostSection from "@/components/custom/BlogPostSection";
 
 export default function Blog({ blogPost }) {
   const { asPath } = useRouter();

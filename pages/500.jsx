@@ -1,8 +1,8 @@
 import React from "react";
 import { NextSeo } from "next-seo";
-import Layout from "../src/components/core/Layout";
-import Section from "../src/components/core/Section";
-import ExternalLink from "../src/components/core/ExternalLink";
+import Layout from "@/components/core/Layout";
+import Section from "@/components/core/Section";
+import ExternalLink from "@/components/core/ExternalLink";
 
 export default function Custom500() {
   return (

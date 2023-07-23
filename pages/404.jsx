@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import Layout from "../src/components/core/Layout";
-import Section from "../src/components/core/Section";
+import Layout from "@/components/core/Layout";
+import Section from "@/components/core/Section";
 
 export default function Custom404() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import WritingCard from "../../../src/components/custom/WritingCard";
+import WritingCard from "@/components/custom/WritingCard";
 
 jest.mock(
-  "../../../src/components/core/MarkdownToHtml",
+  "@/components/core/MarkdownToHtml",
   () =>
     ({ markdown }) =>
       markdown,

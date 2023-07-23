@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/content/*": ["content/*"],
+      "@/flags/*": ["flags/*"],
+      "@/components/*": ["src/components/*"],
+      "@/formatters/*": ["src/formatters/*"],
+      "@/gateways/*": ["src/gateways/*"],
+      "@/useCases/*": ["src/useCases/*"]
+    }
+  }
+}

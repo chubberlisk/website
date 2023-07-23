@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Tag from "../core/Tag";
-import DateTime from "../core/DateTime";
+import Tag from "@/components/core/Tag";
+import DateTime from "@/components/core/DateTime";
 
 export default function BlogPostCard({
   title,

@@ -1,7 +1,7 @@
 import React from "react";
-import Section from "../core/Section";
-import Logo from "../core/Logo";
-import ExternalLink from "../core/ExternalLink";
+import Section from "@/components/core/Section";
+import Logo from "@/components/core/Logo";
+import ExternalLink from "@/components/core/ExternalLink";
 
 export default function ContactMeSection() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Navbar from "../../../src/components/core/Navbar";
+import Navbar from "@/components/core/Navbar";
 
 it("displays the link to blog", () => {
   render(<Navbar />);

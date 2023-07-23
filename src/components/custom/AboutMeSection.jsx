@@ -1,20 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import Section from "../core/Section";
-import ExternalLink from "../core/ExternalLink";
-import Text from "../core/Text";
-import JavaScriptLogo from "../core/icons/JavaScriptLogo";
-import TerraformLogo from "../core/icons/TerraformLogo";
-import CSharpLogo from "../core/icons/CSharpLogo";
-import ReactLogo from "../core/icons/ReactLogo";
-import PostgresqlLogo from "../core/icons/PostgresqlLogo";
-import RubyLogo from "../core/icons/RubyLogo";
-import GitLogo from "../core/icons/GitLogo";
-import AwsLogo from "../core/icons/AwsLogo";
-import AzureLogo from "../core/icons/AzureLogo";
-import HerokuLogo from "../core/icons/HerokuLogo";
-import ServerlessFrameworkLogo from "../core/icons/ServerlessFrameworkLogo";
-import TypeScriptLogo from "../core/icons/TypeScriptLogo";
+import Section from "@/components/core/Section";
+import ExternalLink from "@/components/core/ExternalLink";
+import Text from "@/components/core/Text";
+import JavaScriptLogo from "@/components/core/icons/JavaScriptLogo";
+import TerraformLogo from "@/components/core/icons/TerraformLogo";
+import CSharpLogo from "@/components/core/icons/CSharpLogo";
+import ReactLogo from "@/components/core/icons/ReactLogo";
+import PostgresqlLogo from "@/components/core/icons/PostgresqlLogo";
+import RubyLogo from "@/components/core/icons/RubyLogo";
+import GitLogo from "@/components/core/icons/GitLogo";
+import AwsLogo from "@/components/core/icons/AwsLogo";
+import AzureLogo from "@/components/core/icons/AzureLogo";
+import HerokuLogo from "@/components/core/icons/HerokuLogo";
+import ServerlessFrameworkLogo from "@/components/core/icons/ServerlessFrameworkLogo";
+import TypeScriptLogo from "@/components/core/icons/TypeScriptLogo";
 
 export default function AboutMeSection() {
   return (

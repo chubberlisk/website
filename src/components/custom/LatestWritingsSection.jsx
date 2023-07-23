@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import WritingsSection from "./WritingsSection";
+import WritingsSection from "@/components/custom/WritingsSection";
 
 export default function LatestWritingsSection({ writings }) {
   return (

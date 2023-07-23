@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "../core/Section";
-import ExternalLink from "../core/ExternalLink";
+import Section from "@/components/core/Section";
+import ExternalLink from "@/components/core/ExternalLink";
 
 export default function LandingSection() {
   return (

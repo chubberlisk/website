@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "../core/Section";
-import WritingCard from "./WritingCard";
+import Section from "@/components/core/Section";
+import WritingCard from "@/components/custom/WritingCard";
 
 export default function WritingsSection({
   displayLatest,

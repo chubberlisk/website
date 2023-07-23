@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import BlogSection from "./BlogSection";
+import BlogSection from "@/components/custom/BlogSection";
 
 export default function LatestBlogPostsSection({ latestBlogPosts }) {
   return (

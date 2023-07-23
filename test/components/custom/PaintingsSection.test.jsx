@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import PaintingsSection from "../../../src/components/custom/PaintingsSection";
+import PaintingsSection from "@/components/custom/PaintingsSection";
 
-jest.mock("../../../content/paintings", () => [
+jest.mock("@/content/paintings", () => [
   {
     title: "Painting title 1",
     publishDateTime: "2021-03-01T13:00:00Z",

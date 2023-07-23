@@ -1,14 +1,14 @@
 import React from "react";
-import Layout from "../src/components/core/Layout";
-import LandingSection from "../src/components/custom/LandingSection";
-import AboutMeSection from "../src/components/custom/AboutMeSection";
-import LatestPaintingsSection from "../src/components/custom/LatestPaintingsSection";
-import ContactMeSection from "../src/components/custom/ContactMeSection";
-import GetBlogPosts from "../src/useCases/getBlogPosts";
-import GetWritings from "../src/useCases/getWritings";
-import MarkdownGateway from "../src/gateways/markdownGateway";
-import LatestBlogPostsSection from "../src/components/custom/LatestBlogPostsSection";
-import LatestWritingsSection from "../src/components/custom/LatestWritingsSection";
+import Layout from "@/components/core/Layout";
+import LandingSection from "@/components/custom/LandingSection";
+import AboutMeSection from "@/components/custom/AboutMeSection";
+import LatestPaintingsSection from "@/components/custom/LatestPaintingsSection";
+import ContactMeSection from "@/components/custom/ContactMeSection";
+import GetBlogPosts from "@/useCases/getBlogPosts";
+import GetWritings from "@/useCases/getWritings";
+import MarkdownGateway from "@/gateways/markdownGateway";
+import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";
+import LatestWritingsSection from "@/components/custom/LatestWritingsSection";
 
 export default function Home({ latestBlogPosts, writings }) {
   return (

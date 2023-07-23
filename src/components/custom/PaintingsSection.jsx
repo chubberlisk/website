@@ -1,8 +1,8 @@
 import React from "react";
-import Section from "../core/Section";
-import PaintingCard from "./PaintingCard";
-import paintings from "../../../content/paintings";
-import Text from "../core/Text";
+import paintings from "@/content/paintings";
+import Section from "@/components/core/Section";
+import PaintingCard from "@/components/custom/PaintingCard";
+import Text from "@/components//core/Text";
 
 export default function PaintingsSection({
   displayLatest = paintings.length,

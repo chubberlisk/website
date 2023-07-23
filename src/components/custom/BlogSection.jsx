@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "../core/Section";
-import BlogPostCard from "./BlogPostCard";
+import Section from "@/components/core/Section";
+import BlogPostCard from "@/components/custom/BlogPostCard";
 
 export default function BlogSection({
   blogPosts,

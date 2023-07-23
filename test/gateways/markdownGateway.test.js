@@ -1,4 +1,4 @@
-import MarkdownGateway from "../../src/gateways/markdownGateway";
+import MarkdownGateway from "@/gateways/markdownGateway";
 
 const markdownGateway = new MarkdownGateway({ contentDirectory: "fixtures" });
 

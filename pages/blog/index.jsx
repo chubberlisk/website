@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../src/components/core/Layout";
-import GetBlogPosts from "../../src/useCases/getBlogPosts";
-import MarkdownGateway from "../../src/gateways/markdownGateway";
-import BlogSection from "../../src/components/custom/BlogSection";
+import Layout from "@/components/core/Layout";
+import GetBlogPosts from "@/useCases/getBlogPosts";
+import MarkdownGateway from "@/gateways/markdownGateway";
+import BlogSection from "@/components/custom/BlogSection";
 import { NextSeo } from "next-seo";
 
 export default function Blog({ blogPosts }) {

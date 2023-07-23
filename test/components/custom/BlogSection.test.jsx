@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import BlogSection from "../../../src/components/custom/BlogSection";
+import BlogSection from "@/components/custom/BlogSection";
 
 it("displays the title", () => {
   render(
