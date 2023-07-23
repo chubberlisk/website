@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Tag from "@/components/core/Tag";
 import DateTime from "@/components/core/DateTime";
+import Link from "next/link";
 
 export default function PaintingCard({
   id,
@@ -16,13 +17,15 @@ export default function PaintingCard({
 
   return (
     <div id={id} className="border-2 border-wtw-yellow p-5">
-      <Image
-        src={src}
-        alt={alt}
-        className="w-full object-fill"
-        width={1080}
-        height={1080}
-      />
+      <Link href={src}>
+        <Image
+          src={src}
+          alt={alt}
+          className="w-full object-fill"
+          width={1080}
+          height={1080}
+        />
+      </Link>
 
       <div className="pt-5">
         <span className="block text-wtw-yellow">
