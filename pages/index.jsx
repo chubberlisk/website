@@ -4,7 +4,7 @@ import LandingSection from "@/components/custom/LandingSection";
 import AboutMeSection from "@/components/custom/AboutMeSection";
 import LatestPaintingsSection from "@/components/custom/LatestPaintingsSection";
 import ContactMeSection from "@/components/custom/ContactMeSection";
-import GetBlogPosts from "@/useCases/getBlogPosts";
+import GetBlogPosts from "@/useCases/GetBlogPosts";
 import GetWritings from "@/useCases/getWritings";
 import MarkdownGateway from "@/gateways/MarkdownGateway";
 import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";

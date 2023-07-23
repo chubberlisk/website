@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@/components/core/Layout";
-import GetBlogPosts from "@/useCases/getBlogPosts";
+import GetBlogPosts from "@/useCases/GetBlogPosts";
 import MarkdownGateway from "@/gateways/MarkdownGateway";
 import BlogSection from "@/components/custom/BlogSection";
 import { NextSeo } from "next-seo";

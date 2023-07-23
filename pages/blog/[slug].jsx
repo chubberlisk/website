@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Layout from "@/components/core/Layout";
 import MarkdownGateway from "@/gateways/MarkdownGateway";
 import GetBlogPostBySlug from "@/useCases/GetBlogPostBySlug";
-import GetBlogPosts from "@/useCases/getBlogPosts";
+import GetBlogPosts from "@/useCases/GetBlogPosts";
 import BlogPostSection from "@/components/custom/BlogPostSection";
 
 export default function Blog({ blogPost }) {
