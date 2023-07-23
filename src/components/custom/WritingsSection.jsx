@@ -12,7 +12,7 @@ export default function WritingsSection({
 }) {
   const environment = process.env.NODE_ENV;
   const writingsToShow =
-    environment == "development"
+    environment === "development"
       ? writings
       : writings.filter((writing) => !writing.metadata.draft);
 
@@ -21,7 +21,7 @@ export default function WritingsSection({
       {title}
 
       <div data-testid="writings">
-        {writingsToShow.length == 0 ? (
+        {writingsToShow.length === 0 ? (
           <p>There are no existing writings.</p>
         ) : (
           writingsToShow

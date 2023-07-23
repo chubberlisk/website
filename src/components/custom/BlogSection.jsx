@@ -11,7 +11,7 @@ export default function BlogSection({
 }) {
   const environment = process.env.NODE_ENV;
   const blogPostsToShow =
-    environment == "development"
+    environment === "development"
       ? blogPosts
       : blogPosts.filter((blogPost) => !blogPost.metadata.draft);
 
@@ -19,7 +19,7 @@ export default function BlogSection({
     <Section id="blog" minHeight={minHeight}>
       {title}
 
-      {blogPostsToShow.length == 0 ? (
+      {blogPostsToShow.length === 0 ? (
         <p>There are no existing blog posts.</p>
       ) : (
         blogPostsToShow.map((blogPost) => (
