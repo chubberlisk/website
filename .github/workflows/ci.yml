@@ -45,8 +45,8 @@ jobs:
       - name: Run unit tests
         run: yarn test:unit
 
-  end-to-end-testing:
-    name: 🖥 End-to-end testing
+  smoke-testing:
+    name: 🖥 Smoke testing
     runs-on: ubuntu-latest
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
@@ -55,12 +55,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run end to end tests
+      - name: Run smoke tests
         uses: cypress-io/github-action@v4
         with:
           start: yarn dev -p 3001
           wait-on: http://localhost:3001
-          command: yarn test:e2e
+          command: yarn test:smoke
         env:
           NEXT_PUBLIC_FLAGS_ENVIRONMENT_KEY: ${{ secrets.flags-key }}
 

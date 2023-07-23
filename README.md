@@ -5,7 +5,7 @@
     <img src="./public/images/icons/icon-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Wen Ting Wang</h3>
+<h3 align="center">Wen Ting Wang</h3>
 
   <p align="center">
     A personal website for Wen Ting Wang.
@@ -29,7 +29,7 @@
   - [💻 Running the application](#-running-the-application)
   - [🧪 Running the tests](#-running-the-tests)
     - [Running the unit tests](#running-the-unit-tests)
-    - [Running the end-to-end tests](#running-the-end-to-end-tests)
+    - [Running the smoke tests](#running-the-smoke-tests)
     - [Running all the tests](#running-all-the-tests)
   - [🧹 Running the linter](#-running-the-linter)
   - [❤ Running the formatter](#-running-the-formatter)
@@ -37,7 +37,8 @@
 
 ## 📘 About the project
 
-This is the personal website for Wen Ting Wang, see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
+This is the personal website for Wen Ting Wang,
+see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
 ### 🧱 Built with
 
@@ -94,33 +95,34 @@ Then visit [http://localhost:3000](http://localhost:3000).
 
 #### Running the unit tests
 
-To run the unit tests that use [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
+To run the unit tests that use [Jest](https://jestjs.io/)
+and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/):
 
 ```sh
 yarn test:unit
 ```
 
-#### Running the end-to-end tests
+#### Running the smoke tests
 
-To run the end-to-end tests using [Cypress](https://www.cypress.io/)'s headless mode:
+To run the smoke tests using [Cypress](https://www.cypress.io/)'s headless mode:
 
 ```sh
-yarn test:e2e
+yarn test:smoke
 # or with a server as well
-yarn test:e2e:with-server
+yarn test:smoke:with-server
 ```
 
-To interactively run the end-to-end tests:
+To interactively run the smoke tests:
 
 ```sh
-yarn test:e2e:interactive
+yarn test:smoke:interactive
 # or with a server as well
-yarn test:e2e:interactive:with-server
+yarn test:smoke:interactive:with-server
 ```
 
 #### Running all the tests
 
-To run the unit tests and end-to-end tests
+To run the unit tests and smoke tests
 
 ```sh
 yarn test

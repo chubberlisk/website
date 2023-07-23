@@ -8,12 +8,12 @@
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write . --log-level=warn",
-    "test": "yarn test:unit && yarn test:e2e:with-server",
+    "test": "yarn test:unit && yarn test:smoke:with-server",
     "test:unit": "jest",
-    "test:e2e": "cypress run --headless --project test/e2e",
-    "test:e2e:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e'",
-    "test:e2e:interactive": "cypress open --project test/e2e",
-    "test:e2e:interactive:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:e2e:interactive'",
+    "test:smoke": "cypress run --headless --project test/smoke",
+    "test:smoke:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:smoke'",
+    "test:smoke:interactive": "cypress open --project test/smoke",
+    "test:smoke:interactive:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:smoke:interactive'",
     "prepare": "husky install"
   },
   "dependencies": {

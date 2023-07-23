@@ -4,7 +4,7 @@ module.exports = {
     "**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
     "!**/node_modules/**",
-    "!**/test/e2e/**",
+    "!**/test/smoke/**",
   ],
   moduleNameMapper: {
     "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
@@ -16,7 +16,7 @@ module.exports = {
   testPathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/.next/",
-    "<rootDir>/test/e2e/",
+    "<rootDir>/test/smoke/",
   ],
   testEnvironment: "jsdom",
   transform: {
