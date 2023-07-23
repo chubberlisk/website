@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { formatDate } from "../../formatters/date";
 import Tag from "../core/Tag";
+import DateTime from "../core/DateTime";
 
 export default function PaintingCard({
   id,
@@ -26,7 +26,7 @@ export default function PaintingCard({
 
       <div className="pt-5">
         <span className="block text-wtw-yellow">
-          <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
+          <DateTime dateTime={publishDateTime} />
         </span>
         <Heading className="text-lg md:text-xl font-medium mb-3">
           <span className="mr-2">#{number}</span>

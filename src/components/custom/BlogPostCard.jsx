@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { formatDate } from "../../formatters/date";
 import Tag from "../core/Tag";
+import DateTime from "../core/DateTime";
 
 export default function BlogPostCard({
   title,
@@ -17,7 +17,7 @@ export default function BlogPostCard({
     <article className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5">
       <div className="basis-1/5">
         <span className="block text-wtw-yellow">
-          <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
+          <DateTime dateTime={publishDateTime} />
         </span>
       </div>
       <div className="basis-4/5">

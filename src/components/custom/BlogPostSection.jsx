@@ -1,9 +1,9 @@
 import React from "react";
 import Section from "../../components/core/Section";
 import MarkdownToHtml from "../../components/core/MarkdownToHtml";
-import { formatDate } from "../../formatters/date";
 import Link from "next/link";
 import Image from "next/image";
+import DateTime from "../core/DateTime";
 
 export default function BlogPostSection({ blogPost, padding }) {
   return (
@@ -25,9 +25,7 @@ export default function BlogPostSection({ blogPost, padding }) {
         />
       </div>
       <span className="block text-xl text-wtw-yellow">
-        <time dateTime={blogPost.metadata.publishDateTime}>
-          {formatDate(blogPost.metadata.publishDateTime)}
-        </time>
+        <DateTime dateTime={blogPost.metadata.publishDateTime} />
       </span>
       <h1 className="text-3xl md:text-5xl">{blogPost.metadata.title}</h1>
       <div className="flex flex-wrap mb-3">

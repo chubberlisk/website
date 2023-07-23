@@ -1,7 +1,7 @@
 import React from "react";
-import { formatDate } from "../../formatters/date";
 import MarkdownToHtml from "../core/MarkdownToHtml";
 import Tag from "../core/Tag";
+import DateTime from "../core/DateTime";
 
 export default function WritingCard({
   id,
@@ -21,7 +21,7 @@ export default function WritingCard({
     >
       <div className="basis-1/5">
         <span className="block text-wtw-yellow">
-          <time dateTime={publishDateTime}>{formatDate(publishDateTime)}</time>
+          <DateTime dateTime={publishDateTime} />
         </span>
       </div>
       <div className="basis-4/5">
