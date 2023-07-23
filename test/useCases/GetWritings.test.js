@@ -1,4 +1,4 @@
-import GetWritings from "@/useCases/getWritings";
+import GetWritings from "@/useCases/GetWritings";
 
 const writingsGateway = {
   retrieveWritings: jest.fn().mockReturnValue({
