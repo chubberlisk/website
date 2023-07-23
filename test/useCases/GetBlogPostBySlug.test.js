@@ -1,4 +1,4 @@
-import GetBlogPostBySlug from "@/useCases/getBlogPostBySlug";
+import GetBlogPostBySlug from "@/useCases/GetBlogPostBySlug";
 
 const blogPostsGateway = {
   retrieveBlogPost: jest.fn().mockReturnValue({
