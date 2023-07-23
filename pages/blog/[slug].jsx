@@ -2,10 +2,8 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import Layout from "@/components/core/Layout";
-import MarkdownGateway from "@/gateways/MarkdownGateway";
-import GetBlogPostBySlug from "@/useCases/GetBlogPostBySlug";
-import GetBlogPosts from "@/useCases/GetBlogPosts";
 import BlogPostSection from "@/components/custom/BlogPostSection";
+import { getBlogPostBySlug, getBlogPosts } from "@/utils/AppContext";
 
 export default function Blog({ blogPost }) {
   const { asPath } = useRouter();
@@ -47,8 +45,6 @@ export default function Blog({ blogPost }) {
 }
 
 export async function getStaticPaths() {
-  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
-  const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
   const paths = blogPosts.blogPosts.map((blogPost) => ({
     params: {
@@ -63,8 +59,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
-  const getBlogPostBySlug = new GetBlogPostBySlug(markdownGateway);
   const blogPost = getBlogPostBySlug.execute(params.slug);
 
   return { props: { blogPost } };

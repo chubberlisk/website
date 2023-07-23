@@ -1,9 +1,8 @@
 import React from "react";
-import Layout from "@/components/core/Layout";
-import GetBlogPosts from "@/useCases/GetBlogPosts";
-import MarkdownGateway from "@/gateways/MarkdownGateway";
-import BlogSection from "@/components/custom/BlogSection";
 import { NextSeo } from "next-seo";
+import Layout from "@/components/core/Layout";
+import BlogSection from "@/components/custom/BlogSection";
+import { getBlogPosts } from "@/utils/AppContext";
 
 export default function Blog({ blogPosts }) {
   return (
@@ -22,8 +21,6 @@ export default function Blog({ blogPosts }) {
 }
 
 export async function getStaticProps() {
-  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
-  const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
 
   return { props: { blogPosts: blogPosts.blogPosts } };

@@ -1,9 +1,8 @@
 import React from "react";
-import Layout from "@/components/core/Layout";
-import GetWritings from "@/useCases/GetWritings";
-import MarkdownGateway from "@/gateways/MarkdownGateway";
-import WritingsSection from "@/components/custom/WritingsSection";
 import { NextSeo } from "next-seo";
+import Layout from "@/components/core/Layout";
+import WritingsSection from "@/components/custom/WritingsSection";
+import { getWritings } from "@/utils/AppContext";
 
 export default function Index({ writings }) {
   return (
@@ -24,8 +23,6 @@ export default function Index({ writings }) {
 }
 
 export async function getStaticProps() {
-  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
-  const getWritings = new GetWritings(markdownGateway);
   const writings = getWritings.execute();
 
   return { props: { writings: writings.writings } };

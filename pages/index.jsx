@@ -4,11 +4,9 @@ import LandingSection from "@/components/custom/LandingSection";
 import AboutMeSection from "@/components/custom/AboutMeSection";
 import LatestPaintingsSection from "@/components/custom/LatestPaintingsSection";
 import ContactMeSection from "@/components/custom/ContactMeSection";
-import GetBlogPosts from "@/useCases/GetBlogPosts";
-import GetWritings from "@/useCases/GetWritings";
-import MarkdownGateway from "@/gateways/MarkdownGateway";
 import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";
 import LatestWritingsSection from "@/components/custom/LatestWritingsSection";
+import { getBlogPosts, getWritings } from "@/utils/AppContext";
 
 export default function Home({ latestBlogPosts, writings }) {
   return (
@@ -26,11 +24,7 @@ export default function Home({ latestBlogPosts, writings }) {
 }
 
 export async function getStaticProps() {
-  const markdownGateway = new MarkdownGateway({ contentDirectory: "content" });
-  const getBlogPosts = new GetBlogPosts(markdownGateway);
   const blogPosts = getBlogPosts.execute();
-
-  const getWritings = new GetWritings(markdownGateway);
   const writings = getWritings.execute();
 
   return {
