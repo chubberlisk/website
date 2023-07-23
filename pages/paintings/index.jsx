@@ -1,11 +1,11 @@
 import React from "react";
 import { NextSeo } from "next-seo";
-import Layout from "../src/components/core/Layout";
-import PaintingsSection from "../src/components/custom/PaintingsSection";
-import ExternalLink from "../src/components/core/ExternalLink";
-import paintings from "../content/paintings";
+import Layout from "../../src/components/core/Layout";
+import PaintingsSection from "../../src/components/custom/PaintingsSection";
+import ExternalLink from "../../src/components/core/ExternalLink";
+import paintings from "../../content/paintings";
 
-export default function Paintings() {
+export default function Index() {
   return (
     <>
       <NextSeo
