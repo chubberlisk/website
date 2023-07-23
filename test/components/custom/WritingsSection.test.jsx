@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import WritingsSection from "./WritingsSection";
+import WritingsSection from "../../../src/components/custom/WritingsSection";
 
 jest.mock(
-  "../core/MarkdownToHtml",
+  "../../../src/components/core/MarkdownToHtml",
   () =>
     ({ markdown }) =>
       markdown,

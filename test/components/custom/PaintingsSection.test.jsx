@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import PaintingsSection from "./PaintingsSection";
+import PaintingsSection from "../../../src/components/custom/PaintingsSection";
 
 jest.mock("../../../content/paintings", () => [
   {

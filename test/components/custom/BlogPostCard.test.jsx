@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import BlogPostCard from "./BlogPostCard";
+import BlogPostCard from "../../../src/components/custom/BlogPostCard";
 
 it("displays the title", () => {
   render(

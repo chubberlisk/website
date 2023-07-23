@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import LatestBlogPostsSection from "./LatestBlogPostsSection";
+import LatestBlogPostsSection from "../../../src/components/custom/LatestBlogPostsSection";
 
 it("displays the title", () => {
   render(<LatestBlogPostsSection latestBlogPosts={[]} />);

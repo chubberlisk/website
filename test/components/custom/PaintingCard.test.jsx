@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import PaintingCard from "./PaintingCard";
+import PaintingCard from "../../../src/components/custom/PaintingCard";
 
 it("displays the title", () => {
   render(

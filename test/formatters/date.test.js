@@ -1,4 +1,4 @@
-import { formatDate } from "./date";
+import { formatDate } from "../../src/formatters/date";
 
 it("formats a date like 1 March 2021", () => {
   expect(formatDate("2021-03-01")).toBe("1 March 2021");
