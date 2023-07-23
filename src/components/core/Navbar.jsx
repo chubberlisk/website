@@ -1,11 +1,8 @@
 import React from "react";
-import { useFlagBag } from "../../../flags/client";
 import Link from "next/link";
 import Logo from "./Logo";
 
 export default function Navbar() {
-  const { flags } = useFlagBag();
-
   return (
     <div className="container">
       <nav className="flex items-center justify-between flex-wrap min-h-screen-10">
@@ -29,14 +26,12 @@ export default function Navbar() {
           >
             About
           </Link>
-          {flags?.enableBlog && (
-            <Link
-              href="/blog"
-              className="inline-block mr-5 md:mr-10 text-wtw-white"
-            >
-              Blog
-            </Link>
-          )}
+          <Link
+            href="/blog"
+            className="inline-block mr-5 md:mr-10 text-wtw-white"
+          >
+            Blog
+          </Link>
           <Link
             href="/writings"
             className="inline-block mr-5 md:mr-10 text-wtw-white"

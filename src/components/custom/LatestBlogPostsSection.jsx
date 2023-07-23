@@ -1,12 +1,9 @@
 import React from "react";
-import { useFlagBag } from "../../../flags/client";
 import Link from "next/link";
 import BlogSection from "./BlogSection";
 
 export default function LatestBlogPostsSection({ latestBlogPosts }) {
-  const { flags } = useFlagBag();
-
-  return flags?.enableBlog ? (
+  return (
     <BlogSection
       blogPosts={latestBlogPosts}
       title={<h2>Latest blog posts</h2>}
@@ -14,5 +11,5 @@ export default function LatestBlogPostsSection({ latestBlogPosts }) {
     >
       <Link href="/blog">View all blog posts →</Link>
     </BlogSection>
-  ) : null;
+  );
 }
