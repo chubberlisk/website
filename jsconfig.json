@@ -7,8 +7,7 @@
       "@/components/*": ["src/components/*"],
       "@/formatters/*": ["src/formatters/*"],
       "@/gateways/*": ["src/gateways/*"],
-      "@/useCases/*": ["src/useCases/*"],
-      "@/utils/*": ["src/utils/*"]
+      "@/useCases/*": ["src/useCases/*"]
     }
   }
 }
