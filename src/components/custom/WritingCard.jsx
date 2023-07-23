@@ -1,7 +1,7 @@
 import React from "react";
-import MarkdownToHtml from "@/components//core/MarkdownToHtml";
-import Tag from "@/components//core/Tag";
-import DateTime from "@/components//core/DateTime";
+import MarkdownToHtml from "@/components/core/MarkdownToHtml";
+import Tag from "@/components/core/Tag";
+import DateTime from "@/components/core/DateTime";
 
 export default function WritingCard({
   id,

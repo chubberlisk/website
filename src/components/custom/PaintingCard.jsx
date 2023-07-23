@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import Tag from "@/components//core/Tag";
-import DateTime from "@/components//core/DateTime";
+import Tag from "@/components/core/Tag";
+import DateTime from "@/components/core/DateTime";
 
 export default function PaintingCard({
   id,
