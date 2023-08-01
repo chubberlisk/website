@@ -25,10 +25,12 @@ export default function WritingCard({
         </span>
       </div>
       <div className="basis-4/5">
-        <Heading className="text-lg md:text-xl font-medium mb-3">
-          <span className="mr-2">#{number}</span>
-          {title}
-        </Heading>
+        <a href={`#${id}`} className="text-wtw-white">
+          <Heading className="text-lg md:text-xl font-medium mb-3">
+            <span className="mr-2">#{number}</span>
+            {title}
+          </Heading>
+        </a>
         <div className="flex flex-wrap mb-3">
           {tags?.map((tag) => (
             <Tag key={tag} tag={tag} />
