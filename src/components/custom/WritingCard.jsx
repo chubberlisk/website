@@ -4,7 +4,7 @@ import Tag from "@/components/core/Tag";
 import DateTime from "@/components/core/DateTime";
 
 export default function WritingCard({
-  id,
+  slug,
   title,
   publishDateTime,
   tags,
@@ -16,7 +16,7 @@ export default function WritingCard({
 
   return (
     <article
-      id={id}
+      id={slug}
       className="flex flex-col lg:flex-row border-t-2 border-wtw-yellow py-5"
     >
       <div className="basis-1/5">
@@ -25,7 +25,7 @@ export default function WritingCard({
         </span>
       </div>
       <div className="basis-4/5">
-        <a href={`#${id}`} className="text-wtw-white">
+        <a href={`#${slug}`} className="text-wtw-white">
           <Heading className="text-lg md:text-xl font-medium mb-3">
             <span className="mr-2">#{number}</span>
             {title}

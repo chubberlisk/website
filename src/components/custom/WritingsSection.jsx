@@ -33,14 +33,14 @@ export default function WritingsSection({
             .slice(0, displayLatest || writings.length)
             .map(
               (
-                { metadata: { title, publishDateTime, tags }, content },
+                { metadata: { title, publishDateTime, tags, slug }, content },
                 index,
               ) => {
                 const number = writingsToShow.length - index;
 
                 return (
                   <WritingCard
-                    id={`writing-${number}`}
+                    slug={slug}
                     title={title}
                     key={publishDateTime}
                     publishDateTime={publishDateTime}
