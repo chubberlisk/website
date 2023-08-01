@@ -31,10 +31,12 @@ export default function PaintingCard({
         <span className="block text-wtw-yellow">
           <DateTime dateTime={publishDateTime} />
         </span>
-        <Heading className="text-lg md:text-xl font-medium mb-3">
-          <span className="mr-2">#{number}</span>
-          {title}
-        </Heading>
+        <a href={`#${id}`} className="text-wtw-white">
+          <Heading className="text-lg md:text-xl font-medium mb-3">
+            <span className="mr-2">#{number}</span>
+            {title}
+          </Heading>
+        </a>
 
         <div className="w-full mb-0">
           <div className="flex flex-wrap">

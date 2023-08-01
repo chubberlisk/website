@@ -31,11 +31,12 @@ export default function PaintingsSection({
           )
           .slice(0, displayLatest)
           .map(({ image, title, publishDateTime, tags }, index) => {
+            const slug = title.toLowerCase().replaceAll(" ", "-");
             const number = paintings.length - index;
 
             return (
               <PaintingCard
-                id={number}
+                id={slug}
                 title={title}
                 publishDateTime={publishDateTime}
                 image={image}
