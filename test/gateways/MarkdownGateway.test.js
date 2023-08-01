@@ -115,6 +115,14 @@ describe("#retrieveWriting", () => {
     writing = markdownGateway.retrieveWriting("writing-1.md");
   });
 
+  it("returns slug in metadata of a writing", () => {
+    expect(writing.metadata).toEqual(
+      expect.objectContaining({
+        slug: "writing-1",
+      }),
+    );
+  });
+
   it("returns title in metadata of a writing", () => {
     expect(writing.metadata).toEqual(
       expect.objectContaining({
