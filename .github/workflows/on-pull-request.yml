@@ -2,10 +2,6 @@ name: Pull Request
 
 on: pull_request
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
   ci:
     name: CI
@@ -39,4 +35,4 @@ jobs:
           gh pr merge --rebase --auto "$PR_URL"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_ON_PULL_REQUEST  }}
