@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "babel-jest": "^29.6.2",
-    "cypress": "^12.17.3",
+    "cypress": "^12.17.4",
     "eslint": "<9.0.0",
     "eslint-config-next": "^13.4.16",
     "eslint-config-prettier": "^9.0.0",
