@@ -4,7 +4,7 @@
 yarn format
 yarn lint
 
-stagedJavaScriptFiles=$(git diff --cached --name-only -- "*.jsx" "*.js")
+stagedJavaScriptFiles=$(git diff --cached --name-only -- "*.js" "*.jsx")
 
 if [ ${#stagedJavaScriptFiles} -gt 0 ]; then
   yarn test:unit
