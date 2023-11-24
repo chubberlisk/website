@@ -8,7 +8,4 @@ stagedJavaScriptFiles=$(git diff --cached --name-only -- "*.jsx" "*.js")
 
 if [ ${#stagedJavaScriptFiles} -gt 0 ]; then
   yarn test:unit
-else
-  exit 0
 fi
-
