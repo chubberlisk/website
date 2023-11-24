@@ -11,6 +11,13 @@ paths:
   /api/ting-puns:
     get:
       summary: Returns a list of Ting puns i.e. words ending with "ting".
+      parameters:
+        - in: query
+          name: random
+          schema:
+            type: boolean
+          required: false
+          description: Return one random Ting pun.
       responses:
         200:
           description: Successfully returned a list of Ting puns.
