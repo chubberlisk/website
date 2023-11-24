@@ -1,0 +1,52 @@
+openapi: 3.0.3
+
+info:
+  title: Wen Ting Wang
+  version: 0.0.1
+
+servers:
+  - url: https://wentingwang.co.uk
+
+paths:
+  /api/ting-puns:
+    get:
+      summary: Returns a list of Ting puns i.e. words ending with "ting".
+      responses:
+        200:
+          description: Successfully returned a list of Ting puns.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      ting-puns:
+                        type: array
+                        minItems: 0
+                        items:
+                          type: string
+                          example: farting
+                  metadata:
+                    type: object
+                    properties:
+                      sources:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/MetadataSource"
+
+components:
+  schemas:
+    MetadataSource:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the data source
+          example: JSON Placeholder
+        url:
+          type: string
+          format: uri
+          description: URL for the data source
+          example: https://jsonplaceholder.typicode.com
