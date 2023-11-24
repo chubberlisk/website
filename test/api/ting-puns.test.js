@@ -8,6 +8,7 @@ jest.mock("@/utils/AppContext", () => ({
       data: {
         tingPuns: ["farting", "vomiting", "exhausting"],
       },
+      metadata: { source: "Awesome Sauce API" },
     }),
   },
 }));
@@ -33,6 +34,12 @@ describe("when HTTP GET method", () => {
       "vomiting",
       "exhausting",
     ]);
+  });
+
+  it("returns metadata", () => {
+    expect(res._getJSONData()["metadata"]).toEqual({
+      source: "Awesome Sauce API",
+    });
   });
 });
 
