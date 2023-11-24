@@ -26,8 +26,7 @@ describe("#retrieveTingPuns", () => {
   it("requests words containing 'ting' from Datamuse API", async () => {
     await datamuseApiGateway.retrieveTingPuns();
 
-    expect(fetchMock.mock.calls.length).toEqual(1);
-    expect(fetchMock.mock.calls[0][0]).toEqual(
+    expect(fetchMock).toHaveBeenCalledWith(
       "https://api.datamuse.com/words?sp=*ting&max=1000",
     );
   });
