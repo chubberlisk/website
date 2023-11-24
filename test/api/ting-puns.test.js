@@ -21,7 +21,7 @@ describe("when HTTP GET method", () => {
   });
 
   it("retrieves Ting puns", () => {
-    expect(getTingPuns.execute).toHaveBeenCalled();
+    expect(getTingPuns.execute).toHaveBeenCalledWith({ random: false });
   });
 
   it("returns a HTTP 200 Success status", () => {
