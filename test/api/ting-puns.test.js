@@ -41,6 +41,21 @@ describe("when HTTP GET method", () => {
       sources: [{ name: "Awesome Sauce API" }],
     });
   });
+
+  describe("and 'random' query parameter is specified", () => {
+    [null, true, "true", "yes"].map((random) => {
+      it(`retrieves one Ting pun at random for ${random}`, async () => {
+        const { req, res } = createHttpMocks({
+          method: "GET",
+          query: { random },
+        });
+
+        await handler(req, res);
+
+        expect(getTingPuns.execute).toHaveBeenCalledWith({ random: true });
+      });
+    });
+  });
 });
 
 describe("when an unsupported HTTP method", () => {
