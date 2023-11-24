@@ -9,7 +9,9 @@ export default class GetTingPuns {
     return {
       data: { tingPuns },
       metadata: {
-        source: { name: "Datamuse API", url: "https://www.datamuse.com/api/" },
+        sources: [
+          { name: "Datamuse API", url: "https://www.datamuse.com/api/" },
+        ],
       },
     };
   }

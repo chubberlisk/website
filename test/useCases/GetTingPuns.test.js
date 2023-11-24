@@ -22,9 +22,11 @@ it("returns metadata", async () => {
   const response = await getTingPuns.execute();
 
   expect(response.metadata).toEqual({
-    source: {
-      name: "Datamuse API",
-      url: "https://www.datamuse.com/api/",
-    },
+    sources: [
+      {
+        name: "Datamuse API",
+        url: "https://www.datamuse.com/api/",
+      },
+    ],
   });
 });
