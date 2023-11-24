@@ -6,6 +6,11 @@ export default class GetTingPuns {
   async execute() {
     const tingPuns = await this.datamuseApiGateway.retrieveTingPuns();
 
-    return { data: { tingPuns } };
+    return {
+      data: { tingPuns },
+      metadata: {
+        source: { name: "Datamuse API", url: "https://www.datamuse.com/api/" },
+      },
+    };
   }
 }

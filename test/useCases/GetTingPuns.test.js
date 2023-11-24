@@ -17,3 +17,14 @@ it("returns all Ting puns", async () => {
 
   expect(response.data.tingPuns).toHaveLength(1);
 });
+
+it("returns metadata", async () => {
+  const response = await getTingPuns.execute();
+
+  expect(response.metadata).toEqual({
+    source: {
+      name: "Datamuse API",
+      url: "https://www.datamuse.com/api/",
+    },
+  });
+});
