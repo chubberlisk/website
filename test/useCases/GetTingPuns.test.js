@@ -1,7 +1,9 @@
 import GetTingPuns from "@/useCases/GetTingPuns";
 
 const datamuseApiGateway = {
-  retrieveTingPuns: jest.fn().mockResolvedValue(["testing"]),
+  retrieveTingPuns: jest
+    .fn()
+    .mockResolvedValue(["testing", "computing", "setting"]),
 };
 
 const getTingPuns = new GetTingPuns(datamuseApiGateway);
@@ -15,7 +17,7 @@ it("retrieves Ting puns", async () => {
 it("returns all Ting puns", async () => {
   const response = await getTingPuns.execute();
 
-  expect(response.data.tingPuns).toHaveLength(1);
+  expect(response.data.tingPuns).toHaveLength(3);
 });
 
 it("returns metadata", async () => {
@@ -28,5 +30,13 @@ it("returns metadata", async () => {
         url: "https://www.datamuse.com/api/",
       },
     ],
+  });
+});
+
+describe("when random parameter is true", () => {
+  it("returns one Ting pun at random", async () => {
+    const response = await getTingPuns.execute({ random: true });
+
+    expect(response.data.tingPuns).toHaveLength(1);
   });
 });

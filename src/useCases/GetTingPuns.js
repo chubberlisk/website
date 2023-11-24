@@ -3,11 +3,15 @@ export default class GetTingPuns {
     this.datamuseApiGateway = datamuseApiGateway;
   }
 
-  async execute() {
+  async execute({ random = false } = {}) {
     const tingPuns = await this.datamuseApiGateway.retrieveTingPuns();
 
     return {
-      data: { tingPuns },
+      data: {
+        tingPuns: random
+          ? [tingPuns[Math.floor(Math.random() * tingPuns.length)]]
+          : tingPuns,
+      },
       metadata: {
         sources: [
           { name: "Datamuse API", url: "https://www.datamuse.com/api/" },
