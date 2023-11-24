@@ -13,7 +13,7 @@ it("retrieves Ting puns", async () => {
 });
 
 it("returns all Ting puns", async () => {
-  const tingPuns = await getTingPuns.execute();
+  const response = await getTingPuns.execute();
 
-  expect(tingPuns).toHaveLength(1);
+  expect(response.data.tingPuns).toHaveLength(1);
 });

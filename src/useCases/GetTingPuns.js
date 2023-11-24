@@ -4,6 +4,8 @@ export default class GetTingPuns {
   }
 
   async execute() {
-    return await this.datamuseApiGateway.retrieveTingPuns();
+    const tingPuns = await this.datamuseApiGateway.retrieveTingPuns();
+
+    return { data: { tingPuns } };
   }
 }

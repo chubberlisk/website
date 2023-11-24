@@ -4,7 +4,11 @@ import { createMocks as createHttpMocks } from "node-mocks-http";
 
 jest.mock("@/utils/AppContext", () => ({
   getTingPuns: {
-    execute: jest.fn().mockReturnValue(["farting", "vomiting", "exhausting"]),
+    execute: jest.fn().mockReturnValue({
+      data: {
+        tingPuns: ["farting", "vomiting", "exhausting"],
+      },
+    }),
   },
 }));
 
