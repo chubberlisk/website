@@ -12,7 +12,7 @@ it("retrieves Ting puns", async () => {
   expect(datamuseApiGateway.retrieveTingPuns).toHaveBeenCalled();
 });
 
-it("returns all writings", async () => {
+it("returns all Ting puns", async () => {
   const tingPuns = await getTingPuns.execute();
 
   expect(tingPuns).toHaveLength(1);
