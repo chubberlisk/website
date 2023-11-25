@@ -79,7 +79,7 @@ jobs:
         run: vercel deploy --prebuilt --token=${{ secrets.vercel-token }} > preview-deployment-url.txt
 
       - id: preview-deployment-url
-        name: Output and save preview deployment URL to outputs
+        name: Output and save preview deployment URL
         run: |
           cat preview-deployment-url.txt
           echo "url=$(cat preview-deployment-url.txt)" >> "$GITHUB_OUTPUT"
