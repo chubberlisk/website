@@ -9,8 +9,6 @@ on:
         required: true
       vercel-project-id:
         required: true
-      flags-key:
-        required: true
 
 jobs:
   linting:
