@@ -51,24 +51,57 @@ jobs:
       - name: Run unit tests
         run: yarn test:unit
 
-  smoke-testing:
-    name: 🖥 Smoke testing
-    runs-on: ubuntu-latest
+  deploy-to-preview:
+    name: 👀 Deploy to preview
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
       VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
+    environment:
+      name: Preview
+      url: ${{ steps.preview-deployment-url.outputs.url }}
+    outputs:
+      preview-deployment-url: ${{ steps.preview-deployment-url.outputs.url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Vercel CLI
+        run: yarn global add vercel
+
+      - name: Pull preview environment information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.vercel-token }}
+
+      - name: Build project
+        run: vercel build --token=${{ secrets.vercel-token }}
+
+      - name: Deploy built project to preview
+        run: vercel deploy --prebuilt --token=${{ secrets.vercel-token }} > preview-deployment-url.txt
+
+      - id: preview-deployment-url
+        name: Output and save preview deployment URL to outputs
+        run: |
+          cat preview-deployment-url.txt
+          echo "url=$(cat preview-deployment-url.txt)" >> "$GITHUB_OUTPUT"
+
+  post-deploy-to-preview-smoke-testing:
+    name: 🖥 Post-deploy to preview smoke testing
+    runs-on: ubuntu-latest
+    needs: deploy-to-preview
+    env:
+      PREVIEW_DEPLOYMENT_URL: ${{needs.deploy-to-preview.outputs.preview-deployment-url}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Output preview deployment URL
+        run: echo $PREVIEW_DEPLOYMENT_URL
+
       - name: Run smoke tests
         uses: cypress-io/github-action@v6
         with:
-          start: yarn dev -p 3001
-          wait-on: http://localhost:3001
-          command: yarn test:smoke
-        env:
-          NEXT_PUBLIC_FLAGS_ENVIRONMENT_KEY: ${{ secrets.flags-key }}
+          command: yarn test:smoke --config baseUrl=${{env.PREVIEW_DEPLOYMENT_URL}}
+          wait-on: ${{env.PREVIEW_DEPLOYMENT_URL}}
 
       - name: Upload screenshots
         uses: actions/upload-artifact@v3
