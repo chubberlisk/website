@@ -39,8 +39,10 @@ jobs:
         run: vercel deploy --prebuilt --token=${{ secrets.vercel-token }} > preview-deployment-url.txt
 
       - id: preview-deployment-url
-        name: Output preview deployment URL
-        run: echo "url=$(cat preview-deployment-url.txt)" >> "$GITHUB_OUTPUT"
+        name: Output and save preview deployment URL to outputs
+        run: |
+          cat preview-deployment-url.txt
+          echo "url=$(cat preview-deployment-url.txt)" >> "$GITHUB_OUTPUT"
 
   post-deploy-to-preview-smoke-testing:
     name: 🖥 Post-deploy to preview smoke testing
