@@ -10,7 +10,7 @@ export default class GetTingPuns {
       data: {
         tingPuns: random
           ? [tingPuns[Math.floor(Math.random() * tingPuns.length)]]
-          : tingPuns,
+          : tingPuns.sort(),
       },
       metadata: {
         sources: [

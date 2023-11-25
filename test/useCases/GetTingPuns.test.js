@@ -33,6 +33,12 @@ it("returns metadata", async () => {
   });
 });
 
+it("orders Ting puns alphabetically", async () => {
+  const response = await getTingPuns.execute();
+
+  expect(response.data.tingPuns).toEqual(["computing", "setting", "testing"]);
+});
+
 describe("when random parameter is true", () => {
   it("returns one Ting pun at random", async () => {
     const response = await getTingPuns.execute({ random: true });
