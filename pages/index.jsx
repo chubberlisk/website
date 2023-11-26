@@ -8,13 +8,13 @@ import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";
 import LatestWritingsSection from "@/components/custom/LatestWritingsSection";
 import { getBlogPosts, getWritings } from "@/utils/AppContext";
 
-export default function Home({ latestBlogPosts, writings }) {
+export default function Home({ blogPosts, writings }) {
   return (
     <Layout>
       <div className="divide-y-2 divide-wtw-yellow">
         <LandingSection />
         <AboutMeSection />
-        <LatestBlogPostsSection latestBlogPosts={latestBlogPosts} />
+        <LatestBlogPostsSection blogPosts={blogPosts} />
         <LatestWritingsSection writings={writings} />
         <LatestPaintingsSection />
         <ContactMeSection />
@@ -29,7 +29,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      latestBlogPosts: blogPosts.blogPosts.slice(0, 2),
+      blogPosts: blogPosts.blogPosts,
       writings: writings.writings,
     },
   };

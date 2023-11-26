@@ -18,10 +18,10 @@ it("displays view all blog posts link to blog page", () => {
   );
 });
 
-it("displays provided blog posts", () => {
+it("displays the latest three blog posts by default", () => {
   render(
     <LatestBlogPostsSection
-      latestBlogPosts={[
+      blogPosts={[
         {
           metadata: { title: "Blog post 1" },
         },
@@ -31,6 +31,12 @@ it("displays provided blog posts", () => {
         {
           metadata: { title: "Blog post 3" },
         },
+        {
+          metadata: { title: "Blog post 4" },
+        },
+        {
+          metadata: { title: "Blog post 5" },
+        },
       ]}
     />,
   );
@@ -38,4 +44,37 @@ it("displays provided blog posts", () => {
   expect(screen.getByText("Blog post 1")).toBeVisible();
   expect(screen.getByText("Blog post 2")).toBeVisible();
   expect(screen.getByText("Blog post 3")).toBeVisible();
+  expect(screen.queryByText("Blog post 4")).not.toBeInTheDocument();
+  expect(screen.queryByText("Blog post 5")).not.toBeInTheDocument();
+});
+
+it("displays the number of blog posts specified", () => {
+  render(
+    <LatestBlogPostsSection
+      blogPosts={[
+        {
+          metadata: { title: "Blog post 1" },
+        },
+        {
+          metadata: { title: "Blog post 2" },
+        },
+        {
+          metadata: { title: "Blog post 3" },
+        },
+        {
+          metadata: { title: "Blog post 4" },
+        },
+        {
+          metadata: { title: "Blog post 5" },
+        },
+      ]}
+      showLatest={2}
+    />,
+  );
+
+  expect(screen.getByText("Blog post 1")).toBeVisible();
+  expect(screen.getByText("Blog post 2")).toBeVisible();
+  expect(screen.queryByText("Blog post 3")).not.toBeInTheDocument();
+  expect(screen.queryByText("Blog post 4")).not.toBeInTheDocument();
+  expect(screen.queryByText("Blog post 5")).not.toBeInTheDocument();
 });
