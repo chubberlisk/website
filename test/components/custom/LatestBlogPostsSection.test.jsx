@@ -3,13 +3,13 @@ import { render, screen } from "@testing-library/react";
 import LatestBlogPostsSection from "@/components/custom/LatestBlogPostsSection";
 
 it("displays the title", () => {
-  render(<LatestBlogPostsSection latestBlogPosts={[]} />);
+  render(<LatestBlogPostsSection blogPosts={[]} />);
 
   expect(screen.getByText("Latest blog posts")).toBeVisible();
 });
 
 it("displays view all blog posts link to blog page", () => {
-  render(<LatestBlogPostsSection latestBlogPosts={[]} />);
+  render(<LatestBlogPostsSection blogPosts={[]} />);
 
   expect(screen.getByText("View all blog posts →")).toBeVisible();
   expect(screen.getByText("View all blog posts →")).toHaveAttribute(
