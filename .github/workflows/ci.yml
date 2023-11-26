@@ -49,8 +49,8 @@ jobs:
       - name: Run unit tests
         run: yarn test:unit
 
-  deploy-to-preview:
-    name: 👀 Deploy to preview
+  preview-deployment:
+    name: 👀 Preview deployment
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
       VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
@@ -82,12 +82,12 @@ jobs:
           cat preview-deployment-url.txt
           echo "url=$(cat preview-deployment-url.txt)" >> "$GITHUB_OUTPUT"
 
-  post-deploy-to-preview-smoke-testing:
-    name: 🖥 Post-deploy to preview smoke testing
+  smoke-testing:
+    name: 🖥 Smoke testing for preview
     runs-on: ubuntu-latest
-    needs: deploy-to-preview
+    needs: preview-deployment
     env:
-      PREVIEW_DEPLOYMENT_URL: ${{needs.deploy-to-preview.outputs.preview-deployment-url}}
+      PREVIEW_DEPLOYMENT_URL: ${{needs.preview-deployment.outputs.preview-deployment-url}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

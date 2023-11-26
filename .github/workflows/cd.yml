@@ -11,8 +11,8 @@ on:
         required: true
 
 jobs:
-  deploy:
-    name: 🚀 Deploy to production
+  production-deployment:
+    name: 🚀 Production deployment
     env:
       VERCEL_ORG_ID: ${{ secrets.vercel-org-id }}
       VERCEL_PROJECT_ID: ${{ secrets.vercel-project-id }}
