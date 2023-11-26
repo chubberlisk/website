@@ -68,7 +68,7 @@ it("displays the number of blog posts specified", () => {
           metadata: { title: "Blog post 5" },
         },
       ]}
-      showLatest={2}
+      displayLatest={2}
     />,
   );
 

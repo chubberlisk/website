@@ -4,9 +4,9 @@ import BlogSection from "@/components/custom/BlogSection";
 
 export default function LatestBlogPostsSection({
   blogPosts = [],
-  showLatest = 3,
+  displayLatest = 3,
 }) {
-  const latestBlogPosts = blogPosts.slice(0, showLatest);
+  const latestBlogPosts = blogPosts.slice(0, displayLatest);
 
   return (
     <BlogSection
