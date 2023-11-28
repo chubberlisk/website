@@ -3,7 +3,6 @@ import Section from "@/components/core/Section";
 import WritingCard from "@/components/custom/WritingCard";
 
 export default function WritingsSection({
-  displayLatest,
   writings,
   title,
   children,
@@ -30,27 +29,22 @@ export default function WritingsSection({
                 new Date(writingB.metadata.publishDateTime) -
                 new Date(writingA.metadata.publishDateTime),
             )
-            .slice(0, displayLatest || writings.length)
             .map(
-              (
-                { metadata: { title, publishDateTime, tags, slug }, content },
-                index,
-              ) => {
-                const number = writingsToShow.length - index;
-
-                return (
-                  <WritingCard
-                    slug={slug}
-                    title={title}
-                    key={publishDateTime}
-                    publishDateTime={publishDateTime}
-                    tags={tags}
-                    content={content}
-                    number={number}
-                    headingLevel={cardHeadingLevel}
-                  />
-                );
-              },
+              ({
+                metadata: { title, publishDateTime, tags, slug, number },
+                content,
+              }) => (
+                <WritingCard
+                  slug={slug}
+                  title={title}
+                  key={publishDateTime}
+                  publishDateTime={publishDateTime}
+                  tags={tags}
+                  content={content}
+                  number={number}
+                  headingLevel={cardHeadingLevel}
+                />
+              ),
             )
         )}
       </div>
