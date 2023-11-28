@@ -23,29 +23,23 @@ export default function WritingsSection({
         {writingsToShow.length === 0 ? (
           <p>There are no existing writings.</p>
         ) : (
-          writingsToShow
-            .sort(
-              (writingA, writingB) =>
-                new Date(writingB.metadata.publishDateTime) -
-                new Date(writingA.metadata.publishDateTime),
-            )
-            .map(
-              ({
-                metadata: { title, publishDateTime, tags, slug, number },
-                content,
-              }) => (
-                <WritingCard
-                  slug={slug}
-                  title={title}
-                  key={publishDateTime}
-                  publishDateTime={publishDateTime}
-                  tags={tags}
-                  content={content}
-                  number={number}
-                  headingLevel={cardHeadingLevel}
-                />
-              ),
-            )
+          writingsToShow.map(
+            ({
+              metadata: { title, publishDateTime, tags, slug, number },
+              content,
+            }) => (
+              <WritingCard
+                slug={slug}
+                title={title}
+                key={publishDateTime}
+                publishDateTime={publishDateTime}
+                tags={tags}
+                content={content}
+                number={number}
+                headingLevel={cardHeadingLevel}
+              />
+            ),
+          )
         )}
       </div>
 

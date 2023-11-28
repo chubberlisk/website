@@ -75,33 +75,6 @@ describe("when the environment is production", () => {
   });
 });
 
-it("orders writings by publish date with most recent first", () => {
-  render(
-    <WritingsSection
-      writings={[
-        {
-          metadata: { draft: false, publishDateTime: "2021-01-01T15:30:00" },
-          content: "Writing 1",
-        },
-        {
-          metadata: { draft: false, publishDateTime: "2021-03-03T15:30:00" },
-          content: "Writing 3",
-        },
-        {
-          metadata: { draft: false, publishDateTime: "2021-02-02T15:30:00" },
-          content: "Writing 2",
-        },
-      ]}
-    />,
-  );
-
-  const writings = screen.getByTestId("writings");
-
-  expect(writings.childNodes[0]).toHaveTextContent("Writing 3");
-  expect(writings.childNodes[1]).toHaveTextContent("Writing 2");
-  expect(writings.childNodes[2]).toHaveTextContent("Writing 1");
-});
-
 it("displays the number for each writing", () => {
   render(
     <WritingsSection
