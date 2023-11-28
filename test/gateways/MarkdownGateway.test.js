@@ -178,6 +178,12 @@ describe("#retrieveWritings", () => {
     expect(writings.writings[0].metadata).toHaveProperty("tags");
   });
 
+  it("returns the number for each writing", () => {
+    expect(writings.writings[0].metadata.number).toEqual(3);
+    expect(writings.writings[1].metadata.number).toEqual(2);
+    expect(writings.writings[2].metadata.number).toEqual(1);
+  });
+
   it("returns content of a writing", () => {
     expect(writings.writings[0]).toHaveProperty("content");
   });

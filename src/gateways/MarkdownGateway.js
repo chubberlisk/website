@@ -56,13 +56,17 @@ export default class MarkdownGateway {
 
     return {
       writings: files
-        .map((file) => this.retrieveWriting(file))
-        .sort((postA, postB) =>
-          new Date(postA.metadata.publishDateTime) >
-          new Date(postB.metadata.publishDateTime)
+        .map((file, index) => this.retrieveWriting(file))
+        .sort((writingA, writingB) =>
+          new Date(writingA.metadata.publishDateTime) >
+          new Date(writingB.metadata.publishDateTime)
             ? -1
             : 1,
-        ),
+        )
+        .map((writing, index) => ({
+          metadata: { ...writing.metadata, number: files.length - index },
+          content: writing.content,
+        })),
     };
   }
 }
