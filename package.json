@@ -23,7 +23,7 @@
     "@happykit/flags": "^3.3.0",
     "@vercel/analytics": "^1.1.1",
     "autoprefixer": "^10.4.16",
-    "classnames": "^2.3.3",
+    "classnames": "^2.4.0",
     "gray-matter": "^4.0.3",
     "moment": "^2.29.4",
     "next": "14.0.4",
