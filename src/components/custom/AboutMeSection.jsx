@@ -14,7 +14,7 @@ import AwsLogo from "@/components/core/icons/AwsLogo";
 import AzureLogo from "@/components/core/icons/AzureLogo";
 import HerokuLogo from "@/components/core/icons/HerokuLogo";
 import ServerlessFrameworkLogo from "@/components/core/icons/ServerlessFrameworkLogo";
-import TypeScriptLogo from "@/components/core/icons/TypeScriptLogo";
+import KotlinLogo from "@/components/core/icons/KotlinLogo";
 
 export default function AboutMeSection() {
   return (
@@ -83,8 +83,8 @@ export default function AboutMeSection() {
         </div>
 
         <div className="flex justify-start items-center">
-          <TypeScriptLogo />
-          <span>TypeScript</span>
+          <KotlinLogo />
+          <span>Kotlin</span>
         </div>
 
         <div className="flex justify-start items-center">
