@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Fetch metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1
+        uses: dependabot/fetch-metadata@v2
         with:
           github-token: "${{ secrets.GH_TOKEN_ON_PULL_REQUEST }}"
       - name: Approve and auto-merge PR for non-major version upgrades
