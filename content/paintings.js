@@ -41,7 +41,7 @@ export default [
     image: {
       src: "/images/paintings/emperor-king-yusuf-character-bio.png",
       alt: [
-        "A charcter biography of Emperor King Yusuf.",
+        "A character biography of Emperor King Yusuf.",
         "Age is 786.",
         "Height is 7.3 bananas.",
         "Random facts include: they own the world;",
@@ -77,7 +77,7 @@ export default [
     image: {
       src: "/images/paintings/repeat-ting-character-bio.png",
       alt: [
-        "A charcter biography of Repeat Ting.",
+        "A character biography of Repeat Ting.",
         "Age is 555.",
         "Height is 3.69 bananas.",
         "Random facts include: they're Interrogate Ting's arch-enemy;",
@@ -127,7 +127,7 @@ export default [
     image: {
       src: "/images/paintings/detect-ting-character-bio.png",
       alt: [
-        "A charcter biography of Detect Ting.",
+        "A character biography of Detect Ting.",
         "Age is 46.",
         "Height is 3.69 bananas.",
         "Random facts include: bullshit, not puns, is their favourite thing to detect;",
@@ -161,7 +161,7 @@ export default [
     image: {
       src: "/images/paintings/meta-ting-character-bio.png",
       alt: [
-        "A charcter biography of Meta Ting.",
+        "A character biography of Meta Ting.",
         "Age is 41.",
         "Height is 3.69 bananas.",
         "Random facts include: the first time they broke the fourth wall, they broke their hand;",
@@ -178,7 +178,7 @@ export default [
     image: {
       src: "/images/paintings/paint-ting-character-bio.png",
       alt: [
-        "A charcter biography of Paint Ting.",
+        "A character biography of Paint Ting.",
         "Age is 1.",
         "Height is 3.69 bananas.",
         "Random facts include: they once applied for teacher training;",
