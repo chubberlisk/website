@@ -20,29 +20,7 @@ export default function Index() {
           description={
             <p>
               These are a poor attempt at making comics using Microsoft Paint.
-              It focuses on a fairy called Tingker Bell among other Tings. Find
-              them on{" "}
-              <ExternalLink
-                href="https://www.webtoons.com/en/challenge/i-am-tingker-bell/list?title_no=578845"
-                aria-label="I am Tingker Bell on Webtoons"
-              >
-                Webtoons
-              </ExternalLink>
-              {", "}
-              <ExternalLink
-                href="https://www.instagram.com/chubbertiste/"
-                aria-label="Chubbertiste's Instagram"
-              >
-                Instagram
-              </ExternalLink>{" "}
-              and{" "}
-              <ExternalLink
-                href="https://twitter.com/chubbertiste"
-                aria-label="Chubbertiste's Twitter"
-              >
-                Twitter
-              </ExternalLink>{" "}
-              as well.
+              It focuses on a fairy called Tingker Bell among other Tings.
             </p>
           }
           minHeight="min-h-screen-90"
