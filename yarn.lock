@@ -2325,7 +2325,7 @@
   resolved "https://registry.npmjs.org/@types/ms/-/ms-0.7.31.tgz"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
-"@types/node@*", "@types/node@^20.10.6":
+"@types/node@*":
   version "20.10.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.6.tgz#a3ec84c22965802bf763da55b2394424f22bfbb5"
   integrity sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==
@@ -6986,13 +6986,13 @@ node-int64@^0.4.0:
   resolved "https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz"
   integrity sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=
 
-node-mocks-http@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/node-mocks-http/-/node-mocks-http-1.15.0.tgz#fe7bb1efa4ab395739f4097b44f745440326a1b3"
-  integrity sha512-3orGBAxXrnwz3ixU8AZpa0x8srAvVSHvbWanAqd5F0zVCVA2QstxaVcTSarFcjz4+pFSnR1zm28MsV83s/BtmA==
+node-mocks-http@^1.15.1:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/node-mocks-http/-/node-mocks-http-1.15.1.tgz#668591d5fd5af6d927e3c8bed0e2214a8d9f8d47"
+  integrity sha512-X/GpUpNNiPDYUeUD183W8V4OW6OHYWI29w/QDyb+c/GzOfVEAlo6HjbW9++eXT2aV2lGg+uS+XqTD2q0pNREQA==
   dependencies:
     "@types/express" "^4.17.21"
-    "@types/node" "^20.10.6"
+    "@types/node" "*"
     accepts "^1.3.7"
     content-disposition "^0.5.3"
     depd "^1.1.0"
