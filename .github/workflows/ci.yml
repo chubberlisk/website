@@ -98,6 +98,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node.js with Yarn
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
       - name: Output preview deployment URL
         run: echo $PREVIEW_DEPLOYMENT_URL
 
