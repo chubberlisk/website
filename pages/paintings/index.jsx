@@ -2,10 +2,9 @@ import React from "react";
 import { NextSeo } from "next-seo";
 import Layout from "@/components/core/Layout";
 import PaintingsSection from "@/components/custom/PaintingsSection";
-import ExternalLink from "@/components/core/ExternalLink";
 import paintings from "@/content/paintings";
 
-export default function Index() {
+export default function Paintings() {
   return (
     <>
       <NextSeo

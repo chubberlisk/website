@@ -4,7 +4,7 @@ import Layout from "@/components/core/Layout";
 import WritingsSection from "@/components/custom/WritingsSection";
 import { getWritings } from "@/utils/AppContext";
 
-export default function Index({ writings }) {
+export default function Writings({ writings }) {
   return (
     <>
       <NextSeo
