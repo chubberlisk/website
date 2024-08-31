@@ -17,7 +17,7 @@
     "test:smoke:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:smoke'",
     "test:smoke:interactive": "cypress open --project test/smoke",
     "test:smoke:interactive:with-server": "start-server-and-test 'next dev --port 3001' 3001 'yarn test:smoke:interactive'",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@happykit/flags": "^3.3.0",
