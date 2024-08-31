@@ -29,7 +29,7 @@ paths:
                   data:
                     type: object
                     properties:
-                      ting-puns:
+                      tingPuns:
                         type: array
                         minItems: 0
                         items:

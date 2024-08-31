@@ -29,7 +29,7 @@ describe("when HTTP GET method", () => {
   });
 
   it("returns Ting puns within a data key", () => {
-    expect(res._getJSONData()["data"]["ting-puns"]).toEqual([
+    expect(res._getJSONData()["data"]["tingPuns"]).toEqual([
       "farting",
       "vomiting",
       "exhausting",

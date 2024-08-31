@@ -6,7 +6,7 @@ export default async function handler(req, res) {
       random: req.query["random"] !== undefined,
     });
 
-    res.json({ data: { "ting-puns": data.tingPuns }, metadata });
+    res.json({ data: { tingPuns: data.tingPuns }, metadata });
   } else {
     res.status(405);
   }
