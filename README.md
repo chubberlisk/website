@@ -1,11 +1,11 @@
 [![CI/CD](https://github.com/chubberlisk/website/actions/workflows/on-main.yml/badge.svg)](https://github.com/chubberlisk/website/actions/workflows/main.yml)
 
-<p align="center">
+<div align="center">
   <a href="https://github.com/chubberlisk/website">
     <img src="./public/images/icons/icon-512x512.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Wen Ting Wang</h3>
+  <h3 align="center">Wen Ting Wang</h3>
 
   <p align="center">
     A personal website for Wen Ting Wang.
@@ -15,51 +15,51 @@
     ·
     <a href="https://github.com/chubberlisk/website/issues">Report Bug</a>
   </p>
-</p>
+</div>
 
-## 📚 Contents <!-- omit in toc -->
+## Contents <!-- omit in toc -->
 
-- [📘 About the project](#-about-the-project)
-  - [🧱 Built with](#-built-with)
-  - [🚀 Deployed using](#-deployed-using)
-- [🏃‍♀️ Getting started](#️-getting-started)
-  - [✅ Prerequisites](#-prerequisites)
-  - [🏗 Installation](#-installation)
-- [👩‍💻 Usage](#-usage)
-  - [💻 Running the application](#-running-the-application)
-  - [🧪 Running the tests](#-running-the-tests)
-    - [Running the unit tests](#running-the-unit-tests)
-    - [Running the smoke tests](#running-the-smoke-tests)
-    - [Running all the tests](#running-all-the-tests)
-  - [🧹 Running the linter](#-running-the-linter)
-  - [❤ Running the formatter](#-running-the-formatter)
-- [📜 License](#-license)
+- [About the project](#about-the-project)
+    - [Built with](#built-with)
+    - [Deployed using](#deployed-using)
+- [Getting started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+- [Usage](#usage)
+    - [Running the application](#running-the-application)
+    - [Running the tests](#running-the-tests)
+        - [Running the unit tests](#running-the-unit-tests)
+        - [Running the smoke tests](#running-the-smoke-tests)
+        - [Running all the tests](#running-all-the-tests)
+    - [Running the linter](#running-the-linter)
+    - [Running the formatter](#running-the-formatter)
+- [License](#license)
 
-## 📘 About the project
+## About the project
 
 This is the personal website for Wen Ting Wang,
 see [previous version that's built using Gatsby](https://github.com/chubberlisk/chubberlisk.github.io).
 
-### 🧱 Built with
+### Built with
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [Cypress](https://www.cypress.io/)
 
-### 🚀 Deployed using
+### Deployed using
 
 - [Vercel](https://vercel.com/)
 
-## 🏃‍♀️ Getting started
+## Getting started
 
 To get a local copy up and running follow these simple steps.
 
-### ✅ Prerequisites
+### Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/en/docs/getting-started)
 
-### 🏗 Installation
+### Installation
 
 1. Clone the repo
 
@@ -79,9 +79,9 @@ yarn
 cp .env.local.sample .env.local
 ```
 
-## 👩‍💻 Usage
+## Usage
 
-### 💻 Running the application
+### Running the application
 
 To run the application for local development:
 
@@ -91,7 +91,7 @@ yarn dev
 
 Then visit [http://localhost:3000](http://localhost:3000).
 
-### 🧪 Running the tests
+### Running the tests
 
 #### Running the unit tests
 
@@ -128,7 +128,7 @@ To run the unit tests and smoke tests
 yarn test
 ```
 
-### 🧹 Running the linter
+### Running the linter
 
 To run linting using [ESLint](https://eslint.org/):
 
@@ -136,7 +136,7 @@ To run linting using [ESLint](https://eslint.org/):
 yarn lint
 ```
 
-### ❤ Running the formatter
+### Running the formatter
 
 To run linting that uses [Prettier](https://prettier.io/):
 
@@ -144,6 +144,6 @@ To run linting that uses [Prettier](https://prettier.io/):
 yarn format
 ```
 
-## 📜 License
+## License
 
 Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
