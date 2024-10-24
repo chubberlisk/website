@@ -44,7 +44,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies from cache
-        run: yarn --frozen-lockfile --ignore-optional --ignore-scripts
+        run: yarn --frozen-lockfile
 
       - name: Run unit tests
         run: yarn test:unit
