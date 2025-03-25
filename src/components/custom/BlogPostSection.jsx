@@ -8,7 +8,7 @@ import DateTime from "@/components/core/DateTime";
 export default function BlogPostSection({ blogPost, padding }) {
   return (
     <Section
-      minHeight="min-h-screen-90"
+      minHeight="min-h-[90vh]"
       id={blogPost.metadata.slug}
       padding={padding}
     >

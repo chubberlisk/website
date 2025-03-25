@@ -22,9 +22,9 @@ export default function Paintings() {
               It focuses on a fairy called Tingker Bell among other Tings.
             </p>
           }
-          minHeight="min-h-screen-90"
+          minHeight="min-h-[90vh]"
           cardHeadingLevel={2}
-          padding="py-6 xs:pb-8 xs:pt-0"
+          padding="py-6 sm:pb-8 sm:pt-0"
         />
       </Layout>
     </>

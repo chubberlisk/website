@@ -1,85 +1,127 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
 
-html {
-  @apply text-wtw-white bg-wtw-black;
+@theme {
+  --breakpoint-xs: 30rem;
+
+  --color-mint-500: oklch(0.72 0.11 178);
+  --color-wtw-yellow: #eac435;
+  --color-wtw-orange: #e46f06;
+  --color-wtw-black: #121212;
+  --color-wtw-white: #f3f4f6;
+  --color-made-tech: #40c842;
+  --color-wtw-code-black: #2f2f2f;
+  --color-wtw-code-lime: #a5e844;
 }
 
-h1 {
-  @apply text-5xl md:text-7xl mb-5;
+@layer base {
+  html {
+    @apply text-wtw-white bg-wtw-black;
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl mb-5;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl mb-5;
+  }
+
+  h3 {
+    @apply text-3xl md:text-5xl mb-5;
+  }
+
+  h4 {
+    @apply text-2xl md:text-4xl mb-5;
+  }
+
+  ul,
+  ol {
+    @apply list-inside ml-3 md:ml-5;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  p,
+  li,
+  code {
+    @apply text-base md:text-lg;
+  }
+
+  p,
+  ul,
+  ol {
+    @apply mb-5;
+  }
+
+  a {
+    @apply text-base md:text-lg underline text-blue-500;
+  }
+
+  a:hover {
+    @apply no-underline;
+  }
+
+  mark {
+    padding: 0.25rem 0.5rem;
+  }
+
+  table {
+    @apply border-2 border-wtw-yellow;
+  }
+
+  thead,
+  tr,
+  th {
+    @apply border-2 border-wtw-yellow;
+  }
+
+  th {
+    @apply p-3;
+  }
+
+  td {
+    @apply p-3 border-2 border-wtw-yellow;
+  }
+
+  .textGradient {
+    background: linear-gradient(to right, #eac435, #e46f06);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-h2 {
-  @apply text-4xl md:text-6xl mb-5;
-}
+@utility container {
+  padding-inline: 2rem;
+  margin-inline: 0rem;
 
-h3 {
-  @apply text-3xl md:text-5xl mb-5;
-}
+  @variant sm {
+    padding-inline: 2rem;
+    margin-inline: 0rem;
+  }
 
-h4 {
-  @apply text-2xl md:text-4xl mb-5;
-}
+  @variant md {
+    padding-inline: 4rem;
+    margin-inline: auto;
+  }
 
-ul,
-ol {
-  @apply list-inside ml-3 md:ml-5;
-}
+  @variant lg {
+    padding-inline: 4rem;
+    margin-inline: auto;
+  }
 
-ul {
-  @apply list-disc;
-}
+  @variant xl {
+    padding-inline: 5rem;
+    margin-inline: auto;
+  }
 
-ol {
-  @apply list-decimal;
+  @variant 2xl {
+    padding-inline: 6rem;
+    margin-inline: auto;
+  }
 }
-
-p,
-li,
-code {
-  @apply text-base md:text-lg;
-}
-
-p,
-ul,
-ol {
-  @apply mb-5;
-}
-
-a {
-  @apply text-base md:text-lg underline text-blue-500;
-}
-
-a:hover {
-  @apply no-underline;
-}
-
-mark {
-  padding: 0.25rem 0.5rem;
-}
-
-.textGradient {
-  background: linear-gradient(to right, #eac435, #e46f06);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-table {
-  @apply border-2 border-wtw-yellow;
-}
-
-thead,
-tr,
-th {
-  @apply border-2 border-wtw-yellow;
-}
-
-th {
-  @apply p-3;
-}
-
-td {
-  @apply p-3 border-2 border-wtw-yellow;
-}
-
-@tailwind utilities;
