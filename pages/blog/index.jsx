@@ -12,7 +12,7 @@ export default function Blog({ blogPosts }) {
         <BlogSection
           blogPosts={blogPosts}
           title={<h1 className="mb-8">All blog posts</h1>}
-          minHeight="min-h-screen-90"
+          minHeight="min-h-[90vh]"
           cardHeadingLevel={2}
         />
       </Layout>

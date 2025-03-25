@@ -54,12 +54,13 @@ const blockquote = ({ children }) => {
 
 export default function MarkdownToHtml({ markdown }) {
   return (
-    <ReactMarkdown
-      className="text-sm md:text-base md:w-3/4"
-      components={{ code, h2, p, a, blockquote }}
-      remarkPlugins={[remarkGfm]}
-    >
-      {markdown}
-    </ReactMarkdown>
+    <div className="text-sm md:text-base">
+      <ReactMarkdown
+        components={{ code, h2, p, a, blockquote }}
+        remarkPlugins={[remarkGfm]}
+      >
+        {markdown}
+      </ReactMarkdown>
+    </div>
   );
 }

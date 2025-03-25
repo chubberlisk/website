@@ -14,7 +14,7 @@ export default function Custom404() {
         nofollow={true}
       />
       <Layout>
-        <Section minHeight="min-h-screen-90">
+        <Section minHeight="min-h-[90vh]">
           <div className="container">
             <h1>😞 Page not found</h1>
             <p>

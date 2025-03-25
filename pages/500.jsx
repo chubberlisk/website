@@ -14,7 +14,7 @@ export default function Custom500() {
         nofollow={true}
       />
       <Layout>
-        <Section minHeight="min-h-screen-90">
+        <Section minHeight="min-h-[90vh]">
           <div className="container">
             <h1>🔥 Internal server error</h1>
             <p>Eh, sorry lah! Something has seriously gone wrong.</p>
