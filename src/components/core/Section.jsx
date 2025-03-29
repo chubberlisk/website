@@ -7,7 +7,7 @@ export default function Section({
   minHeight = "min-h-screen",
   className,
   children,
-  padding = "py-14",
+  padding = "py-5",
 }) {
   return (
     <section

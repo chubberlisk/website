@@ -4,9 +4,9 @@ import ExternalLink from "@/components/core/ExternalLink";
 
 export default function LandingSection() {
   return (
-    <Section id="landing" minHeight="min-h-screen-90">
-      <h1 className="text-xl md:text-3xl leading-normal mb-3">Hi there! 👋</h1>
-      <h2 className="text-4xl md:text-7xl leading-normal mb-9 md:w-3/4">
+    <Section id="landing" minHeight="min-h-[90vh]">
+      <h1 className="text-xl md:text-3xl leading-none mb-3">Hi there! 👋</h1>
+      <h2 className="text-4xl md:text-7xl leading-none mb-9 md:w-3/4">
         My name is{" "}
         <span className="textGradient font-medium">Wen Ting Wang</span>, but
         just call me <span className="textGradient font-medium">Ting</span>.

@@ -15,7 +15,7 @@ export default function Writings({ writings }) {
         <WritingsSection
           writings={writings}
           title={<h1 className="mb-8">Writings</h1>}
-          minHeight="min-h-screen-90"
+          minHeight="min-h-[90vh]"
         />
       </Layout>
     </>
