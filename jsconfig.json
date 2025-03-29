@@ -3,7 +3,6 @@
     "baseUrl": ".",
     "paths": {
       "@/content/*": ["content/*"],
-      "@/flags/*": ["flags/*"],
       "@/api/*": ["pages/api/*"],
       "@/components/*": ["src/components/*"],
       "@/formatters/*": ["src/formatters/*"],

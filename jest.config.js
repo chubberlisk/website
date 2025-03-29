@@ -13,7 +13,6 @@ const customJestConfig = {
     "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
     "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg)$":
       "<rootDir>/__mocks__/fileMock.js",
-    "flags/(.*)": "<rootDir>/__mocks__/flagsMock.js",
     "^@/api/(.*)$": "<rootDir>/pages/api/$1",
     "^@/content/(.*)$": "<rootDir>/content/$1",
     "^@/components/(.*)$": "<rootDir>/src/components/$1",
