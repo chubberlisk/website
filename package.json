@@ -56,6 +56,6 @@
     "prettier": "^3.6.2",
     "react-test-renderer": "^18.3.1",
     "start-server-and-test": "^2.0.12",
-    "webpack": "^5.100.1"
+    "webpack": "^5.100.2"
   }
 }
