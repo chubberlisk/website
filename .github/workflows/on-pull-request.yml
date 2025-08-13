@@ -18,7 +18,7 @@ jobs:
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' && github.repository == 'chubberlisk/website' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Fetch metadata
         id: metadata
         uses: dependabot/fetch-metadata@v2
