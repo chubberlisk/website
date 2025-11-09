@@ -1,10 +1,10 @@
 import React from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { DefaultSeo } from "next-seo";
+import { DM_Sans } from "next/font/google";
 import SEO from "../next-seo.config";
 import "./styles.css";
-
-import { DM_Sans } from "next/font/google";
 
 const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
@@ -19,6 +19,7 @@ export default function CustomApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </main>
       <Analytics />
+      <SpeedInsights />
     </>
   );
 }
