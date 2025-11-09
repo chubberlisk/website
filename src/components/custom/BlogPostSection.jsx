@@ -21,7 +21,6 @@ export default function BlogPostSection({ blogPost, padding }) {
           alt="hello"
           width={1000}
           height={420}
-          quality={100}
         />
       </div>
       <span className="block text-xl text-wtw-yellow">
