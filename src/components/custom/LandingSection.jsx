@@ -12,16 +12,7 @@ export default function LandingSection() {
         just call me <span className="textGradient font-medium">Ting</span>.
       </h2>
       <p className="md:w-2/4">
-        I&apos;m a software engineer based in London, UK. Currently, I&apos;m
-        working at{" "}
-        <ExternalLink
-          href="https://madetech.com"
-          className="text-made-tech"
-          ariaLabel="Made Tech"
-        >
-          Made Tech
-        </ExternalLink>{" "}
-        helping to build services for the public sector and making Ting puns.
+        I&apos;m a software engineer based in London, UK.
       </p>
     </Section>
   );

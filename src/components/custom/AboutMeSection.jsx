@@ -25,8 +25,8 @@ export default function AboutMeSection() {
         <p>
           After accidentally discovering a passion for programming during
           A-Levels, I embarked on a journey to learn more about software
-          engineering - getting a degree in Computer Science and eventually
-          joining the{" "}
+          engineering. I got a degree in Computer Science and eventually joined
+          the{" "}
           <ExternalLink
             href="https://madetech.com/careers/academy"
             className="text-made-tech"
@@ -34,25 +34,17 @@ export default function AboutMeSection() {
           >
             Made Tech Academy
           </ExternalLink>{" "}
-          programme in 2019 where I learnt about things like Clean Architecture,
-          test-driven development (TDD), etc.
+          programme in 2019, where I learnt about things like Clean
+          Architecture, test-driven development (TDD), etc.
         </p>
 
         <p>
-          Now I&apos;m a{" "}
-          <ExternalLink
-            href="https://github.com/madetech/handbook/blob/main/roles/mid_software_engineer.md"
-            className="text-made-tech"
-            ariaLabel="Made Tech Role Guidance: Software Engineer"
-          >
-            Software Engineer
-          </ExternalLink>{" "}
-          at the company, building software that makes our clients and users
-          happy, using a silly sense of humour and Agile practices and
-          techniques such as continuous delivery, TDD and pair (or 🍐)
-          programming. Oh, and I may or may not have had a phase where I made
-          some <Link href="/paintings">&quot;paintings&quot;</Link> (emphasis on
-          the &quot;pain&quot; and &quot;ting&quot;) using Microsoft Paint.
+          I became a software engineer at the company, building software that
+          made our clients and users happy, using Agile practices and techniques
+          such as continuous delivery, TDD and pair (or 🍐) programming. Oh, and
+          I may or may not have had a phase where I made some{" "}
+          <Link href="/paintings">&quot;paintings&quot;</Link> (emphasis on the
+          &quot;pain&quot; and &quot;ting&quot;) using Microsoft Paint.
           It&apos;s related to creating amazing software, I promise!
         </p>
         <p>
