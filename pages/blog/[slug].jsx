@@ -31,11 +31,6 @@ export default function Blog({ blogPost }) {
             },
           ],
         }}
-        twitter={{
-          handle: "@chubberlisk",
-          site: "@chubberlisk",
-          cardType: "summary_large_image",
-        }}
       />
       <Layout>
         <BlogPostSection blogPost={blogPost} padding="py-6 sm:pb-8 sm:pt-0" />
