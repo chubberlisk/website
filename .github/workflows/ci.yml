@@ -108,7 +108,7 @@ jobs:
         run: echo $PREVIEW_DEPLOYMENT_URL
 
       - name: Run smoke tests
-        uses: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v7
         with:
           command: yarn test:smoke --config baseUrl=${{env.PREVIEW_DEPLOYMENT_URL}}
           wait-on: ${{env.PREVIEW_DEPLOYMENT_URL}}
