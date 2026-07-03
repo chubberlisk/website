@@ -43,7 +43,7 @@ export default function AboutMeSection() {
           made our clients and users happy, using Agile practices and techniques
           such as continuous delivery, TDD and pair (or 🍐) programming. Oh, and
           I may or may not have had a phase where I made some{" "}
-          <Link href="/paintings">&quot;paintings&quot;</Link> (emphasis on the
+          <Link href="/paintings">&quot;paintings&quot;</Link>{" "}(emphasis on the
           &quot;pain&quot; and &quot;ting&quot;) using Microsoft Paint.
           It&apos;s related to creating amazing software, I promise!
         </p>
