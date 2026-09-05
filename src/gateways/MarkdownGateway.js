@@ -1,5 +1,5 @@
 import fileSystem from "fs";
-import { join, resolve } from "path";
+import { join } from "path";
 import matter from "gray-matter";
 
 export default class MarkdownGateway {
@@ -10,7 +10,7 @@ export default class MarkdownGateway {
 
   retrieveBlogPost(file) {
     const slug = file.replace(/\.md$/, "");
-    const fullPath = join(resolve("./", this.blogPostsDirectory), `${slug}.md`);
+    const fullPath = join(process.cwd(), this.blogPostsDirectory, `${slug}.md`);
     const fileContents = fileSystem.readFileSync(fullPath, "utf8");
     const { data: metadata, content } = matter(fileContents);
 
@@ -22,7 +22,7 @@ export default class MarkdownGateway {
 
   retrieveBlogPosts() {
     const files = fileSystem.readdirSync(
-      resolve("./", this.blogPostsDirectory),
+      join(process.cwd(), this.blogPostsDirectory),
     );
 
     return {
@@ -39,7 +39,7 @@ export default class MarkdownGateway {
 
   retrieveWriting(file) {
     const slug = file.replace(/\.md$/, "");
-    const fullPath = join(resolve("./", this.writingsDirectory), `${slug}.md`);
+    const fullPath = join(process.cwd(), this.writingsDirectory, `${slug}.md`);
     const fileContents = fileSystem.readFileSync(fullPath, "utf8");
     const { data: metadata, content } = matter(fileContents);
 
@@ -51,12 +51,12 @@ export default class MarkdownGateway {
 
   retrieveWritings() {
     const files = fileSystem
-      .readdirSync(resolve("./", this.writingsDirectory))
+      .readdirSync(join(process.cwd(), this.writingsDirectory))
       .filter((file) => file.includes(".md"));
 
     return {
       writings: files
-        .map((file, index) => this.retrieveWriting(file))
+        .map((file) => this.retrieveWriting(file))
         .sort((writingA, writingB) =>
           new Date(writingA.metadata.publishDateTime) >
           new Date(writingB.metadata.publishDateTime)
