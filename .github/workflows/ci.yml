@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js with Yarn
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Install dependencies from cache
@@ -40,7 +40,7 @@ jobs:
       - name: Set up Node.js with Yarn
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Install dependencies from cache
@@ -67,7 +67,7 @@ jobs:
       - name: Set up Node.js with Yarn
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Install Vercel CLI
@@ -101,7 +101,7 @@ jobs:
       - name: Set up Node.js with Yarn
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
           cache: yarn
 
       - name: Output preview deployment URL
