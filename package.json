@@ -23,7 +23,7 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "autoprefixer": "^10.5.4",
+    "autoprefixer": "^10.5.5",
     "classnames": "^2.5.1",
     "gray-matter": "^4.0.3",
     "moment": "^2.30.1",
