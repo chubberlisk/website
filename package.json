@@ -32,7 +32,7 @@
     "node-fetch": "^3.3.2",
     "postcss": "^8.5.28",
     "postcss-preset-env": "^11.5.2",
-    "react": "^19.0.0",
+    "react": "^19.3.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
     "react-syntax-highlighter": "^16.1.1",
