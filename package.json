@@ -22,7 +22,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.5",
     "@vercel/analytics": "^2.0.1",
-    "@vercel/speed-insights": "^2.0.0",
+    "@vercel/speed-insights": "^2.1.0",
     "autoprefixer": "^10.6.2",
     "classnames": "^2.5.1",
     "gray-matter": "^4.0.3",
